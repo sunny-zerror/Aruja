@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+*{
+  scroll-behavior: smooth ;
+}
+body {
+  overflow-x: hidden;
+  width: 100%;
+  background-color: #FFFDF6;
+  color: #2E2D2B;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.scroller_none::-webkit-scrollbar {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
