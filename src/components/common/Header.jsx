@@ -6,7 +6,6 @@ const Header = () => {
     gsap.from(".header", { display: "none", delay: 2.28 });
   }, [])
 
-
   return (
     <div>
       <div className=" header w-full flex p-5 px-10 z-[999] items-center justify-between fixed top-0 left-0">
