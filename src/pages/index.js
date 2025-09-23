@@ -13,7 +13,7 @@ const index = () => {
       <StaticImage />
       <StickyWork />
       <ServiceSlider/>
-      {/* <ReviewSection/> */}
+      <ReviewSection/>
     </>
   )
 }

@@ -80,20 +80,6 @@ const IntroLoader = () => {
             delay: 1.7,
             ease: "in-out-quint",
         });
-        gsap.from(".left_txt_2", {
-            left: "93%",
-            opacity:0,
-            duration: 1.2,
-            delay: 1.7,
-            ease: "in-out-quint",
-        });
-        gsap.from(".right_txt_2", {
-            right: "91.5%",
-            opacity:0,
-            duration: 1.2,
-            delay: 1.7,
-            ease: "in-out-quint",
-        });
 
         gsap.set(".center_txt , .left_txt , .right_txt", {
             display: "none",
@@ -117,11 +103,6 @@ const IntroLoader = () => {
 
                 <p className='  left_txt text-sm font-semibold  uppercase absolute top-1/2 left-1 -translate-y-1/2  text-white'>Looking for</p>
                 <p className=' right_txt  text-sm font-semibold  uppercase absolute top-1/2 right-1 -translate-y-1/2  text-white'>new emotions ?</p>
-
-                <p className='  left_txt_2 text-sm font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white'>Designed</p>
-                <p className=' right_txt_2  text-sm font-semibold  uppercase absolute top-1/2 right-1 -translate-y-1/2  text-white'>For you </p>
-
-
 
                 <p className='center_txt text-4xl font-light    tracking-[1.2vw] uppercase absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white'>Aruja</p>
 

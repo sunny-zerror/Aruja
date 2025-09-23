@@ -4,27 +4,21 @@ import CustomEase from 'gsap/dist/CustomEase'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
-const Hero = () => {
+const NewHero = () => {
     CustomEase.create("in-out-quint", "0.83,0,0.17,1");
 
     useEffect(() => {
-
-        gsap.from(".left_txt_2a", {
-            left: "93%",
-            opacity: 0,
-            duration: 1.2,
-            delay: 1.7,
-            ease: "in-out-quint",
-        });
-        gsap.from(".right_txt_2a", {
-            right: "91.5%",
-            opacity: 0,
-            duration: 1.2,
-            delay: 1.7,
-            ease: "in-out-quint",
-        });
-
-        gsap.from(".anim_txt", { y: 100, duration: 1, stagger: 0.1, delay: 2.2, ease: "in-out-quint" })
+        gsap.from(".anim_txt", { y: 120, duration: 1, delay: 2.2, ease: "in-out-quint" })
+        gsap.from(".anim_txt_2", {
+            y: 120, duration: 1, delay: 2.3,
+            onComplete: () => {
+                gsap.set(".anim_txt_2_paren", {
+                    overflow: "visible"
+                })
+            }, ease: "in-out-quint"
+        })
+        gsap.from(".anim_txt_3", { y: 120, duration: 1, delay: 2.4, ease: "in-out-quint" })
+        gsap.from(".anim_txt_4", { y: 20, duration: 1, delay: 2.4, ease: "in-out-quint" })
 
 
         var tl = gsap.timeline({
@@ -37,15 +31,46 @@ const Hero = () => {
                 // markers: true,
             }
         })
-        tl.to(".hero_bg_img", { scale: 1.2, duration: 3, }, "hello")
 
+        tl.to(".anim_txt_paren", {
+            x: -100,
+            opacity: 0,
+            duration: 1,
+            ease: "linear",
+        }, "0")
+        tl.to(".anim_txt_2", {
+            x: 100,
+            opacity: 0,
+            duration: 1,
+            ease: "linear",
+        }, "0")
+        tl.to(".anim_txt_3_left", {
+            x: -300,
+            opacity: 0,
+            duration: 1,
+            ease: "linear",
+        }, "0")
+        tl.to(".anim_txt_3_right", {
+            x: 300,
+            opacity: 0,
+            duration: 1,
+            ease: "linear",
+        }, "0")
+
+        tl.fromTo(".hero_bg_img", {
+            clipPath: "polygon(10% 20%, 90% 20%, 90% 90%, 10% 90%)",
+        }, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            duration: 1,
+            ease: "linear",
+        }, "0")
         tl.fromTo(".slide_paren", {
             scaleX: 0.005555555555555556, scaleY: 0
         }, {
             ease: "linear",
             keyframes: [
-                { scaleX: 0.005555555555555556, scaleY: 1, duration: 0.5 },
-                { scaleX: 1, scaleY: 1, duration: 1 }
+                { scaleX: 0.005555555555555556, scaleY: 1, duration: 0.375 },
+                { scaleX: 1, scaleY: 1, duration: 0.625 }
             ]
         }, "hello")
 
@@ -56,18 +81,6 @@ const Hero = () => {
             willChange: "transform",
             delay: .7,
             duration: 1,
-            onComplete: function () {
-                tl.to(".left_txt_2a ,.right_txt_2a", {
-                    opacity: 0,
-                    duration: 0,
-                });
-            },
-            onReverseComplete: function () {
-                tl.to(".left_txt_2a ,.right_txt_2a", {
-                    opacity: 1,
-                    duration: 0,
-                });
-            },
             onUpdate: function () {
                 const progress = this.progress();
                 const half = 50 * progress;
@@ -79,7 +92,6 @@ const Hero = () => {
                 });
             }
         }, "hello");
-
         tl.to(".hero_slide_2_img", {
             scale: 1,
             ease: "linear",
@@ -118,8 +130,8 @@ const Hero = () => {
 
         tl.to(".hero_slide_4", {
             scale: 1,
-            duration: .8,
-            delay: 1.6,
+            duration: .9,
+            delay: 1.7,
             ease: "linear",
         }, "hello");
 
@@ -146,7 +158,7 @@ const Hero = () => {
         tl.to(".opa_slide_4", {
             left: "100%",
             duration: .8,
-            delay: 2.4,
+            delay: 1.8,
             ease: "linear",
         }, "parr");
 
@@ -200,18 +212,49 @@ const Hero = () => {
     return (
         <div>
             <div className=" hero_paren  w-full center h-screen relative overflow-hidden">
-                <p className='  left_txt_2a text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[99] '>Designed</p>
-                <p className=' right_txt_2a  text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[99] '>For you </p>
 
-                <img className='hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="" />
-                <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white text-5xl font-semibold">
-                    <div className="block overflow-hidden">
-                        <p className='anim_txt font-bold'>Where Spaces Flows,</p>
+                <div className="w-full relative center h-full">
+                    <div className='uppercase h-[1.2rem] overflow-hidden    absolute top-[80vh] left-[4.3%] text-sm font-bold -rotate-90    '>
+                        <p className='anim_txt_4'>
+                            Designed for You
+                        </p>
                     </div>
-                    <div className="block overflow-hidden">
-                        <p className='anim_txt font-bold'>& thinks Design</p>
+                    <p className='uppercase anim_txt_paren anim_txt  absolute top-[8%] left-[12%]    text-[8.5vw] '>Where Spaces </p>
+                    <div className='uppercase block overflow-hidden  h-[10vw] left-10 top-[48%] absolute text-[8.5vw]'>
+                        <p className='anim_txt_3 anim_txt_3_left'>
+                            thinks
+                        </p>
                     </div>
-                    <p></p>
+                    <div className='uppercase block overflow-hidden  h-[10vw] right-10 top-[48%] absolute text-[8.5vw]'>
+                        <p className='anim_txt_3 anim_txt_3_right'>
+                            design
+                        </p>
+                    </div>
+                    <div
+                        style={{ clipPath: "polygon(10% 20%, 90% 20%, 90% 90%, 10% 90%)" }}
+                        className=" hero_bg_img relative  overflow-hidden  w-[100%] h-[100%]">
+                        <div className='uppercase  block anim_txt_paren overflow-hidden  h-[10vw] text-white absolute top-[8%] left-[12%]    text-[8.5vw] '>
+                            <p className='anim_txt'>
+                                Where Spaces
+                            </p>
+                        </div>
+                        <div className=' anim_txt_2_paren uppercase block overflow-hidden  h-[10vw] text-white absolute top-[28%] left-[50%] -translate-x-1/2   text-[8.5vw] '>
+                            <p className='anim_txt_2'>
+                                flow, &
+                            </p>
+                        </div>
+                        <div className='uppercase block overflow-hidden  h-[10vw] left-10 text-white absolute top-[48%]  text-[8.5vw]'>
+                            <p className='anim_txt_3 anim_txt_3_left'>
+                                thinks
+                            </p>
+                        </div>
+                        <div className='uppercase block overflow-hidden  h-[10vw] right-10 text-white absolute top-[48%]  text-[8.5vw]'>
+                            <p className='anim_txt_3 anim_txt_3_right'>
+                                design
+                            </p>
+                        </div>
+                        <img className='w-full h-full object-cover' src="/Images/HomePage/HeroImg.png" alt="" />
+                    </div>
                 </div>
 
                 <div className=" slide_paren  w-[100%] h-[100%] center overflow-hidden absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-[#FFFDF6]"></div>
@@ -246,7 +289,7 @@ const Hero = () => {
                                         At arujaK, design is more than decoration
                                     </p>
                                 </div>
-                                <div className="flex  relative overflow-hidden pb-2 pr-2 gap-2">
+                                <div className="flex  relative overflow-hidden pb-2 gap-2">
                                     <div className=" opa_slide_2 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
                                     <p>decoration it’s about</p>
                                     <h2> <i>creating spaces</i> </h2>
@@ -268,7 +311,7 @@ const Hero = () => {
                         <div className=" sq_img_2 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] left-10 w-[15vw] ">
                             <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="" />
                         </div>
-                        <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-15vw] left-1/2 -translate-x-1/2 w-[15vw] ">
+                        <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] left-1/2 -translate-x-1/2 w-[15vw] ">
                             <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="" /></div>
                         <div className=" sq_img_4 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] right-32 w-[15vw] ">
                             <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service_01a01267d4.png" alt="" />
@@ -307,4 +350,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default NewHero

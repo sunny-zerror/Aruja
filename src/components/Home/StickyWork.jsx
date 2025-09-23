@@ -95,20 +95,24 @@ const StickyWork = () => {
     return (
         <div>
             <div className="w-full px-10 pt-20">
-                <div className="w-full relative mb-20 h-[50vh] flex flex-col items-center">
+                <div className="w-full relative mb-20 h-[50vh] flex flex-col  items-center">
                     <div className=" w-[15%] left-0 bottom-5 font-semibold absolute uppercase text-sm">
                         <p>our interiors are designed to be functional, timeless, and personal.</p>
                         <button>
                             <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center gap-2'>
-                                <div className="w-0  group-hover:w-[80%] transition-all duration-300 h-[1px]  bg-black bottom-0.5 left-0 absolute"></div>
+                                <div className="w-[80%]  group-hover:right-[-100%] transition-all duration-300 h-[1px]  bg-black translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
                                 <p>
                                     View more
                                 </p>
-                                <img className='scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-300 ' src="/icons/black_arrow.png" alt="" />
+                                <div className="block relative">
+                                    <img className='  opacity-0  ' src="/icons/black_arrow.png" alt="" />
+                                    <img className='absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
+                                    <img className=' absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
+                                </div>
                             </div>
                         </button>
                     </div>
-                    <div className="w-full ml-3 h-fit text-sm font-black">
+                    <div className="w-full ml-3 mb-5 h-fit text-sm font-black">
                         <p>OUR WORK</p>
                     </div>
                     <div className="uppercase text-8xl space-y-5 w-full">

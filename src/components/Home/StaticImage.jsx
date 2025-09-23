@@ -85,7 +85,7 @@ const StaticImage = () => {
                 <div
                     style={{ clipPath: "polygon(20% 10%, 80% 10%, 80% 90%, 20% 90%)" }}
                     className="show_reel_1 absolute z-[1]  w-full h-screen scale-[.3]   center text-white">
-                    <video className='vid_1 w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="https://download-video-ak.vimeocdn.com/v3-1/playback/6a3e1298-cb20-45ea-8d5c-6f78e83a705a/539d2895-749f0ec8?__token__=st=1758626014~exp=1758629614~acl=%2Fv3-1%2Fplayback%2F6a3e1298-cb20-45ea-8d5c-6f78e83a705a%2F539d2895-749f0ec8%2A~hmac=003d97305d91b7d273f195eacc8c580b9446759b13b4324868e15dbe006c5e92&r=dXMtY2VudHJhbDE%3D"></video>
+                    <video className='vid_1 w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="https://player.vimeo.com/progressive_redirect/playback/1068143296/rendition/1080p/file.mp4?loc=external&log_user=0&signature=45361f1c168c38505d5268bc534b24c38799b90f005a0dcf990cb1d69f610d7a"></video>
                     <div className=" det_1 absolute flex gap-10  top-10 ">
                         <h2> 1 </h2>
                         <h2> /</h2>
