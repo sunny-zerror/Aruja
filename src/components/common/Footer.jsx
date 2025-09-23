@@ -4,7 +4,7 @@ const Footer = () => {
   return (
 <div className="w-full p-10 flex bg-[#BBB86D] items-stretch">
   <div className="aspect-[3/4]">
-    <img className="w-full h-full object-cover" src="/HomePage/Static image.png" alt="" />
+    <img className="w-full h-full object-cover" src="/images/HomePage/Static image.png" alt="" />
   </div>
   <div className="w-full  flex flex-col justify-between pl-10">
     <div className="w-full flex justify-between">
