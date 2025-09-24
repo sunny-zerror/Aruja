@@ -1,11 +1,14 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 
 const ReviewSection = () => {
   const scrollRef = useRef(null);
   const cursorRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
 
+  // Move scroll by button clicks
   const handleScroll = (direction) => {
     if (scrollRef.current) {
       const scrollAmount = 460; // card width + gap
@@ -16,56 +19,77 @@ const ReviewSection = () => {
     }
   };
 
-  // Mouse move → animate cursor position with GSAP
+  // Custom cursor follow
   const handleMouseMove = (e) => {
     if (cursorRef.current) {
       gsap.to(cursorRef.current, {
-        x: e.clientX -35,
-        y: e.clientY -130,
-        duration: 0.4,
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.3,
         ease: "power3.out",
       });
     }
-  };
 
-  // Fade in cursor
-  const handleMouseEnter = () => {
-    setIsVisible(true);
-    if (cursorRef.current) {
-      gsap.to(cursorRef.current, { autoAlpha: 1, duration: 0.3, ease: "power2.out" });
+    // while dragging → update scroll
+    if (isDragging.current && scrollRef.current) {
+      const walk = (e.clientX - startX.current) * 1.2; // sensitivity
+      scrollRef.current.scrollLeft = scrollLeft.current - walk;
     }
   };
 
-  // Fade out cursor
-  const handleMouseLeave = () => {
-    setIsVisible(false);
+  const handleMouseEnter = () => {
     if (cursorRef.current) {
-      gsap.to(cursorRef.current, { autoAlpha: 0, duration: 0.3, ease: "power2.in" });
+      gsap.to(cursorRef.current, { opacity: 1, duration: 0.3, ease: "power2.out" });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (cursorRef.current) {
+      gsap.to(cursorRef.current, { opacity: 0, duration: 0.3, ease: "power2.in" });
+    }
+    isDragging.current = false;
+  };
+
+  // Drag start
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    startX.current = e.clientX;
+    scrollLeft.current = scrollRef.current.scrollLeft;
+
+    if (cursorRef.current) {
+      gsap.to(cursorRef.current, { scale: 0.9, borderRadius:"4px", duration: 0.2, ease: "power2.out" });
+    }
+  };
+
+  // Drag end
+  const handleMouseUp = () => {
+    isDragging.current = false;
+
+    if (cursorRef.current) {
+      gsap.to(cursorRef.current, { scale: 1, borderRadius:"0px", duration: 0.2, ease: "power2.out" });
     }
   };
 
   useEffect(() => {
     if (cursorRef.current) {
-      gsap.set(cursorRef.current, { autoAlpha: 0 }); // hide initially
+      gsap.set(cursorRef.current, { opacity: 0, scale: 1 });
     }
   }, []);
 
   return (
     <div>
-      <div className="w-full relative px-10 py-20">
-        {/* Floating drag cursor */}
-        <div
-          ref={cursorRef}
-          className="absolute z-50 text-xs px-4 py-2 bg-[#2E2D2B] text-[#FFFDF4] uppercase  pointer-events-none"
-          style={{
-            transform: "translate(-50%, -50%)",
-          }}
-        >
-          <h2>
-          drag
-          </h2>
-        </div>
+      {/* Floating custom cursor */}
+      <div
+        ref={cursorRef}
+        className="fixed z-[99] top-0 left-0 text-xs px-4 py-2 bg-[#2E2D2B] text-[#FFFDF4] uppercase pointer-events-none "
+        style={{ transform: "translate(-50%, -50%)" }}
+      >
+        <h2>
+        drag
+        </h2>
+      </div>
 
+      <div className="w-full relative px-10 py-20">
         {/* Header */}
         <div className="w-full flex items-center justify-between">
           <div className="text-4xl uppercase flex">
@@ -73,7 +97,7 @@ const ReviewSection = () => {
             <h2 className="mx-3 italic">client</h2>
             <p>say</p>
           </div>
-          <div className="flex h-full gap-8 items-center">
+          <div className="flex h-full gap-5 items-center">
             <button
               onClick={() => handleScroll("left")}
               className="size-10 center uppercase bg-[#2E2D2B] text-[#FFFDF4]"
@@ -91,7 +115,7 @@ const ReviewSection = () => {
 
         {/* Content */}
         <div className="w-full h-[300px] scroller_none gap-5 flex mt-14">
-          <div className="w-[200px] h-[300px] overflow-hidden shrink-0">
+          <div className="w-[220px] h-[300px] overflow-hidden shrink-0">
             <img
               className="w-full h-full object-cover"
               src="/Images/HomePage/reviews/heroReview.png"
@@ -102,10 +126,12 @@ const ReviewSection = () => {
           {/* Scrollable reviews */}
           <div
             ref={scrollRef}
-            className="w-full scroller_none relative overflow-x-scroll gap-5 flex scroll-smooth cursor-none "
+            className="w-full scroller_none relative overflow-x-scroll gap-5 flex scroll-smooth cursor-none"
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
           >
             {[1, 2, 3, 4].map((item) => (
               <div
@@ -126,7 +152,7 @@ const ReviewSection = () => {
                   </div>
                 </div>
                 <h2 className="text-2xl leading-none capitalize">
-                  “ arujaK turned our vision into reality with clarity and zero
+                  “arujaK turned our vision into reality with clarity and zero
                   delays”.
                 </h2>
               </div>

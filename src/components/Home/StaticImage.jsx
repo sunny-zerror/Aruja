@@ -11,7 +11,7 @@ const StaticImage = () => {
             scrollTrigger: {
                 trigger: ".show_reel_paren",
                 start: "top top",
-                end: "+=1500",
+                end: "+=2000",
                 scrub: true,
                 pin: true,
                 // markers: true
@@ -85,7 +85,7 @@ const StaticImage = () => {
                 <div
                     style={{ clipPath: "polygon(20% 10%, 80% 10%, 80% 90%, 20% 90%)" }}
                     className="show_reel_1 absolute z-[1]  w-full h-screen scale-[.3]   center text-white">
-                    <video className='vid_1 w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="https://player.vimeo.com/progressive_redirect/playback/1068143296/rendition/1080p/file.mp4?loc=external&log_user=0&signature=45361f1c168c38505d5268bc534b24c38799b90f005a0dcf990cb1d69f610d7a"></video>
+                    <video className='vid_1 w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="/video/vid2.mp4"></video>
                     <div className=" det_1 absolute flex gap-10  top-10 ">
                         <h2> 1 </h2>
                         <h2> /</h2>
@@ -100,7 +100,7 @@ const StaticImage = () => {
                 <div
                     style={{ clipPath: "polygon(20% 10%, 80% 10%, 80% 90%, 20% 90%)" }}
                     className=" show_reel_2 absolute z-[2] w-full h-full scale-[.3]  center text-white">
-                    <video className=' vid_2 w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="https://player.vimeo.com/progressive_redirect/playback/1068143135/rendition/1080p/file.mp4?loc=external&log_user=0&signature=abdc701b62153e9c8dbb6b85bb14d8923c40ce6ae5be190bc090f62abc6e6d9b"></video>
+                    <video className=' vid_2 w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="/video/vid1.mp4"></video>
                     <div className=" det_2 absolute flex gap-10  top-10 ">
                         <h2> 2 </h2>
                         <h2> /</h2>
@@ -115,7 +115,7 @@ const StaticImage = () => {
                 <div
                     style={{ clipPath: "polygon(20% 10%, 80% 10%, 80% 90%, 20% 90%)" }}
                     className=" show_reel_3 absolute z-[3] w-full h-full scale-[.3]  center text-white">
-                    <video className='w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="https://player.vimeo.com/progressive_redirect/playback/1068143296/rendition/1080p/file.mp4?loc=external&log_user=0&signature=45361f1c168c38505d5268bc534b24c38799b90f005a0dcf990cb1d69f610d7a"></video>
+                    <video className='w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="/video/vid2.mp4"></video>
                     <div className="absolute flex gap-10  top-10 ">
                         <h2> 3 </h2>
                         <h2> /</h2>

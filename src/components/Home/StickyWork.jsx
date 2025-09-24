@@ -100,7 +100,7 @@ const StickyWork = () => {
                         <p>our interiors are designed to be functional, timeless, and personal.</p>
                         <button>
                             <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center gap-2'>
-                                <div className="w-[80%]  group-hover:right-[-100%] transition-all duration-300 h-[1px]  bg-black translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                                <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
                                 <p>
                                     View more
                                 </p>

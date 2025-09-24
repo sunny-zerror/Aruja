@@ -37,7 +37,7 @@ const Hero = () => {
                 // markers: true,
             }
         })
-        tl.to(".hero_bg_img", { scale: 1.2, duration: 3, }, "hello")
+        tl.to(".hero_bg_img", { scale: 1.2, duration: 2, }, "hello")
 
         tl.fromTo(".slide_paren", {
             scaleX: 0.005555555555555556, scaleY: 0
