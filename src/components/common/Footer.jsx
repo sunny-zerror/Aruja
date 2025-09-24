@@ -1,16 +1,10 @@
-"use client"; // only if using Next.js App Router
-
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router"; // for Pages Router
-// 👉 if you're on App Router: import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 const Footer = () => {
-  const router = useRouter(); // Pages Router
+  const router = useRouter(); 
   const currentPath = router.pathname;
-
-  // For App Router (Next 13+), replace with:
-  // const currentPath = usePathname();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -24,7 +18,7 @@ const Footer = () => {
       <div className="aspect-[3/4]">
         <img
           className="w-full h-full object-cover"
-          src="/Images/HomePage/FooterImg.png"
+          src="/Images/HomePage/FooterImg.webp"
           alt=""
         />
       </div>
