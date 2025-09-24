@@ -1,17 +1,21 @@
-import React from 'react'
-import Header from './common/Header'
-import Footer from './common/Footer'
-import IntroLoader from './common/IntroLoader'
+import React from "react";
+import Header from "./common/Header";
+import Footer from "./common/Footer";
+import IntroLoader from "./common/IntroLoader";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
-    return (
-        <div>
-            <IntroLoader/>
-            <header><Header /></header>
-            <main>{children}</main>
-            <footer><Footer /></footer>
-        </div>
-    )
-}
+  const router = useRouter();
+  const currentPath = router.pathname;
 
-export default Layout
+  return (
+    <div>
+      <IntroLoader />
+      {currentPath !== "/contact" && <header><Header /></header>}
+      <main>{children}</main>
+      {currentPath !== "/contact" && <footer><Footer /></footer>}
+    </div>
+  );
+};
+
+export default Layout;

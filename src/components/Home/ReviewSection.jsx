@@ -81,7 +81,7 @@ const ReviewSection = () => {
       {/* Floating custom cursor */}
       <div
         ref={cursorRef}
-        className="fixed z-[99] top-0 left-0 text-xs px-4 py-2 bg-[#2E2D2B] text-[#FFFDF4] uppercase pointer-events-none "
+        className="fixed z-[99] top-0 left-0 text-xs px-4 font-semibold py-2 bg-[#2E2D2B] text-[#FFFDF4] uppercase pointer-events-none "
         style={{ transform: "translate(-50%, -50%)" }}
       >
         <h2>
