@@ -155,8 +155,11 @@ const index = () => {
                 {work.images.map((item, i) => (
                     <div
                         key={i}
-                        className={`w-full overflow-hidden col-span-${item.span}`}
-                        style={{ height: item.height }}
+                        className="w-full overflow-hidden"
+                        style={{
+                            gridColumn: `span ${item.span} / span ${item.span}`,
+                            height: item.height,
+                        }}
                     >
                         <img
                             className="w-full h-full object-cover"
@@ -164,6 +167,7 @@ const index = () => {
                             alt={`grid-img-${i}`}
                         />
                     </div>
+
                 ))}
             </div>
 
