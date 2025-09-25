@@ -45,7 +45,7 @@ const ServiceSlider = () => {
 
     return (
         <div>
-            <div className=" serv_slider_paren w-full center mt-20 text-[#FFFDF6] h-screen relative">
+            <div id='services' className=" serv_slider_paren w-full center mt-20 text-[#FFFDF6] h-screen relative">
                 <img className=' serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/HomePage/cdcs.webp" alt="" />
                 <img className=' serv_slide_bg_img_2 w-full h-full absolute object-cover top-0 left-0 z-[3] ' src="/Images/HomePage/erec.webp" alt="" />
                 <img className=' serv_slide_bg_img_3 w-full h-full absolute object-cover top-0 left-0 z-[2] ' src="/Images/HomePage/okdv.webp" alt="" />

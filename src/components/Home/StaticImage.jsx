@@ -34,7 +34,7 @@ const StaticImage = () => {
         })
         tl.fromTo(".show_reel_2", {
             clipPath: "polygon(20% 10%, 80% 10%, 80% 90%, 20% 90%)",
-            y: 600
+            y: 650
         }, {
             scale: 1,
             y: 0,
@@ -55,7 +55,7 @@ const StaticImage = () => {
         }, "pp")
         tl.fromTo(".show_reel_3", {
             clipPath: "polygon(20% 10%, 80% 10%, 80% 90%, 20% 90%)",
-            y: 600
+            y: 650
         }, {
             scale: 1,
             y: 0,

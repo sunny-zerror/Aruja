@@ -1,5 +1,8 @@
 import { useRouter } from 'next/router';
-import React from 'react'
+import React, { useEffect } from 'react'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const worksData = [
     {
@@ -73,16 +76,38 @@ const index = () => {
     const decodedTitle = decodeURIComponent(title || "");
     const work = worksData.find((item) => item.title === decodedTitle);
 
+
+
+    useEffect(() => {
+
+        gsap.to(".paex_img", {
+            y: 500,
+            duration: 4,
+            ease: "linear",
+            scrollTrigger: {
+                trigger: ".stic_image_pent",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+                // markers: true,
+            }
+        })
+
+    }, [work])
+
+
     if (!work) {
         return <p className="p-10">Project not found</p>;
     }
 
     return (
         <div>
-            <div className="w-full h-[170vh] relative text-[#FFFDF4] ">
-                <img className='brightness-90 w-full h-full object-cover'
-                    src={work.HeroImg}
-                    alt={work.title} />
+            <div className="  w-full h-[170vh] relative text-[#FFFDF4] ">
+                <div className=" stic_image_pent w-full h-full overflow-hidden center">
+                    <img className=' paex_img brightness-90 w-full h-full object-cover'
+                        src={work.HeroImg}
+                        alt={work.title} />
+                </div>
                 <div className="absolute w-full top-[30vw] px-10 ">
                     <p className="text-8xl font-semibold uppercase leading-none">
                         {work.title.split(" ").slice(0, 2).join(" ")}

@@ -10,7 +10,6 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <IntroLoader />
       {currentPath !== "/contact" && <header><Header /></header>}
       <main>{children}</main>
       {currentPath !== "/contact" && <footer><Footer /></footer>}

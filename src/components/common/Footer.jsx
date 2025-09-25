@@ -1,10 +1,7 @@
-import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import React from "react";
 
 const Footer = () => {
-  const router = useRouter(); 
-  const currentPath = router.pathname;
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -14,35 +11,26 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full p-10 flex bg-[#BBB86D] items-stretch">
+    <div className="w-full p-10 flex items-stretch">
       <div className="aspect-[3/4]">
         <img
           className="w-full h-full object-cover"
-          src="/Images/HomePage/FooterImg.webp"
+          src="/Images/ContactPageImg.webp"
           alt=""
         />
       </div>
 
       <div className="w-full flex flex-col justify-between pl-10">
         <div className="w-full flex justify-between">
-          {/* Navigation links */}
           <div className="text-4xl flex flex-col gap-y-4 uppercase">
-            {navLinks.map((link) =>
-              currentPath === link.path ? (
-                <Link key={link.path} href={link.path} className="block group w-fit pr-2 overflow-hidden relative ">
-                  <h2 className="italic group-hover:translate-y-[-100%] transition-all duration-300">{link.name}</h2>
-                  <h2 className=" absolute bottom-[-100%] group-hover:bottom-0 left-0 italic transition-all duration-300">{link.name}</h2>
-                </Link>
-              ) : (
-                <Link key={link.path} href={link.path} className="block group w-fit pr-2 overflow-hidden relative ">
-                  <p className=" group-hover:translate-y-[-100%] transition-all duration-300">{link.name}</p>
-                  <p className=" absolute bottom-[-100%] group-hover:bottom-0 left-0  transition-all duration-300">{link.name}</p>
-                </Link>
-              )
+            {navLinks.map((link, i) =>
+              <a href={link.path} key={i} className="group relative w-fit cursor-pointer">
+                <p className=" group-hover:opacity-0 transition-all duration-150">{link.name}</p>
+                <h2 className="absolute italic left-0 top-0 opacity-0 group-hover:opacity-100 transition-all duration-150">{link.name}</h2>
+              </a>
             )}
           </div>
 
-          {/* Social links */}
           <div className="uppercase flex flex-col gap-y-2">
             <button>
               <div className='  relative w-fit group overflow-hidden uppercase flex items-center gap-2'>
@@ -74,7 +62,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Email */}
         <div className="w-full uppercase leading-none">
           <p className="w-full translate-y-3 text-[6.6vw]">hello@arujak.com</p>
         </div>

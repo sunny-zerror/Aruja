@@ -24,3 +24,12 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+.text-clip-img {
+  background-image: url(../../public/Images/clipText_img.webp); 
+  background-size: cover;
+  background-position: start;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

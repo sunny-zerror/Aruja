@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import gsap from 'gsap'
-import CustomEase from 'gsap/dist/CustomEase'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger, CustomEase);
+gsap.registerPlugin(ScrollTrigger);
 
 const ParallaxImgScroll = () => {
 

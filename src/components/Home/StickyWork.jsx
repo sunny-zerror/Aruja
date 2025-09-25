@@ -96,7 +96,7 @@ const StickyWork = () => {
         <div>
             <div className="w-full px-10 pt-20">
                 <div className="w-full relative mb-20 h-[50vh] flex flex-col  items-center">
-                    <div className=" w-[15%] left-0 bottom-5 font-semibold absolute uppercase text-sm">
+                    <div className="sticky_img_1 w-[15%] left-0 bottom-5 font-semibold absolute uppercase text-sm">
                         <p>our interiors are designed to be functional, timeless, and personal.</p>
                         <button>
                             <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center gap-2'>
@@ -112,10 +112,10 @@ const StickyWork = () => {
                             </div>
                         </button>
                     </div>
-                    <div className="w-full ml-3 mb-5 h-fit text-sm font-black">
+                    <div className=" sticky_img_1 w-full ml-3 mb-5 h-fit text-sm font-black">
                         <p>OUR WORK</p>
                     </div>
-                    <div className="uppercase text-8xl space-y-5 w-full">
+                    <div className=" sticky_img_1 uppercase text-8xl space-y-5 w-full">
                         <div className="flex gap-2">
                             <p>From</p>
                             <h2>Homes</h2>
@@ -128,7 +128,6 @@ const StickyWork = () => {
                             <p>to flow</p>
                         </div>
                     </div>
-
                 </div>
 
                 <div className="w-full sticky_img_parent relative h-[70vw] items-start  grid  grid-cols-4 gap-5">

@@ -107,7 +107,7 @@ const index = () => {
         <div className="w-full pt-20 flex-col center">
             {/* Title */}
             <div className="leading-none flex gap-3 -translate-x-5 uppercase text-[17.5vw]">
-                <p>Our</p>
+                <p className='text-clip-img'>Our</p>
                 <h2 className="italic">work</h2>
             </div>
 
@@ -145,7 +145,7 @@ const index = () => {
                 className="w-full my-20 px-10 grid gap-y-14 gap-x-5 grid-cols-2"
             >
                 {worksData.map((item, idx) => (
-                    <Link key={idx} href={`/work/${item.title}`} >
+                    <a key={idx} href={`/work/${item.title}`} >
                         <div key={idx} className="shrink-0 w-full aspect-video">
                             <p className=" font-semibold mb-2 uppercase">{item.title}</p>
                             <div className="w-full h-full overflow-hidden">
@@ -156,7 +156,7 @@ const index = () => {
                                 />
                             </div>
                         </div>
-                    </Link>
+                    </a>
                 ))}
             </div>
 
@@ -167,18 +167,18 @@ const index = () => {
                 style={{ opacity: 0, display: "none" }}
             >
                 {worksData.map((item, idx) => (
-                    <Link key={idx} href={`/work/${item.title}`} >
-                    <div key={idx} className="shrink-0 w-[420px] h-full">
-                        <p className="text-sm font-semibold mb-2 uppercase">{item.title}</p>
-                        <div className="w-full h-full overflow-hidden">
-                            <img
-                                className="w-full h-full object-cover"
-                                src={item.HeroImg}
-                                alt=""
-                            />
+                    <a key={idx} href={`/work/${item.title}`} >
+                        <div key={idx} className="shrink-0 w-[420px] h-full">
+                            <p className="text-sm font-semibold mb-2 uppercase">{item.title}</p>
+                            <div className="w-full h-full overflow-hidden">
+                                <img
+                                    className="w-full h-full object-cover"
+                                    src={item.HeroImg}
+                                    alt=""
+                                />
+                            </div>
                         </div>
-                    </div>
-                    </Link>
+                    </a>
                 ))}
             </div>
         </div>

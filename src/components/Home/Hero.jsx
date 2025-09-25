@@ -206,10 +206,10 @@ const Hero = () => {
                 <img className='hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="" />
                 <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white text-5xl font-semibold">
                     <div className="block overflow-hidden">
-                        <p className='anim_txt font-bold'>Where Spaces Flows,</p>
+                        <p className='anim_txt font-bold'>Design that lives, </p>
                     </div>
                     <div className="block overflow-hidden">
-                        <p className='anim_txt font-bold'>& thinks Design</p>
+                        <p className='anim_txt font-bold'>breathes, and belongs</p>
                     </div>
                     <p></p>
                 </div>
@@ -260,6 +260,19 @@ const Hero = () => {
                                     <h2> <i>and precision.</i> </h2>
                                 </div>
                             </div>
+                            <button>
+                            <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center gap-2'>
+                                <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                                <p>
+                                    View more
+                                </p>
+                                <div className="block relative">
+                                    <img className='  opacity-0  ' src="/icons/black_arrow.png" alt="" />
+                                    <img className='absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
+                                    <img className=' absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
+                                </div>
+                            </div>
+                        </button>
                         </div>
 
                         <div className=" sq_img_1 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] right-10 w-[15vw] ">

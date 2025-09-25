@@ -1,3 +1,4 @@
+import IntroLoader from '@/components/common/IntroLoader'
 import Hero from '@/components/Home/Hero'
 import ReviewSection from '@/components/Home/ReviewSection'
 import ServiceSlider from '@/components/Home/ServiceSlider'
@@ -8,12 +9,13 @@ import React from 'react'
 const index = () => {
   return (
     <>
-      <Hero/>
+      <IntroLoader />
+      <Hero />
       {/* <div className="h-screen"></div> */}
       <StaticImage />
       <StickyWork />
-      <ServiceSlider/>
-      <ReviewSection/>
+      <ServiceSlider />
+      <ReviewSection />
     </>
   )
 }
