@@ -19,7 +19,7 @@ const index = () => {
                 </div>
                 <div className="h-full w-[75%] relative flex items-end justify-end">
                     <div className="absolute text-[6vw] uppercase overflow-hidden scroller_none  w-full top-[25%]">
-                    <Marquee className='h-full w-full scroller_none ' >
+                    <Marquee gradient gradientWidth={100} className='h-full w-full scroller_none ' >
                         <p className='h-full ml-[15vw]'>
                             chew on this
                         </p>
@@ -32,7 +32,7 @@ const index = () => {
                     </Marquee>
                 </div>
 
-                    <div className="w-full space-y-10 uppercase p-28">
+                    <div className="w-full font-semibold space-y-10 uppercase p-28">
                         <div className="flex w-full justify-between">
 
                             <div className="w-1/2">

@@ -51,21 +51,21 @@ const ServiceSlider = () => {
                 <img className=' serv_slide_bg_img_3 w-full h-full absolute object-cover top-0 left-0 z-[2] ' src="/Images/HomePage/okdv.webp" alt="" />
                 <img className=' serv_slide_bg_img_4 w-full h-full absolute object-cover top-0 left-0 z-[1] ' src="/Images/HomePage/wmdsc.webp" alt="" />
 
-                <div className=" serv_slide_bg_img_1 absolute w-[90%] h-[85%] bg-[#454738] z-[15] p-8">
+                <div className=" serv_slide_bg_img_1 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[15] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
-                        <div className=" flex  justify-between">
-                            <div className="flex gap-2 uppercase text-4xl">
+                        <div className=" flex   justify-between">
+                            <div className="flex gap-2 uppercase text-lg lg:text-4xl">
                                 <p>Our</p>
                                 <h2 className='italic'>Services</h2>
                             </div>
                             <div className="flex gap-2 items-end">
-                                <p className='text-7xl'>01/</p>
-                                <p className='text-5xl opacity-50'>04</p>
+                                <p className=' text-3xl  lg:text-7xl'>01/</p>
+                                <p className=' text-lg lg:text-5xl opacity-50'>04</p>
                             </div>
                         </div>
-                        <div className=" flex items-end justify-between">
-                            <p className='text-5xl uppercase'>Residential Interior </p>
-                            <div className="w-[30%] leading-none">
+                        <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
+                            <p className=' text-xl lg:text-5xl uppercase'>Residential Interior </p>
+                            <div className=" w-full text-xs lg:text-base lg:w-[30%] leading-none">
                                 <p className=''>End-to-end spatial design and structural planning that shape how people live and work.</p>
                             </div>
                         </div>
@@ -76,21 +76,21 @@ const ServiceSlider = () => {
                 </div>
 
 
-                <div className=" serv_slide_bg_img_2 absolute w-[90%] h-[85%] bg-[#454738] z-[14] p-8">
+                <div className=" serv_slide_bg_img_2 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[14] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
-                        <div className=" flex  justify-between">
-                            <div className="flex gap-2 uppercase text-4xl">
+                        <div className=" flex   justify-between">
+                            <div className="flex gap-2 uppercase text-lg lg:text-4xl">
                                 <p>Our</p>
                                 <h2 className='italic'>Services</h2>
                             </div>
                             <div className="flex gap-2 items-end">
-                                <p className='text-7xl'>02/</p>
-                                <p className='text-5xl opacity-50'>04</p>
+                                <p className=' text-3xl  lg:text-7xl'>02/</p>
+                                <p className=' text-lg lg:text-5xl opacity-50'>04</p>
                             </div>
                         </div>
-                        <div className=" flex items-end justify-between">
-                            <p className='text-5xl uppercase'>commercial interiors</p>
-                            <div className="w-[30%] leading-none">
+                        <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
+                            <p className=' text-xl lg:text-5xl uppercase'>commercial interiors</p>
+                            <div className=" w-full text-xs lg:text-base lg:w-[30%] leading-none">
                                 <p className=''>End-to-end spatial design and structural planning that shape how people live and work.</p>
                             </div>
                         </div>
@@ -101,21 +101,21 @@ const ServiceSlider = () => {
                 </div>
 
 
-                <div className="serv_slide_bg_img_3 absolute w-[90%] h-[85%] bg-[#454738] z-[13] p-8">
+                <div className="serv_slide_bg_img_3 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[13] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
-                        <div className=" flex  justify-between">
-                            <div className="flex gap-2 uppercase text-4xl">
+                        <div className=" flex   justify-between">
+                            <div className="flex gap-2 uppercase text-lg lg:text-4xl">
                                 <p>Our</p>
                                 <h2 className='italic'>Services</h2>
                             </div>
                             <div className="flex gap-2 items-end">
-                                <p className='text-7xl'>03/</p>
-                                <p className='text-5xl opacity-50'>04</p>
+                                <p className=' text-3xl  lg:text-7xl'>03/</p>
+                                <p className=' text-lg lg:text-5xl opacity-50'>04</p>
                             </div>
                         </div>
-                        <div className=" flex items-end justify-between">
-                            <p className='text-5xl uppercase'>space planning</p>
-                            <div className="w-[30%] leading-none">
+                        <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
+                            <p className=' text-xl lg:text-5xl uppercase'>space planning</p>
+                            <div className=" w-full text-xs lg:text-base lg:w-[30%] leading-none">
                                 <p className=''>End-to-end spatial design and structural planning that shape how people live and work.</p>
                             </div>
                         </div>
@@ -126,21 +126,21 @@ const ServiceSlider = () => {
                 </div>
 
 
-                <div className="serv_slide_bg_img_4 absolute w-[90%] h-[85%] bg-[#454738] z-[12] p-8">
+                <div className="serv_slide_bg_img_4 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[12] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
-                        <div className=" flex  justify-between">
-                            <div className="flex gap-2 uppercase text-4xl">
+                        <div className=" flex   justify-between">
+                            <div className="flex gap-2 uppercase text-lg lg:text-4xl">
                                 <p>Our</p>
                                 <h2 className='italic'>Services</h2>
                             </div>
                             <div className="flex gap-2 items-end">
-                                <p className='text-7xl'>04/</p>
-                                <p className='text-5xl opacity-50'>04</p>
+                                <p className=' text-3xl  lg:text-7xl'>04/</p>
+                                <p className=' text-lg lg:text-5xl opacity-50'>04</p>
                             </div>
                         </div>
-                        <div className=" flex items-end justify-between">
-                            <p className='text-5xl uppercase'>styling</p>
-                            <div className="w-[30%] leading-none">
+                        <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
+                            <p className=' text-xl lg:text-5xl uppercase'>styling</p>
+                            <div className=" w-full text-xs lg:text-base lg:w-[30%] leading-none">
                                 <p className=''>End-to-end spatial design and structural planning that shape how people live and work.</p>
                             </div>
                         </div>

@@ -150,47 +150,93 @@ const Hero = () => {
             ease: "linear",
         }, "parr");
 
-        tl.to(".sq_img_1", {
-            top: "-15vw",
-            duration: 1,
-            ease: "linear",
-        }, "parr");
-        tl.to(".sq_img_2", {
-            top: "-15vw",
-            duration: 1,
-            ease: "linear",
-            delay: .5,
-        }, "parr");
-        tl.to(".sq_img_3", {
-            top: "-15vw",
-            duration: 1,
-            ease: "linear",
-            delay: 1,
-        }, "parr");
-        tl.to(".sq_img_4", {
-            top: "-15vw",
-            duration: 1,
-            ease: "linear",
-            delay: 1.5
-        }, "parr");
-        tl.to(".sq_img_5", {
-            top: "-15vw",
-            duration: 1,
-            ease: "linear",
-            delay: 2,
-        }, "parr");
-        tl.to(".about_div", {
-            y: -150,
-            duration: 1,
-            ease: "linear",
-            delay: 2.3,
-        }, "parr");
-        tl.to(".number_div", {
-            bottom: " 10vh",
-            duration: 1,
-            ease: "linear",
-            delay: 2.3,
-        }, "parr");
+        if(window.innerWidth >= 1024){
+            tl.to(".sq_img_1", {
+                top: "-15vw",
+                duration: 1,
+                ease: "linear",
+            }, "parr");
+            tl.to(".sq_img_2", {
+                top: "-15vw",
+                duration: 1,
+                ease: "linear",
+                delay: .5,
+            }, "parr");
+            tl.to(".sq_img_3", {
+                top: "-15vw",
+                duration: 1,
+                ease: "linear",
+                delay: 1,
+            }, "parr");
+            tl.to(".sq_img_4", {
+                top: "-15vw",
+                duration: 1,
+                ease: "linear",
+                delay: 1.5
+            }, "parr");
+            tl.to(".sq_img_5", {
+                top: "-15vw",
+                duration: 1,
+                ease: "linear",
+                delay: 2,
+            }, "parr");
+            tl.to(".about_div", {
+                y: -150,
+                duration: 1,
+                ease: "linear",
+                delay: 2.3,
+            }, "parr");
+            tl.to(".number_div", {
+                bottom: " 10vh",
+                duration: 1,
+                ease: "linear",
+                delay: 2.3,
+            }, "parr");
+        }
+        if(window.innerWidth < 1024){
+             tl.to(".sq_img_1", {
+                top: "-100vh",
+                duration: 1,
+                ease: "linear",
+            }, "parr");
+            tl.to(".sq_img_2", {
+                top: "-100vh",
+                duration: 1,
+                ease: "linear",
+                delay: .5,
+            }, "parr");
+            tl.to(".sq_img_3", {
+                top: "-100vh",
+                duration: 1,
+                ease: "linear",
+                delay: 1,
+            }, "parr");
+            tl.to(".sq_img_4", {
+                top: "-100vh",
+                duration: 1,
+                ease: "linear",
+                delay: 1.5
+            }, "parr");
+            tl.to(".sq_img_5", {
+                top: "-100vh",
+                duration: 1,
+                ease: "linear",
+                delay: 2,
+            }, "parr");
+            tl.to(".about_div", {
+                y: -150,
+                duration: 1,
+                ease: "linear",
+                delay: 2.3,
+            }, "parr");
+            tl.to(".number_div", {
+                bottom: " 10vh",
+                duration: 1,
+                ease: "linear",
+                delay: 2.3,
+            }, "parr");
+
+        }
 
 
 
@@ -200,11 +246,11 @@ const Hero = () => {
     return (
         <div>
             <div className=" hero_paren  w-full center h-screen relative overflow-hidden">
-                <p className='  left_txt_2a text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[99] '>Designed</p>
-                <p className=' right_txt_2a  text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[99] '>For you </p>
+                <p className='  left_txt_2a text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[99] '>Designed</p>
+                <p className=' right_txt_2a  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[99] '>For you </p>
 
                 <img className='hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="" />
-                <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white text-5xl font-semibold">
+                <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
                     <div className="block overflow-hidden">
                         <p className='anim_txt font-bold'>Design that lives, </p>
                     </div>
@@ -238,76 +284,78 @@ const Hero = () => {
                 <div className=" hero_slide_4 overflow-hidden scale-[0] bg-[#FFFDF6] w-full h-full absolute z-[5]">
                     <div className="w-full h-screen relative flex-col gap-10 center text-center ">
                         <div className=" about_div flex-col w-full h-full gap-10 center text-center">
-                            <p className='font-black'>ABOUT US</p>
-                            <div className="text-5xl flex flex-col  items-center   capitalize">
-                                <div className='block relative overflow-hidden pb-2'>
+                            <p className=' text-xs lg:text-base font-black'>ABOUT US</p>
+                            <div className="  lg:text-5xl flex flex-col  items-center   capitalize">
+                                <div className='block relative overflow-hidden lg:pb-2'>
                                     <div className=" opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
                                     <p>
                                         At arujaK, design is more than decoration
                                     </p>
                                 </div>
-                                <div className="flex  relative overflow-hidden pb-2 pr-2 gap-2">
+                                <div className="flex  relative overflow-hidden lg:pb-2 pr-2 gap-2">
                                     <div className=" opa_slide_2 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
                                     <p>decoration it’s about</p>
                                     <h2> <i>creating spaces</i> </h2>
                                 </div>
-                                <div className='block relative overflow-hidden pb-2 '>
+                                <div className='block relative overflow-hidden lg:pb-2 '>
                                     <div className=" opa_slide_3 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
                                     <p >that flow with purpose, proportion, </p>
                                 </div>
-                                <div className='block relative w-fit overflow-hidden pb-2 '>
+                                <div className='block relative w-fit overflow-hidden lg:pb-2 '>
                                     <div className=" opa_slide_4 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
                                     <h2> <i>and precision.</i> </h2>
                                 </div>
                             </div>
-                            <button>
-                            <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center gap-2'>
-                                <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                                <p>
-                                    View more
-                                </p>
-                                <div className="block relative">
-                                    <img className='  opacity-0  ' src="/icons/black_arrow.png" alt="" />
-                                    <img className='absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
-                                    <img className=' absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
-                                </div>
-                            </div>
-                        </button>
+                            <a href="/studio">
+                                <button>
+                                    <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
+                                        <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                                        <p className=' text-xs lg:text-base '>
+                                            View more
+                                        </p>
+                                        <div className="block relative">
+                                            <img className='  w-[70%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="" />
+                                            <img className='  w-[70%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
+                                            <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
                         </div>
 
-                        <div className=" sq_img_1 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] right-10 w-[15vw] ">
+                        <div className=" sq_img_1 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-10 w-[50vw] lg:w-[15vw] ">
                             <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/six_70549f943a.png" alt="" />
                         </div>
-                        <div className=" sq_img_2 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] left-10 w-[15vw] ">
+                        <div className=" sq_img_2 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-10 w-[50vw] lg:w-[15vw] ">
                             <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="" />
                         </div>
-                        <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-15vw] left-1/2 -translate-x-1/2 w-[15vw] ">
+                        <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] lg:w-[15vw] ">
                             <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="" /></div>
-                        <div className=" sq_img_4 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] right-32 w-[15vw] ">
+                        <div className=" sq_img_4 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-32 w-[50vw] lg:w-[15vw] ">
                             <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service_01a01267d4.png" alt="" />
                         </div>
-                        <div className=" sq_img_5 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] left-32 w-[15vw] ">
+                        <div className=" sq_img_5 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-32 w-[50vw] lg:w-[15vw] ">
                             <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_damac_2cd1f341f0.png" alt="" />
                         </div>
 
 
-                        <div className=" number_div w-full absolute bottom-[-20vh] left-0 h-[20vh]   flex items-center justify-between px-24">
+                        <div className=" number_div w-full absolute bottom-[-20vh] left-0 h-[20vh]   grid space-y-10 lg:space-y-0 content-center  grid-cols-2 lg:flex lg:items-center lg:justify-between px-3 lg:px-24">
                             <div className=" text-start block">
-                                <h2 className='text-8xl'>15+</h2>
-                                <p className='uppercase text-sm font-extrabold'>projects</p>
+                                <h2 className=' text-5xl lg:text-8xl'>15+</h2>
+                                <p className='uppercase text-xs lg:text-sm font-extrabold'>projects</p>
+                            </div>  
+                            <div className=" text-start block">
+                                <div className=' text-5xl lg:text-8xl flex items-center'> <h2> 45K+</h2> <p className=' text-xl lg:text-3xl lowercase lg:-translate-y-[3px]'>SQ. ft.</p> </div>
+                                <p className='uppercase text-xs lg:text-sm font-extrabold'>Space Designed</p>
                             </div>
                             <div className=" text-start block">
-                                <div className='text-8xl flex items-center'> <h2> 45K+</h2> <p className='text-3xl lowercase -translate-y-[3px]'>SQ. ft.</p> </div>
-                                <p className='uppercase text-sm font-extrabold'>Space Designed</p>
-                            </div>
-                            <div className=" text-start block">
-                                <div className='text-8xl flex items-center'> <h2> 5+</h2> <p className='text-3xl capitalize  -translate-y-[2px]'>Yrs</p> </div>
+                                <div className=' text-5xl lg:text-8xl flex items-center'> <h2> 5+</h2> <p className='text-xl lg:text-3xlcapitalize  lg:-translate-y-[2px]'>Yrs</p> </div>
 
-                                <p className='uppercase text-sm font-extrabold'>Experience</p>
+                                <p className='uppercase text-xs lg:text-sm font-extrabold'>Experience</p>
                             </div>
                             <div className=" text-start block">
-                                <h2 className='text-8xl'>100%</h2>
-                                <p className='uppercase text-sm font-extrabold'>Transparency</p>
+                                <h2 className=' text-5xl lg:text-8xl'>100%</h2>
+                                <p className='uppercase text-xs lg:text-sm font-extrabold'>Transparency</p>
                             </div>
                         </div>
 

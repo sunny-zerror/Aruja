@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 const LenisScroll = ({ children }) => {
 
   useEffect(() => {
-    if(window.innerWidth < 1024) return
+    if (window.innerWidth < 1024) return
     const lenis = new Lenis({
       duration: 1.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -17,7 +17,7 @@ const LenisScroll = ({ children }) => {
       infinite: false,
     });
 
-    window.lenis = lenis; 
+    window.lenis = lenis;
 
     lenis.on("scroll", ({ scroll }) => {
     });

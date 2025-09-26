@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full p-10 flex items-stretch">
+    <div className="w-full  border-t border-black/20 p-10 flex items-stretch">
       <div className="aspect-[3/4]">
         <img
           className="w-full h-full object-cover"

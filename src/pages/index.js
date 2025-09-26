@@ -11,7 +11,6 @@ const index = () => {
     <>
       <IntroLoader />
       <Hero />
-      {/* <div className="h-screen"></div> */}
       <StaticImage />
       <StickyWork />
       <ServiceSlider />

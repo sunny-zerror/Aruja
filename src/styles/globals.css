@@ -26,10 +26,12 @@ button {
 }
 
 .text-clip-img {
-  background-image: url(../../public/Images/clipText_img.webp); 
-  background-size: cover;
-  background-position: start;
+  background-image: url('/Images/HomePage/FooterImg.webp'); /* Correct path */
+  background-size: 140vw 140vh; 
+  background-position: 21% -10%; 
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  display: inline-block; /* ensure clip works properly */
 }
+

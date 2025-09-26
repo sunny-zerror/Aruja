@@ -112,6 +112,16 @@ const index = () => {
                 // markers: true,
             }
         })
+        gsap.to(".text-clip-img", {
+            backgroundPosition: "21% -30%", // move vertically to 100%
+            duration: 3,
+            scrollTrigger: {
+                trigger: ".stic_image_pent_c",
+                start: "top 50%",
+                scrub: true,
+                // markers: true,
+            }
+        });
 
 
         var tl = gsap.timeline({
@@ -176,6 +186,8 @@ const index = () => {
             ease: "linear",
         }, "parallel")
         tl.set(".inside_dot_1", {
+            height:"20px",
+            width:"20px",
             backgroundColor: "#FFFDF6",
             delay: 0.01,
             ease: "linear",
@@ -198,6 +210,8 @@ const index = () => {
             ease: "linear",
         }, "parallel")
         tl.set(".inside_dot_2", {
+            height:"20px",
+            width:"20px",
             backgroundColor: "#FFFDF6",
             delay: 0.105,
             ease: "linear",
@@ -220,6 +234,8 @@ const index = () => {
             ease: "linear",
         }, "parallel")
         tl.set(".inside_dot_3", {
+            height:"20px",
+            width:"20px",
             backgroundColor: "#FFFDF6",
             delay: 0.2,
             ease: "linear",
@@ -242,6 +258,8 @@ const index = () => {
             ease: "linear",
         }, "parallel")
         tl.set(".inside_dot_4", {
+            height:"20px",
+            width:"20px",
             backgroundColor: "#FFFDF6",
             delay: 0.295,
             ease: "linear",
@@ -264,6 +282,8 @@ const index = () => {
             ease: "linear",
         }, "parallel")
         tl.set(".inside_dot_5", {
+            height:"20px",
+            width:"20px",
             backgroundColor: "#FFFDF6",
             delay: 0.39,
             ease: "linear",
@@ -282,6 +302,8 @@ const index = () => {
             ease: "linear",
         }, "parallel")
         tl.set(".last_inside_dot_5", {
+            height:"20px",
+            width:"20px",
             backgroundColor: "#FFFDF6",
             delay: 0.482,
             ease: "linear",
@@ -300,7 +322,7 @@ const index = () => {
     }, [])
 
     return (
-        <div className="w-full pt-20 flex-col center">
+        <div className="w-full pt-12 flex-col center">
             <div className="leading-none flex gap-6 -translate-x-5 uppercase text-[16.2vw]">
                 <p className="text-clip-img">The</p>
                 <h2 className="italic">studio</h2>
@@ -358,7 +380,7 @@ const index = () => {
                                 <h2>the</h2>
                             </div>
                             <div className="flex justify-end gap-4 w-full">
-                                <p className="text-[#8C8C8C]">Design</p>
+                                <p>Design</p>
                                 <h2>Studio</h2>
                             </div>
                         </div>
@@ -384,7 +406,7 @@ const index = () => {
                 <div className="w-[30vw] aspect-[6/7] h-fit overflow-hidden">
                     <img
                         className="w-full h-full object-cover"
-                        src="/Images/HomePage/wmdsc.webp"
+                        src="/Images/studioPage/behind_studio.webp"
                         alt=""
                     />
                 </div>
@@ -446,7 +468,7 @@ const index = () => {
                         {solutionData.map((item, idx) => (
                             <div key={idx} className="w-[30vw] shrink-0 space-y-10 ">
                                 <div className="size-24">
-                                    <img className={` icon_${idx} ${idx === 0 ? "opacity-100" : "opacity-30"} `} src={item.icon} alt="" />
+                                    <img className={` transition-all duration-300 icon_${idx} ${idx === 0 ? "opacity-100" : "opacity-30"} `} src={item.icon} alt="" />
                                 </div>
                                 <div className="w-full h-[3px] bg-[#fffdf646] relative ">
                                     <div className="w-full h-full relative overflow-hidden">
@@ -455,15 +477,15 @@ const index = () => {
 
                                     {idx === 5 && (
                                         <div className={` ${idx === 5 ? " border-[#fffdf646] " : ""} last_dot_border_${idx} size-9  absolute overflow-hidden border-[2px]  bg-[#454738] top-1/2 right-0 -translate-y-1/2 center rounded-full`}>
-                                            <div className={`  ${idx === 5 ? " bg-[#fffdf646] " : "bg-[#FFFDF6]"} last_inside_dot_${idx}  size-5 rounded-full  `}></div>
+                                            <div className={`  ${idx === 5 ? " bg-[#fffdf646] " : "bg-[#FFFDF6]"} transition-all duration-300 last_inside_dot_${idx} h-[0px] w-[0px]  rounded-full  `}></div>
                                         </div>
                                     )}
 
                                     <div className={` ${idx === 0 ? "border-[#FFFDF6]  " : "border-[#fffdf646]"} dot_border_${idx} absolute size-9 border-[2px]  bg-[#454738] top-1/2 left-0 -translate-y-1/2 center rounded-full`}>
-                                        <div className={`  ${idx === 0 ? "  bg-[#FFFDF6] " : "bg-[#fffdf646]"} inside_dot_${idx} size-5 rounded-full  `}></div>
+                                        <div className={`  ${idx === 0 ? "  bg-[#FFFDF6] h-[20px] w-[20px] " : "bg-[#fffdf646] h-[0px] w-[0px]"} transition-all duration-300 inside_dot_${idx}  rounded-full  `}></div>
                                     </div>
                                 </div>
-                                <div className={` content_box_${idx}  w-[70%] ${idx === 0 ? "opacity-100" : "opacity-30"} `}  >
+                                <div className={` transition-all duration-300 content_box_${idx}  w-[70%] ${idx === 0 ? "opacity-100" : "opacity-30"} `}  >
                                     <p className='text-2xl leading-tight font-semibold'>0{idx + 1}/</p>
                                     <p className='uppercase leading-tight font-semibold text-2xl'>{item.title}</p>
                                     <p className=' font-semibold mt-5 leading-tight'>{item.desc}</p>

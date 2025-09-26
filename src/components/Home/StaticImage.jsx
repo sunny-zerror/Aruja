@@ -86,15 +86,19 @@ const StaticImage = () => {
                     style={{ clipPath: "polygon(20% 10%, 80% 10%, 80% 90%, 20% 90%)" }}
                     className="show_reel_1 absolute z-[1]  w-full h-screen scale-[.3]   center text-white">
                     <video className='vid_1 w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="/video/vid2.mp4"></video>
-                    <div className=" det_1 absolute flex gap-10  top-10 ">
+                    <div className=" det_1 absolute flex gap-5 lg:gap-10  top-10 ">
                         <h2> 1 </h2>
                         <h2> /</h2>
                         <h2>3</h2>
                     </div>
-                    <div className=" det_1 absolute w-full flex items-center justify-between px-10">
-                        <p className='capitalize'>Big blue</p>
-                        <h2 className=' text-7xl uppercase '>Wild Blueberry</h2>
-                        <p className='capitalize'>Corporate film</p>
+                    <div className=" det_1 absolute w-full flex items-center justify-between px-3 lg:px-10">
+                        <div className="w-[20%]">
+                        <p className=' text-xs lg:text-base capitalize'>Big blue</p>
+                        </div>
+                        <h2 className=' text-2xl text-center lg:text-7xl uppercase '>Wild Blueberry</h2>
+                        <div className=" w-[20%] text-end">
+                        <p className=' text-xs lg:text-base capitalize'>Corporate film</p>
+                        </div>
                     </div>
                 </div>
                 <div
@@ -106,10 +110,14 @@ const StaticImage = () => {
                         <h2> /</h2>
                         <h2>3</h2>
                     </div>
-                    <div className=" det_2 absolute w-full flex items-center justify-between px-10">
-                        <p className='capitalize'>Pool club</p>
-                        <h2 className=' text-7xl uppercase '>the best of summer</h2>
-                        <p className='capitalize'>advertisement</p>
+                    <div className=" det_2 absolute w-full flex items-center justify-between px-3 lg:px-10">
+                        <div className="w-[20%]  text-start">
+                        <p className=' text-xs lg:text-base capitalize'>Pool club</p>
+                        </div>
+                        <h2 className=' text-3xl text-center lg:text-7xl uppercase '>the best of summer</h2>
+                        <div className="w-[20%] text-end">
+                        <p className=' text-xs lg:text-base capitalize'>Film</p>
+                        </div>
                     </div>
                 </div>
                 <div
@@ -121,10 +129,14 @@ const StaticImage = () => {
                         <h2> /</h2>
                         <h2>3</h2>
                     </div>
-                    <div className=" absolute w-full flex items-center justify-between px-10">
-                        <p className='capitalize'>Genome Quebec</p>
-                        <h2 className=' text-7xl uppercase '>Genomics</h2>
-                        <p className='capitalize'>Corporate film</p>
+                    <div className=" absolute w-full flex items-center justify-between px-3 lg:px-10">
+                        <div className="w-[20%]  text-start">
+                        <p className=' text-xs lg:text-base capitalize'>Genome Quebec</p>
+                        </div>
+                        <h2 className=' text-3xl text-center lg:text-7xl uppercase '>Genomics</h2>
+                        <div className="w-[20%] text-end">
+                        <p className=' text-xs lg:text-base capitalize'>Film</p>
+                        </div>
                     </div>
                 </div>
             </div>

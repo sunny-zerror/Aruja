@@ -24,63 +24,64 @@ const data = [
 
 const StickyWork = () => {
 
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".sticky_elem_0",
-        start: "top center",
-        end: "+=1300",
-        scrub: true,
-        // markers: true,
-      },
-    });
 
-    tl.to(".sticky_txt_box_0", {
-      opacity: 1,
-      duration: .5
-    })
-      .to(".sticky_txt_box_1", {
-        opacity: 1,
-        duration: .5
-      }, "+=0")
-      .to(".sticky_txt_box_2", {
-        opacity: 1,
-        duration: .5
-      }, "+=1")
-      .to(".sticky_txt_box_3", {
-        opacity: 1,
-        duration: .5
-      }, "+=0");
+useEffect(() => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sticky_elem_0",
+      start: "top center",
+      end: "+=1300",
+      scrub: true,
+      // markers: true,
+    },
+  });
 
-  }, []);
+  tl.to(".sticky_txt_box_0", { 
+    opacity: 1,
+    duration: .5
+  })
+  .to(".sticky_txt_box_1", { 
+    opacity: 1,
+    duration: .5
+  }, "+=0") 
+  .to(".sticky_txt_box_2", { 
+    opacity: 1,
+    duration: .5
+  }, "+=1")
+  .to(".sticky_txt_box_3", { 
+    opacity: 1,
+    duration: .5
+  }, "+=0");
 
+}, []);
 
+  
 
 
   return (
     <div>
-      <div className="w-full px-3 lg:px-10 pt-28">
+      <div className="w-full px-10 pt-20">
         <div className="w-full relative mb-20  flex flex-col  items-center">
-          <div className=" w-[35%] leading-tight lg:w-[15%] left-0 bottom-[-50%] lg:bottom-5 font-semibold absolute uppercase text-[8px] lg:text-sm">
+          <div className=" w-[15%] left-0 bottom-5 font-semibold absolute uppercase text-sm">
             <p>our interiors are designed to be functional, timeless, and personal.</p>
             <button>
-              <div className=' mt-3 lg:mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
+              <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center gap-2'>
                 <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                <p className=' text-[8px] lg:text-base '>
+                <p>
                   View more
                 </p>
                 <div className="block relative">
-                  <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="" />
-                  <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
-                  <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
+                  <img className='  opacity-0  ' src="/icons/black_arrow.png" alt="" />
+                  <img className='absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
+                  <img className=' absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
                 </div>
               </div>
             </button>
           </div>
-          <div className=" w-full lg:ml-3 mb-3 lg:mb-5 h-fit text-xs lg:text-sm font-black">
+          <div className=" w-full ml-3 mb-5 h-fit text-sm font-black">
             <p>OUR WORK</p>
           </div>
-          <div className=" uppercase text-2xl lg:text-8xl lg:space-y-5 w-full">
+          <div className=" uppercase text-8xl space-y-5 w-full">
             <div className="flex gap-2">
               <p>From</p>
               <h2>Homes</h2>
@@ -94,21 +95,7 @@ const StickyWork = () => {
             </div>
           </div>
         </div>
-
-        <div className="w-full grid grid-cols-2 space-y-5 gap-3 lg:hidden">
-          {data.map((item, idx) => (
-            <div key={idx} className="w-full">
-              <img className='w-full aspect-square mb-1' src={item.img} alt="" />
-              <div className="w-full text-xs space-y-2 ">
-                <p>/ 0{idx + 1}</p>
-                <p className='leading-tight'>{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-
-        <div className=" hidden lg:block space-y-10">
+        <div className="space-y-10">
           {data.map((item, idx) => {
             if (idx === 0) {
               return (
@@ -205,6 +192,23 @@ const StickyWork = () => {
             }
           })}
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </div>
     </div>
