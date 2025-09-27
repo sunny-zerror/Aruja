@@ -62,7 +62,7 @@ const index = () => {
           className="w-full  gap-5   flex "
         >
           {[...worksData, ...worksData].map((item, idx) => (
-            <a key={idx} href={`/work/${item.title}`}>
+            <Link key={idx} href={`/work/${item.title}`}>
               <div className="shrink-0 w-[360px] h-full">
                 <p className="text-sm font-semibold mb-2 uppercase">{item.title}</p>
                 <div className="w-full h-full overflow-hidden">
