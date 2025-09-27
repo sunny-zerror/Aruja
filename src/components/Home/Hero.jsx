@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import CustomEase from 'gsap/dist/CustomEase'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import Link  from 'next/link';
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const Hero = () => {
@@ -31,7 +32,7 @@ const Hero = () => {
             scrollTrigger: {
                 trigger: ".hero_paren",
                 start: "top top",
-                end: "+=3500",
+                end: "+=6000",
                 scrub: true,
                 pin: true,
                 // markers: true,
@@ -150,9 +151,18 @@ const Hero = () => {
             ease: "linear",
         }, "parr");
 
-        if(window.innerWidth >= 1024){
+
+        ///for desktop
+        if (window.innerWidth >= 1024) {
             tl.to(".sq_img_1", {
                 top: "-15vw",
+                duration: 1,
+                ease: "linear",
+            }, "parr");
+            tl.fromTo(".sq_img_in_1", {
+                y: -80,
+            }, {
+                y: 80,
                 duration: 1,
                 ease: "linear",
             }, "parr");
@@ -162,11 +172,27 @@ const Hero = () => {
                 ease: "linear",
                 delay: .5,
             }, "parr");
+            tl.fromTo(".sq_img_in_2", {
+                y: -80,
+            }, {
+                y: 80,
+                duration: 1,
+                delay: .5,
+                ease: "linear",
+            }, "parr");
             tl.to(".sq_img_3", {
                 top: "-15vw",
                 duration: 1,
                 ease: "linear",
                 delay: 1,
+            }, "parr");
+            tl.fromTo(".sq_img_in_3", {
+                y: -80,
+            }, {
+                y: 80,
+                delay: 1,
+                duration: 1,
+                ease: "linear",
             }, "parr");
             tl.to(".sq_img_4", {
                 top: "-15vw",
@@ -174,11 +200,27 @@ const Hero = () => {
                 ease: "linear",
                 delay: 1.5
             }, "parr");
+            tl.fromTo(".sq_img_in_4", {
+                y: -80,
+            }, {
+                y: 80,
+                duration: 1,
+                delay: 1.5,
+                ease: "linear",
+            }, "parr");
             tl.to(".sq_img_5", {
                 top: "-15vw",
                 duration: 1,
                 ease: "linear",
                 delay: 2,
+            }, "parr");
+            tl.fromTo(".sq_img_in_5", {
+                y: -80,
+            }, {
+                y: 80,
+                duration: 1,
+                delay: 2,
+                ease: "linear",
             }, "parr");
             tl.to(".about_div", {
                 y: -150,
@@ -193,35 +235,76 @@ const Hero = () => {
                 delay: 2.3,
             }, "parr");
         }
-        if(window.innerWidth < 1024){
-             tl.to(".sq_img_1", {
-                top: "-100vh",
+
+        ///for mobile
+        if (window.innerWidth < 1024) {
+            tl.to(".sq_img_1", {
+                top: "-55vw",
+                duration: 1,
+                ease: "linear",
+            }, "parr");
+            tl.fromTo(".sq_img_in_1", {
+                y: -80,
+            }, {
+                y: 80,
                 duration: 1,
                 ease: "linear",
             }, "parr");
             tl.to(".sq_img_2", {
-                top: "-100vh",
+                top: "-55vw",
                 duration: 1,
                 ease: "linear",
                 delay: .5,
             }, "parr");
+            tl.fromTo(".sq_img_in_2", {
+                y: -80,
+            }, {
+                y: 80,
+                duration: 1,
+                delay: .5,
+                ease: "linear",
+            }, "parr");
             tl.to(".sq_img_3", {
-                top: "-100vh",
+                top: "-55vw",
                 duration: 1,
                 ease: "linear",
                 delay: 1,
             }, "parr");
+            tl.fromTo(".sq_img_in_3", {
+                y: -80,
+            }, {
+                y: 80,
+                delay: 1,
+                duration: 1,
+                ease: "linear",
+            }, "parr");
             tl.to(".sq_img_4", {
-                top: "-100vh",
+                top: "-55vw",
                 duration: 1,
                 ease: "linear",
                 delay: 1.5
             }, "parr");
+            tl.fromTo(".sq_img_in_4", {
+                y: -80,
+            }, {
+                y: 80,
+                duration: 1,
+                delay: 1.5,
+                ease: "linear",
+            }, "parr");
             tl.to(".sq_img_5", {
-                top: "-100vh",
+                top: "-55vw",
                 duration: 1,
                 ease: "linear",
                 delay: 2,
+            }, "parr");
+            tl.fromTo(".sq_img_in_5", {
+                y: -80,
+            }, {
+                y: 80,
+                duration: 1,
+                delay: 2,
+                ease: "linear",
             }, "parr");
             tl.to(".about_div", {
                 y: -150,
@@ -235,7 +318,6 @@ const Hero = () => {
                 ease: "linear",
                 delay: 2.3,
             }, "parr");
-
         }
 
 
@@ -306,7 +388,7 @@ const Hero = () => {
                                     <h2> <i>and precision.</i> </h2>
                                 </div>
                             </div>
-                            <a href="/studio">
+                            <Link href="/studio">
                                 <button>
                                     <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
                                         <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
@@ -320,40 +402,40 @@ const Hero = () => {
                                         </div>
                                     </div>
                                 </button>
-                            </a>
+                            </Link>
                         </div>
 
-                        <div className=" sq_img_1 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-10 w-[50vw] lg:w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/six_70549f943a.png" alt="" />
+                        <div className=" sq_img_1 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw] ">
+                            <img className=' sq_img_in_1 w-full h-full object-cover' src="https://cdn.fame-estate.com/six_70549f943a.png" alt="" />
                         </div>
-                        <div className=" sq_img_2 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-10 w-[50vw] lg:w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="" />
+                        <div className=" sq_img_2 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw] ">
+                            <img className=' sq_img_in_2 w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="" />
                         </div>
-                        <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] lg:w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="" /></div>
-                        <div className=" sq_img_4 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-32 w-[50vw] lg:w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service_01a01267d4.png" alt="" />
+                        <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw] ">
+                            <img className=' sq_img_in_3 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="" /></div>
+                        <div className=" sq_img_4 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-32 w-[50vw] md:w-[15vw] ">
+                            <img className='sq_img_in_4 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service_01a01267d4.png" alt="" />
                         </div>
-                        <div className=" sq_img_5 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-32 w-[50vw] lg:w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_damac_2cd1f341f0.png" alt="" />
+                        <div className=" sq_img_5 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-32 w-[50vw] md:w-[15vw] ">
+                            <img className='sq_img_in_5 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_damac_2cd1f341f0.png" alt="" />
                         </div>
 
 
                         <div className=" number_div w-full absolute bottom-[-20vh] left-0 h-[20vh]   grid space-y-10 lg:space-y-0 content-center  grid-cols-2 lg:flex lg:items-center lg:justify-between px-3 lg:px-24">
-                            <div className=" text-start block">
+                            <div className=" lg:text-start block">
                                 <h2 className=' text-5xl lg:text-8xl'>15+</h2>
                                 <p className='uppercase text-xs lg:text-sm font-extrabold'>projects</p>
-                            </div>  
-                            <div className=" text-start block">
-                                <div className=' text-5xl lg:text-8xl flex items-center'> <h2> 45K+</h2> <p className=' text-xl lg:text-3xl lowercase lg:-translate-y-[3px]'>SQ. ft.</p> </div>
+                            </div>
+                            <div className=" lg:text-start block">
+                                <div className=' text-5xl lg:text-8xl flex justify-center lg:justify-start items-center'> <h2> 45K+</h2> <p className=' text-xl lg:text-3xl lowercase lg:-translate-y-[3px]'>SQ. ft.</p> </div>
                                 <p className='uppercase text-xs lg:text-sm font-extrabold'>Space Designed</p>
                             </div>
-                            <div className=" text-start block">
-                                <div className=' text-5xl lg:text-8xl flex items-center'> <h2> 5+</h2> <p className='text-xl lg:text-3xlcapitalize  lg:-translate-y-[2px]'>Yrs</p> </div>
+                            <div className=" lg:text-start block">
+                                <div className=' text-5xl lg:text-8xl flex justify-center lg:justify-start items-center'> <h2> 5+</h2> <p className='text-xl lg:text-3xlcapitalize  lg:-translate-y-[2px]'>Yrs</p> </div>
 
                                 <p className='uppercase text-xs lg:text-sm font-extrabold'>Experience</p>
                             </div>
-                            <div className=" text-start block">
+                            <div className=" lg:text-start block">
                                 <h2 className=' text-5xl lg:text-8xl'>100%</h2>
                                 <p className='uppercase text-xs lg:text-sm font-extrabold'>Transparency</p>
                             </div>

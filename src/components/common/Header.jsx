@@ -22,7 +22,7 @@ const Header = () => {
 
 
   const openMenu = () => {
-    if(window.lenis) lenis.stop();
+    if (window.lenis) lenis.stop();
     gsap.to(".open_menu", {
       right: 0,
       duration: 1,
@@ -40,7 +40,7 @@ const Header = () => {
     })
   }
   const closeMenu = () => {
-    if(window.lenis) lenis.stop();
+    if (window.lenis) lenis.stop();
     gsap.to(".anii", {
       y: -50,
       stagger: 0.05
@@ -59,35 +59,34 @@ const Header = () => {
 
   return (
     <div>
-
       <div
         className=" open_menu right-[-100%] w-full h-[100dvh] bg-[#FFFDF6] text-[#2E2D2B] p-5 fixed z-[99999]">
         <div className=" absolute  right-5 w-full flex justify-end">
           <RiCloseLine size={30} onClick={closeMenu} />
         </div>
         <div className="w-full h-full center flex-col gap-5">
-          <a href="/studio" className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+          <Link href="/studio" className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
             <p className='anii'>
               The studio
             </p>
-          </a>
-          <a href="/work" className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+          </Link>
+          <Link href="/work" className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
             <p className='anii'>
               Our work
             </p>
-          </a>
-          <a href="/" className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+          </Link>
+          <Link href="/" className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
             <p className='anii'>
               services
             </p>
-          </a>
-          <a href="/contact" className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+          </Link>
+          <Link href="/contact" className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-              <p className='text-2xl anii uppercase'>contact</p>
-          </a>
+            <p className='text-2xl anii uppercase'>contact</p>
+          </Link>
         </div>
       </div>
 
@@ -101,29 +100,29 @@ const Header = () => {
           </a>
         </div>
         <div className="flex items-center gap-10  h-full">
-          <a href="/studio" className='uppercase hidden group relative w-fit lg:block text-sm font-semibold'>
+          <Link href="/studio" className='uppercase hidden group relative w-fit lg:block text-sm font-semibold'>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
             <p className='font-semibold'>
               The studio
             </p>
-          </a>
-          <a href="/work" className='uppercase hidden group relative w-fit lg:block text-sm font-semibold'>
+          </Link>
+          <Link href="/work" className='uppercase hidden group relative w-fit lg:block text-sm font-semibold'>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
             <p className='font-semibold'>
               Our work
             </p>
-          </a>
+          </Link>
           <a href="/" className='uppercase hidden group relative w-fit lg:block text-sm font-semibold'>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
             <p className='font-semibold'>
               services
             </p>
           </a>
-          <a href="/contact">
+          <Link href="/contact">
             <button className=' hidden lg:block hover:scale-95 hover:rounded-[4px] transition-all duration-300 uppercase bg-[#2E2D2B] text-[#FFFDF4] py-2 px-4 lg:px-6'>
               <p className=' text-xs lg:text-sm'>Let's talk</p>
             </button>
-          </a>
+          </Link>
           <RiMenu3Line size={28} className='lg:hidden' onClick={openMenu} />
         </div>
       </div>

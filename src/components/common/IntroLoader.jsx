@@ -101,10 +101,10 @@ const IntroLoader = () => {
                     <p>Loaded experience</p>
                 </div>
 
-                <p className='  left_txt text-sm font-semibold  uppercase absolute top-1/2 left-1 -translate-y-1/2  text-white'>Looking for</p>
-                <p className=' right_txt  text-sm font-semibold  uppercase absolute top-1/2 right-1 -translate-y-1/2  text-white'>new emotions ?</p>
+                <p className='  left_txt text-xs lg:text-sm font-semibold  uppercase absolute top-1/2 left-1 -translate-y-1/2  text-white'>Looking for</p>
+                <p className=' right_txt  text-xs lg:text-sm font-semibold  uppercase absolute top-1/2 right-1 -translate-y-1/2  text-white'>new emotions ?</p>
 
-                <p className='center_txt text-4xl font-light    tracking-[1.2vw] uppercase absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white'>Aruja</p>
+                <p className='center_txt text-2xl lg:text-4xl font-light    tracking-[1.2vw] uppercase absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white'>Aruja</p>
 
             </div>
         </div>

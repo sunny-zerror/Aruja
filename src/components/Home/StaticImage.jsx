@@ -11,7 +11,7 @@ const StaticImage = () => {
             scrollTrigger: {
                 trigger: ".show_reel_paren",
                 start: "top top",
-                end: "+=2000",
+                end: "+=3000",
                 scrub: true,
                 pin: true,
                 // markers: true

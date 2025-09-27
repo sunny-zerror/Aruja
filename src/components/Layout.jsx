@@ -10,9 +10,9 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-     <header><Header /></header>
+      <header><Header /></header>
       <main>{children}</main>
-      {currentPath !== "/contact" && <footer><Footer /></footer>}
+      {(currentPath !== "/contact" && currentPath !== "/work" && currentPath !== "/studio" && currentPath !== "/demo" && currentPath !== "/work/[id]") && <footer><Footer /></footer>}
     </div>
   );
 };
