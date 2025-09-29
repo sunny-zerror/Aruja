@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Footer from '@/components/common/Footer';
+import { usePageReady } from '@/components/hooks/usePageReady';
 gsap.registerPlugin(ScrollTrigger);
 
 const worksData = [
@@ -96,6 +97,15 @@ const index = () => {
 
     }, [work])
 
+    usePageReady(() => {
+        gsap.to(".id_anim_txt", {
+            transform: "translateY(0%)",
+            stagger: 0.05,
+            ease: "ease-secondary",
+            duration: 2,
+        });
+    });
+
     return (
         <div>
             <div className="  w-full h-[150vh] lg:h-[170vh] relative text-[#FFFDF4] ">
@@ -105,29 +115,34 @@ const index = () => {
                         alt={work?.title} />
                 </div>
                 <div className="absolute w-full top-[80vh] lg:top-[30vw] px-3 lg:px-10 ">
-                    <p className=" text-5xl  lg:text-8xl font-semibold uppercase leading-none">
-                        {work?.title.split(" ").slice(0, 2).join(" ")}
-                        <br />
-                        {work?.title.split(" ").slice(2).join(" ")}
-                    </p>
+                    <div className=" id_anim_txt   translate-y-[105%] block overflow-hidden text-5xl  lg:text-8xl font-semibold uppercase leading-none">
+                        <p className='id_anim_txt   translate-y-[105%]'  >
+                            {work?.title.split(" ").slice(0, 2).join(" ")}
+                        </p>
+                    </div>
+                    <div className="  block overflow-hidden text-5xl  lg:text-8xl font-semibold uppercase leading-none">
+                        <p className='id_anim_txt   translate-y-[105%]'  >
+                            {work?.title.split(" ").slice(2).join(" ")}
+                        </p>
+                    </div>
 
                     <div className="w-full text-xs md:text-base font-semibold mt-10 lg:mt-20 uppercase flex items-center justify-between md:grid md:grid-cols-12 ">
-                        <div className="w-full md:col-span-6">
-                            <p>Grange, QLD</p>
+                        <div className="w-full  block overflow-hidden md:col-span-6">
+                            <p className='id_anim_txt   translate-y-[105%]' >Grange, QLD</p>
                         </div>
-                        <div className="w-full  md:col-span-2">
-                            <p>Australia</p>
+                        <div className="w-full  block overflow-hidden  md:col-span-2">
+                            <p className='id_anim_txt   translate-y-[105%]' >Australia</p>
                         </div>
-                        <div className="w-full flex justify-end whitespace-nowrap  md:col-span-4">
-                            <p>(scroll to explore)</p>
+                        <div className="w-full  overflow-hidden flex justify-end whitespace-nowrap  md:col-span-4">
+                            <p className='id_anim_txt   translate-y-[105%]' >(scroll to explore)</p>
                         </div>
                     </div>
 
 
                     <div className="w-full text-xs md:text-base grid uppercase grid-cols-4 md:grid-cols-12 ">
 
-                        <div className="w-full opacity-0 hidden lg:block  lg:col-span-6 ">
-                            <p>Grange, QLD</p>
+                        <div className="w-full overflow-hidden opacity-0 hidden lg:block  lg:col-span-6 ">
+                            <p className='id_anim_txt   translate-y-[105%]' >Grange, QLD</p>
                         </div>
 
                         <div className=" w-full  col-span-2 md:col-span-6 lg:col-span-2">
@@ -193,7 +208,7 @@ const index = () => {
                 ))}
             </div>
 
-            <Footer/>
+            <Footer />
 
         </div>
     )

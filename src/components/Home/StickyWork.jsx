@@ -110,9 +110,9 @@ const StickyWork = () => {
                       View more
                     </p>
                     <div className="block relative">
-                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="" />
-                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
-                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
+                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
+                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
+                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
                     </div>
                   </div>
                 </button>
@@ -126,9 +126,9 @@ const StickyWork = () => {
                       View more
                     </p>
                     <div className="block relative">
-                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="" />
-                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
-                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
+                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
+                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
+                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
                     </div>
                   </div>
                 </button>
@@ -146,7 +146,7 @@ const StickyWork = () => {
         <div className="w-full grid grid-cols-2 space-y-5 gap-3 md:hidden">
           {data.map((item, idx) => (
             <div key={idx} className="w-full">
-              <img className='w-full aspect-square mb-1' src={item.img} alt="" />
+              <img className='w-full aspect-square mb-1' src={item.img} alt="loading" />
               <div className="w-full text-xs space-y-2 ">
                 <p>/ 0{idx + 1}</p>
                 <p className='leading-tight'>{item.desc}</p>

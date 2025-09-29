@@ -12,7 +12,7 @@ const ServiceSlider = () => {
             scrollTrigger: {
                 trigger: ".serv_slider_paren",
                 start: "top top",
-                end:"+=3000",
+                end: "+=3000",
                 scrub: true,
                 pin: true,
                 // markers:true,
@@ -24,19 +24,19 @@ const ServiceSlider = () => {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
         }, {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            ease:"linear",
+            ease: "linear",
         });
         tl.fromTo(".serv_slide_bg_img_2", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
         }, {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            ease:"linear",
+            ease: "linear",
         });
         tl.fromTo(".serv_slide_bg_img_3", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
         }, {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            ease:"linear",
+            ease: "linear",
         });
 
 
@@ -46,10 +46,10 @@ const ServiceSlider = () => {
     return (
         <div>
             <div id='services' className=" serv_slider_paren w-full center mt-20 text-[#FFFDF6] h-screen relative">
-                <img className=' serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/HomePage/cdcs.webp" alt="" />
-                <img className=' serv_slide_bg_img_2 w-full h-full absolute object-cover top-0 left-0 z-[3] ' src="/Images/HomePage/erec.webp" alt="" />
-                <img className=' serv_slide_bg_img_3 w-full h-full absolute object-cover top-0 left-0 z-[2] ' src="/Images/HomePage/okdv.webp" alt="" />
-                <img className=' serv_slide_bg_img_4 w-full h-full absolute object-cover top-0 left-0 z-[1] ' src="/Images/HomePage/wmdsc.webp" alt="" />
+                <img className=' serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/HomePage/cdcs.webp" alt="loading" />
+                <img className=' serv_slide_bg_img_2 w-full h-full absolute object-cover top-0 left-0 z-[3] ' src="/Images/HomePage/erec.webp" alt="loading" />
+                <img className=' serv_slide_bg_img_3 w-full h-full absolute object-cover top-0 left-0 z-[2] ' src="/Images/HomePage/okdv.webp" alt="loading" />
+                <img className=' serv_slide_bg_img_4 w-full h-full absolute object-cover top-0 left-0 z-[1] ' src="/Images/HomePage/wmdsc.webp" alt="loading" />
 
                 <div className=" serv_slide_bg_img_1 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[15] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
@@ -71,7 +71,7 @@ const ServiceSlider = () => {
                         </div>
                     </div>
                     <div className="h-[60%] w-full">
-                        <img className='w-full h-full object-cover ' src="/Images/HomePage/cdcs.webp" alt="" />
+                        <img className='w-full h-full object-cover ' src="/Images/HomePage/cdcs.webp" alt="loading" />
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@ const ServiceSlider = () => {
                         </div>
                     </div>
                     <div className="h-[60%] w-full">
-                        <img className='w-full h-full object-cover ' src="/Images/HomePage/erec.webp" alt="" />
+                        <img className='w-full h-full object-cover ' src="/Images/HomePage/erec.webp" alt="loading" />
                     </div>
                 </div>
 
@@ -121,7 +121,7 @@ const ServiceSlider = () => {
                         </div>
                     </div>
                     <div className="h-[60%] w-full">
-                        <img className='w-full h-full object-cover ' src="/Images/HomePage/okdv.webp" alt="" />
+                        <img className='w-full h-full object-cover ' src="/Images/HomePage/okdv.webp" alt="loading" />
                     </div>
                 </div>
 
@@ -146,7 +146,7 @@ const ServiceSlider = () => {
                         </div>
                     </div>
                     <div className="h-[60%] w-full">
-                        <img className='w-full h-full object-cover ' src="/Images/HomePage/wmdsc.webp" alt="" />
+                        <img className='w-full h-full object-cover ' src="/Images/HomePage/wmdsc.webp" alt="loading" />
                     </div>
 
 

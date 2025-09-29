@@ -17,7 +17,7 @@ const Footer = () => {
           <img
             className="w-full h-full object-cover"
             src="/Images/ContactPageImg.webp"
-            alt=""
+            alt="loading"
           />
         </div>
 
@@ -40,9 +40,9 @@ const Footer = () => {
                     instagram
                   </p>
                   <div className="block relative">
-                    <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="" />
-                    <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
-                    <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
+                    <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
+                    <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
+                    <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
                   </div>
                 </div>
               </button>
@@ -53,9 +53,9 @@ const Footer = () => {
                     linkedIn
                   </p>
                   <div className="block relative">
-                    <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="" />
-                    <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
-                    <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
+                    <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
+                    <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
+                    <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
                   </div>
                 </div>
               </button>

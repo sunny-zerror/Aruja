@@ -1,19 +1,31 @@
 import React from "react";
 import Header from "./common/Header";
 import Footer from "./common/Footer";
-import IntroLoader from "./common/IntroLoader";
 import { useRouter } from "next/router";
+import PageTransition from "./common/PageTransition";
+import useNavigation from "../store/useNavigation";
 
 const Layout = ({ children }) => {
   const router = useRouter();
   const currentPath = router.pathname;
+  const { revealerRef } = useNavigation();
 
   return (
-    <div>
-      <header><Header /></header>
+    <>
+      <PageTransition ref={revealerRef} />
+
+      <header>
+        <Header />
+      </header>
+
       <main>{children}</main>
-      {(currentPath !== "/contact" && currentPath !== "/work" && currentPath !== "/studio" && currentPath !== "/demo" && currentPath !== "/work/[id]") && <footer><Footer /></footer>}
-    </div>
+
+      {!["/contact", "/work", "/studio", "/demo", "/work/[id]"].includes(currentPath) && (
+        <footer>
+          <Footer />
+        </footer>
+      )}
+    </>
   );
 };
 

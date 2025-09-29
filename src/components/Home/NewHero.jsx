@@ -253,7 +253,7 @@ const NewHero = () => {
                                 design
                             </p>
                         </div>
-                        <img className='w-full h-full object-cover' src="/Images/HomePage/HeroImg.png" alt="" />
+                        <img className='w-full h-full object-cover' src="/Images/HomePage/HeroImg.png" alt="loading" />
                     </div>
                 </div>
 
@@ -263,19 +263,19 @@ const NewHero = () => {
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_1 w-full h-full origin-center  absolute z-[2] ">
-                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/1_787ee4dae3_54280191fd.webp" alt="" />
+                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/1_787ee4dae3_54280191fd.webp" alt="loading" />
                 </div>
                 <div
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_2 w-full h-full origin-center  absolute z-[3] ">
-                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/4_e4dd79658e_e0dc0c7570.webp" alt="" />
+                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/4_e4dd79658e_e0dc0c7570.webp" alt="loading" />
                 </div>
                 <div
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_3 w-full h-full origin-center  absolute z-[4] ">
-                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/3_58be3bd3a5_5a7aefd99a.webp" alt="" />
+                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/3_58be3bd3a5_5a7aefd99a.webp" alt="loading" />
                 </div>
 
                 <div className=" hero_slide_4 overflow-hidden scale-[0] bg-[#FFFDF6] w-full h-full absolute z-[5]">
@@ -306,18 +306,18 @@ const NewHero = () => {
                         </div>
 
                         <div className=" sq_img_1 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] right-10 w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/six_70549f943a.png" alt="" />
+                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/six_70549f943a.png" alt="loading" />
                         </div>
                         <div className=" sq_img_2 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] left-10 w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="" />
+                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="loading" />
                         </div>
                         <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] left-1/2 -translate-x-1/2 w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="" /></div>
+                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="loading" /></div>
                         <div className=" sq_img_4 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] right-32 w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service_01a01267d4.png" alt="" />
+                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service_01a01267d4.png" alt="loading" />
                         </div>
                         <div className=" sq_img_5 aspect-square overflow-hidden absolute z-[-1] bottom-[-15vw] left-32 w-[15vw] ">
-                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_damac_2cd1f341f0.png" alt="" />
+                            <img className='w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_damac_2cd1f341f0.png" alt="loading" />
                         </div>
 
 

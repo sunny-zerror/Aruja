@@ -4,7 +4,11 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '@/components/common/Footer';
-gsap.registerPlugin(ScrollTrigger);
+import CustomEase from 'gsap/dist/CustomEase';
+import { usePageReady } from '@/components/hooks/usePageReady';
+import useNavigation from '@/store/useNavigation';
+import { useRouter } from 'next/router';
+gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const processData = [
     {
@@ -70,7 +74,9 @@ const solutionData = [
 
 
 const index = () => {
-
+    const router = useRouter();
+    const { navigate } = useNavigation();
+    CustomEase.create("ease-secondary", "0.16, 1, 0.35, 1");
     const [hovered, setHovered] = useState(null);
 
     const spring = {
@@ -496,17 +502,36 @@ const index = () => {
 
     }, [])
 
+    usePageReady(() => {
+        gsap.to(".anim_txt", {
+            transform: "translateY(0%)",
+            stagger: 0.05,
+            ease: "ease-secondary",
+            duration: 2,
+        });
+        gsap.to(".stic_image_pent_c", {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            ease: "ease-secondary",
+            duration: 2,
+        })
+    });
+
+
     return (
-        <div className="w-full pt-16 lg:pt-12 flex-col center">
-            <div className="w-full center block">
-                <div className="leading-none flex gap-2 lg:gap-6 lg:-translate-x-5 uppercase text-[16.2vw]">
-                    <p className="text-clip-img">The</p>
-                    <h2 className="italic">studio</h2>
+        <div className="w-full relative pt-16 lg:pt-12 flex-col center">
+            <div className="w-full z-[99]  center block overflow-hidden">
+                <div className="leading-none  overflow-hidden pr-6  flex translate-x-3 lg:translate-x-0 gap-2 lg:gap-6  uppercase text-[16.5vw]">
+                    <p className=" anim_txt translate-y-[100%]   ">The</p>
+                    <h2 className=" anim_txt translate-y-[100%]   italic">studio</h2>
                 </div>
             </div>
 
-            <div className=" mt-6  lg:mt-10 stic_image_pent_c w-full h-[100vh] lg:h-[140vh] overflow-hidden center">
-                <img className=' paex_img_cdc brightness-90 w-full h-full object-cover'
+            <div
+                style={{
+                    clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)"
+                }}
+                className=" mt-6  lg:mt-10 stic_image_pent_c w-full h-[100vh] lg:h-[140vh] overflow-hidden center">
+                <img className=' paex_img_cdc brightness-[.9] w-full h-full object-cover'
                     src="/Images/HomePage/FooterImg.webp"
                     alt="loading" />
             </div>
@@ -535,14 +560,14 @@ const index = () => {
             <div className="w-full px-3 lg:px-10 gap-y-5 lg:gap-y-0 flex-col md:flex-row  justify-between flex">
                 <div className=" w-full md:w-[60%] h-full">
                     <div className="w-full aspect-[16/10] ">
-                        <img className='w-full h-full object-cover' src="/Images/HomePage/erec.webp" alt="" />
+                        <img className='w-full h-full object-cover' src="/Images/HomePage/erec.webp" alt="loading" />
                     </div>
                     <p className='uppercase text-xs md:text-sm font-black mt-5 md:mt-10'>About us</p>
                     <p className=' text-sm leading-tight md:text-lg lg:text-3xl mt-3 md:mt-5'>Form follows function. Flow shapes design. Based in India, we are a multidisciplinary interior design studio rooted in the principle that form follows function. Our spaces are built on flow — spatial, emotional, and practical. Every project is a study in proportion, purpose, and precision.</p>
                 </div>
                 <div className=" md:hidden w-full flex   ">
                     <div className="w-[50%] h-full flex items-end aspect-[10/14] ">
-                        <img className=' w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="" />
+                        <img className=' w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
                     </div>
                     <div className="w-1/2  aspect-[10/14] pl-2 h-full flex items-end">
                         <p className=' text-xs md:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
@@ -550,7 +575,7 @@ const index = () => {
                 </div>
                 <div className=" hidden md:block w-[23.5%] h-full ">
                     <div className="w-full flex items-end aspect-[10/16] ">
-                        <img className=' w-full aspect-[4/5] object-cover' src="/Images/ContactPageImg.webp" alt="" />
+                        <img className=' w-full aspect-[4/5] object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
                     </div>
                     <p className=' text-sm lg:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
                 </div>
@@ -593,7 +618,7 @@ const index = () => {
                     <img
                         className="w-full aspect-[6/7] object-cover"
                         src="/Images/studioPage/behind_studio.webp"
-                        alt=""
+                        alt="loading"
                     />
                     <div className="leading-tight lg:hidden  mt-3 w-full capitalize font-semibold">
                         <p className='text-sm'>
@@ -630,7 +655,7 @@ const index = () => {
                         >
                             <motion.div className=" cursor-box pointer-events-none z-[-1] lg:opacity-0 aspect-square w-[50vw] md:w-[30vw] lg:w-[20vw]  overflow-hidden fixed top-1/2 lg:top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:left-0"
                                 style={{ x: mousePosition.x, y: mousePosition.y }}>
-                                <img className='w-full h-full object-cover' src={item.img} alt="" />
+                                <img className='w-full h-full object-cover' src={item.img} alt="loading" />
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0.4 }}
@@ -665,7 +690,7 @@ const index = () => {
                         {solutionData.map((item, idx) => (
                             <div key={idx} className=" w-[100vw]  lg:w-[30vw] shrink-0 space-y-10 ">
                                 <div className="size-24">
-                                    <img className={` transition-all duration-300 icon_${idx} ${idx === 0 ? "opacity-100" : "opacity-30"} `} src={item.icon} alt="" />
+                                    <img className={` transition-all duration-300 icon_${idx} ${idx === 0 ? "opacity-100" : "opacity-30"} `} src={item.icon} alt="loading" />
                                 </div>
                                 <div className="w-full h-[3px] bg-[#fffdf646] relative ">
                                     <div className="w-full h-full relative overflow-hidden">
@@ -691,22 +716,22 @@ const index = () => {
                         ))}
                         <div className=" w-[70vw] lg:w-[15vw] pb-24 ml-5  lg:ml-20 flex flex-col justify-center uppercase shrink-0 text-sm  ">
                             <p>our interiors are designed to be functional, timeless, and personal.</p>
-                            <Link href="/contact">
-                                <button className=' relative font-semibold uppercase border  mt-5 border-[#FFFDF6] text-[#FFFDF6] w-fit px-6 py-2'>
-                                    <div className="w-full center h-full">
-                                        <p>
-                                            let's talk
-                                        </p>
-                                    </div>
-                                    <div
-                                        style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
-                                        className=" clip_btn absolute top-0 left-0 bg-[#FFFDF6] center text-[#454738] font-semibold w-full h-full">
-                                        <p>
-                                            let's talk
-                                        </p>
-                                    </div>
-                                </button>
-                            </Link>
+                            <button
+                                onClick={() => navigate(router, "/contact")}
+                                className=' relative font-semibold uppercase border  mt-5 border-[#FFFDF6] text-[#FFFDF6] w-fit px-6 py-2'>
+                                <div className="w-full center h-full">
+                                    <p>
+                                        let's talk
+                                    </p>
+                                </div>
+                                <div
+                                    style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
+                                    className=" clip_btn absolute top-0 left-0 bg-[#FFFDF6] center text-[#454738] font-semibold w-full h-full">
+                                    <p>
+                                        let's talk
+                                    </p>
+                                </div>
+                            </button>
                         </div>
                     </div>
 

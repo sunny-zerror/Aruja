@@ -1,43 +1,55 @@
-// components/PageTransition.js
-import { motion, AnimatePresence } from "framer-motion";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useRouter } from "next/router";
-gsap.registerPlugin(ScrollTrigger);
+"use client";
+import React, { useRef, useImperativeHandle } from "react";
+import { gsap } from "gsap";
+import CustomEase from "gsap/dist/CustomEase";
 
-const variants = {
-  hidden: { opacity: 0 },
-  enter: { opacity: 1, transition: { duration: 0.6, ease: "easeInOut" } },
-  exit: { opacity: 0, transition: { duration: 0.6, ease: "easeInOut" } },
-};
+gsap.registerPlugin(CustomEase);
+CustomEase.create("ease-secondary", "0.16, 1, 0.35, 1");
 
-export default function PageTransition({ children }) {
-  const router = useRouter();
+const PageTransition = React.forwardRef((_, ref) => {
+  const screenRef = useRef(null);
+
+  useImperativeHandle(ref, () => ({
+    fadeIn: () =>
+      new Promise((resolve) => {
+        const el = screenRef.current;
+        if (!el) return resolve();
+
+        const tl = gsap.timeline({
+          onComplete: resolve,
+        });
+
+        tl.set(el, { autoAlpha: 0 }); 
+        tl.to(el, {
+          autoAlpha: 1,
+          ease: "ease-secondary",
+          duration: 0.35,
+        });
+      }),
+      
+fadeOut: () =>
+  new Promise((resolve) => {
+    const el = screenRef.current;
+    if (!el) return resolve();
+
+    gsap.to(el, {
+      autoAlpha: 0,
+      duration: 0.35,
+      ease: "ease-secondary",
+      onComplete: resolve,
+    });
+  }),
+
+  }));
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={router.asPath}
-        variants={variants}
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        onAnimationComplete={() => {
-          ScrollTrigger.refresh();
-          if (window.lenis) {
-            window.lenis.stop();
-            window.scrollTo(0, 0);
-            window.lenis.start();
-          } else {
-            window.scrollTo(0, 0);
-          }
-        }}
-
-        className=" w-full"
-      >
-        {children}
-      </motion.div>
-
-    </AnimatePresence>
+    <div
+      ref={screenRef}
+      className="transition_screen fixed top-0 left-0 w-screen h-screen bg-[#FFFDF6] z-[9999]"
+      style={{ opacity: 0, visibility: "hidden" }}
+    />
   );
-}
+});
+
+PageTransition.displayName = "PageTransition";
+export default PageTransition;

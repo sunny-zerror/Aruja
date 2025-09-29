@@ -2,10 +2,14 @@ import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import CustomEase from 'gsap/dist/CustomEase'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import Link  from 'next/link';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import useNavigation from '@/store/useNavigation';
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const Hero = () => {
+    const router = useRouter();
+    const { navigate } = useNavigation();
     CustomEase.create("in-out-quint", "0.83,0,0.17,1");
 
     useEffect(() => {
@@ -331,7 +335,7 @@ const Hero = () => {
                 <p className='  left_txt_2a text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[99] '>Designed</p>
                 <p className=' right_txt_2a  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[99] '>For you </p>
 
-                <img className='hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="" />
+                <img className='hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="loading" />
                 <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
                     <div className="block overflow-hidden">
                         <p className='anim_txt font-bold'>Design that lives, </p>
@@ -348,19 +352,19 @@ const Hero = () => {
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_1 w-full h-full origin-center  absolute z-[2] ">
-                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/1_787ee4dae3_54280191fd.webp" alt="" />
+                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/1_787ee4dae3_54280191fd.webp" alt="loading" />
                 </div>
                 <div
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_2 w-full h-full origin-center  absolute z-[3] ">
-                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/4_e4dd79658e_e0dc0c7570.webp" alt="" />
+                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/4_e4dd79658e_e0dc0c7570.webp" alt="loading" />
                 </div>
                 <div
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_3 w-full h-full origin-center  absolute z-[4] ">
-                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/3_58be3bd3a5_5a7aefd99a.webp" alt="" />
+                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/3_58be3bd3a5_5a7aefd99a.webp" alt="loading" />
                 </div>
 
                 <div className=" hero_slide_4 overflow-hidden scale-[0] bg-[#FFFDF6] w-full h-full absolute z-[5]">
@@ -388,36 +392,36 @@ const Hero = () => {
                                     <h2> <i>and precision.</i> </h2>
                                 </div>
                             </div>
-                            <Link href="/studio">
-                                <button>
-                                    <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
-                                        <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                                        <p className=' text-xs lg:text-base '>
-                                            View more
-                                        </p>
-                                        <div className="block relative">
-                                            <img className='  w-[70%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="" />
-                                            <img className='  w-[70%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="" />
-                                            <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="" />
-                                        </div>
+                            <button
+                                onClick={() => navigate(router, "/studio")}
+                            >
+                                <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
+                                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                                    <p className=' text-xs lg:text-base '>
+                                        View more
+                                    </p>
+                                    <div className="block relative">
+                                        <img className='  w-[70%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
+                                        <img className='  w-[70%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
+                                        <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
                                     </div>
-                                </button>
-                            </Link>
+                                </div>
+                            </button>
                         </div>
 
                         <div className=" sq_img_1 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_1 w-full h-full object-cover' src="https://cdn.fame-estate.com/six_70549f943a.png" alt="" />
+                            <img className=' sq_img_in_1 w-full h-full object-cover' src="https://cdn.fame-estate.com/six_70549f943a.png" alt="loading" />
                         </div>
                         <div className=" sq_img_2 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_2 w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="" />
+                            <img className=' sq_img_in_2 w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="loading" />
                         </div>
                         <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_3 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="" /></div>
+                            <img className=' sq_img_in_3 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="loading" /></div>
                         <div className=" sq_img_4 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-32 w-[50vw] md:w-[15vw] ">
-                            <img className='sq_img_in_4 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service_01a01267d4.png" alt="" />
+                            <img className='sq_img_in_4 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service_01a01267d4.png" alt="loading" />
                         </div>
                         <div className=" sq_img_5 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-32 w-[50vw] md:w-[15vw] ">
-                            <img className='sq_img_in_5 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_damac_2cd1f341f0.png" alt="" />
+                            <img className='sq_img_in_5 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_damac_2cd1f341f0.png" alt="loading" />
                         </div>
 
 
