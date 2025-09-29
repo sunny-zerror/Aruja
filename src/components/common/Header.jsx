@@ -100,6 +100,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      
       <div className={` header  ${(currentPath === "/studio" || currentPath === "/work" || currentPath === "/contact") ? "flex" : "hidden"}  w-full  p-3 lg:p-5 lg:px-10 z-[999] items-center justify-between fixed top-0 left-0`}>
         <div className="">
           <a href="/">

@@ -13,15 +13,15 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = () => {
-      setTimeout(() => {
-        ScrollTrigger.refresh();
-      }, 600);
-    };
+    const timeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+      if (window.lenis) {
+        window.lenis.resize();
+      }
+    }, 500);
 
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => router.events.off("routeChangeComplete", handleRouteChange);
-  }, [router]);
+    return () => clearTimeout(timeout);
+  }, [router.asPath]);
   
   return (
     <LenisScroll>

@@ -163,10 +163,9 @@ const index = () => {
 
     }, [])
 
-
     useEffect(() => {
-        if (window.innerWidth >= 1024) {
-            // for desktop ///
+        if (window.innerWidth < 1024) return;
+        const ctx = gsap.context(() => {
             var tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".solution_paren",
@@ -328,10 +327,24 @@ const index = () => {
                 delay: 0.485,
                 ease: "linear",
             }, "parallel")
+        });
 
-        } else {
+        const handlePageReady = () => {
+            ScrollTrigger.refresh(true);
+        };
+        window.addEventListener("pageReady", handlePageReady);
 
-            // for mobile ///
+        return () => {
+            ctx.revert();
+            window.removeEventListener("pageReady", handlePageReady);
+        };
+    }, []);
+
+    useEffect(() => {
+
+        if (window.innerWidth >= 1024) return;
+
+        const ctx = gsap.context(() => {
             var tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".solution_paren",
@@ -493,14 +506,18 @@ const index = () => {
                 delay: 0.485,
                 ease: "linear",
             }, "parallel")
+        });
 
-        }
+        const handlePageReady = () => {
+            ScrollTrigger.refresh(true);
+        };
+        window.addEventListener("pageReady", handlePageReady);
 
-
-
-
-
-    }, [])
+        return () => {
+            ctx.revert();
+            window.removeEventListener("pageReady", handlePageReady);
+        };
+    }, []);
 
     usePageReady(() => {
         gsap.to(".anim_txt", {
@@ -525,7 +542,7 @@ const index = () => {
                     <h2 className=" anim_txt translate-y-[100%]   italic">studio</h2>
                 </div>
             </div>
-
+            
             <div
                 style={{
                     clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)"

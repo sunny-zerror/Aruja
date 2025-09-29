@@ -1,7 +1,11 @@
+import useNavigation from "@/store/useNavigation";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Footer = () => {
+  const router = useRouter();
+  const { navigate } = useNavigation();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -25,10 +29,12 @@ const Footer = () => {
           <div className="w-full flex justify-between">
             <div className=" text-sm md:text-4xl flex flex-col lg:gap-y-4 uppercase">
               {navLinks.map((link, i) =>
-                <Link href={link.path} key={i} className="group relative w-fit cursor-pointer">
+                <div
+                  onClick={() => navigate(router, link.path)}
+                  key={i} className="group relative w-fit cursor-pointer">
                   <p className=" group-hover:opacity-0 transition-all duration-150">{link.name}</p>
                   <h2 className="absolute italic left-0 top-0 opacity-0 group-hover:opacity-100 transition-all duration-150">{link.name}</h2>
-                </Link>
+                </div>
               )}
             </div>
 
