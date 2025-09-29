@@ -67,7 +67,7 @@ const solutionData = [
     {
         title: "Quality Checks",
         desc: "Final quality checks after the project completion to be conducted by our team",
-        icon: "/icons/solutionIcons/ring.svg"
+        icon: "/icons/solutionIcons/searchCube.svg"
     },
 
 ]
@@ -106,6 +106,20 @@ const index = () => {
 
     useEffect(() => {
 
+        gsap.fromTo(".parlx_img_eff", {
+            y: -100,
+        }, {
+            y: 100,
+            duration: 6,
+            ease: "linear",
+            scrollTrigger: {
+                trigger: ".parlx_img_eff",
+                start: "top 100%",
+                end: "bottom 0%",
+                scrub: true,
+                // markers: true,
+            }
+        })
         gsap.fromTo(".paex_img_cdc", {
             y: -200,
         }, {
@@ -535,11 +549,11 @@ const index = () => {
 
 
     return (
-        <div className="w-full relative pt-16 lg:pt-12 flex-col center">
-            <div className="w-full z-[99]  center block overflow-hidden">
-                <div className="leading-none  overflow-hidden pr-6  flex translate-x-3 lg:translate-x-0 gap-2 lg:gap-6  uppercase text-[16.5vw]">
+        <div className="w-full relative pt-10 lg:pt-0 flex-col center">
+            <div className="w-full z-[99]  translate-y-[7vw] lg:translate-y-[4.1vw]  center block overflow-hidden">
+                <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-2    flex center gap-2 lg:gap-6  uppercase text-[15vw]">
                     <p className=" anim_txt translate-y-[100%]   ">The</p>
-                    <h2 className=" anim_txt translate-y-[100%]   italic">studio</h2>
+                    <h2 className=" anim_txt translate-y-[100%] italic   ">studio</h2>
                 </div>
             </div>
             
@@ -576,23 +590,23 @@ const index = () => {
 
             <div className="w-full px-3 lg:px-10 gap-y-5 lg:gap-y-0 flex-col md:flex-row  justify-between flex">
                 <div className=" w-full md:w-[60%] h-full">
-                    <div className="w-full aspect-[16/10] ">
-                        <img className='w-full h-full object-cover' src="/Images/HomePage/erec.webp" alt="loading" />
+                    <div className="w-full overflow-hidden aspect-[16/10] ">
+                        <img className=' parlx_img_eff w-full h-full object-cover' src="/Images/HomePage/erec.webp" alt="loading" />
                     </div>
                     <p className='uppercase text-xs md:text-sm font-black mt-5 md:mt-10'>About us</p>
                     <p className=' text-sm leading-tight md:text-lg lg:text-3xl mt-3 md:mt-5'>Form follows function. Flow shapes design. Based in India, we are a multidisciplinary interior design studio rooted in the principle that form follows function. Our spaces are built on flow — spatial, emotional, and practical. Every project is a study in proportion, purpose, and precision.</p>
                 </div>
                 <div className=" md:hidden w-full flex   ">
-                    <div className="w-[50%] h-full flex items-end aspect-[10/14] ">
-                        <img className=' w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
+                    <div className="w-[50%] overflow-hidden h-full flex items-end aspect-[10/14] ">
+                        <img className='  parlx_img_eff w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
                     </div>
                     <div className="w-1/2  aspect-[10/14] pl-2 h-full flex items-end">
                         <p className=' text-xs md:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
                     </div>
                 </div>
                 <div className=" hidden md:block w-[23.5%] h-full ">
-                    <div className="w-full flex items-end aspect-[10/16] ">
-                        <img className=' w-full aspect-[4/5] object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
+                    <div className="w-full flex overflow-hidden items-end aspect-[10/16] ">
+                        <img className=' parlx_img_eff w-full aspect-[4/5] object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
                     </div>
                     <p className=' text-sm lg:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
                 </div>

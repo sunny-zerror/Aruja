@@ -11,64 +11,84 @@ const worksData = [
         title: "Beyond the Frame",
         HeroImg: "/Images/HomePage/HeroImg.png",
         images: [
-            { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
         ],
     },
     {
         title: "Urban Calm",
         HeroImg: "/Images/HomePage/cdcs.webp",
         images: [
-            { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
         ],
     },
     {
         title: "The Flexible Studio",
         HeroImg: "/Images/HomePage/erec.webp",
         images: [
-            { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
         ],
     },
     {
         title: "Sleek Sanctuary",
         HeroImg: "/Images/HomePage/FooterImg.webp",
         images: [
-            { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
         ],
     },
     {
         title: "Heritage Reimagined",
         HeroImg: "/Images/HomePage/wmdsc.webp",
         images: [
-            { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-            { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-            { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
         ],
     },
+];
 
-]
 
 const index = () => {
 
@@ -108,13 +128,13 @@ const index = () => {
 
     return (
         <div>
-            <div className="  w-full h-[150vh] lg:h-[170vh] relative text-[#FFFDF4] ">
+            <div className="  w-full h-[100vh] lg:h-[170vh] relative text-[#FFFDF4] ">
                 <div className=" stic_image_pent w-full h-full overflow-hidden center">
                     <img className=' paex_img brightness-90 w-full h-full object-cover'
                         src={work?.HeroImg}
                         alt={work?.title} />
                 </div>
-                <div className="absolute w-full top-[80vh] lg:top-[30vw] px-3 lg:px-10 ">
+                <div className="absolute w-full bottom-20 lg:top-[30vw] px-3 lg:px-10 ">
                     <div className=" id_anim_txt   translate-y-[105%] block overflow-hidden text-5xl  lg:text-8xl font-semibold uppercase leading-none">
                         <p className='id_anim_txt   translate-y-[105%]'  >
                             {work?.title.split(" ").slice(0, 2).join(" ")}
@@ -148,24 +168,44 @@ const index = () => {
                         <div className=" w-full  col-span-2 md:col-span-6 lg:col-span-2">
                             <div className="  space-y-5  lg:space-y-10">
                                 <div className=" pt-10">
-                                    <p className='capitalize font-semibold'>Date Completed</p>
-                                    <p className=' font-black'>2024</p>
+                                    <div className=' block overflow-hidden capitalize font-semibold'>
+                                        <p className='id_anim_txt  translate-y-[105%]'>
+                                            Date Completed
+                                        </p>
+                                    </div>
+                                    <div className=' block overflow-hidden capitalize font-black'>
+                                        <p className='id_anim_txt  translate-y-[105%]'>
+                                            2024
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className="">
-                                    <p className='capitalize font-semibold'>Collaborators</p>
+                                    <div className=' block overflow-hidden  capitalize font-semibold'>
+                                        <p className='id_anim_txt  translate-y-[105%]'>
+                                            Collaborators
+                                        </p>
+                                    </div>
                                     <div className=' font-black'>
-                                        <p>
-                                            Porter and Co Construction
-                                        </p>
-                                        <p>
-                                            ECRU Landscape Architecture
-                                        </p>
-                                        <p>
-                                            Rogue Engineering
-                                        </p>
-                                        <p>
-                                            Urbicus Town Planning
-                                        </p>
+                                        <div className=' block overflow-hidden  '>
+                                            <p className='id_anim_txt  translate-y-[105%]'>
+                                                Porter and Co Construction
+                                            </p>
+                                        </div>
+                                        <div className=' block overflow-hidden  '>
+                                            <p className='id_anim_txt  translate-y-[105%]'>
+                                                ECRU Landscape Architecture
+                                            </p>
+                                        </div>
+                                        <div className=' block overflow-hidden  '>
+                                            <p className='id_anim_txt  translate-y-[105%]'>
+                                                Rogue Engineering
+                                            </p>
+                                        </div>
+                                        <div className=' block overflow-hidden  '>
+                                            <p className='id_anim_txt  translate-y-[105%]'>
+                                                Urbicus Town Planning
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -174,39 +214,78 @@ const index = () => {
                         <div className=" w-full  col-span-2 lg:col-span-4">
                             <div className=" space-y-5  lg:space-y-10">
                                 <div className="pt-10">
-                                    <p className='capitalize font-semibold'>Project Type</p>
-                                    <p className='font-black'>New Build</p>
+                                    <div className=' block overflow-hidden capitalize font-semibold'>
+                                        <p className='id_anim_txt  translate-y-[105%]'>
+                                            Project Type
+                                        </p>
+                                    </div>
+                                    <div className=' block overflow-hidden font-black'>
+                                        <p className='id_anim_txt  translate-y-[105%]'>
+                                            New Build
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className="">
-                                    <p className='capitalize font-semibold'>Photography</p>
-                                    <p className='font-black'>Andy Macpherson</p>
+                                    <div className=' block overflow-hidden capitalize font-semibold'>
+                                        <p className='id_anim_txt  translate-y-[105%]'>
+                                            Photography
+                                        </p>
+                                    </div>
+                                    <div className=' block overflow-hidden font-black'>
+                                        <p className='id_anim_txt  translate-y-[105%]'>
+                                            Andy Macpherson
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div className="w-full gap-3 lg:gap-5 pt-3 lg:pt-5 px-3 lg:px-10 mb-10 lg:mb-20 grid grid-cols-12">
-                {work?.images.map((item, i) => (
-                    <div
-                        key={i}
-                        className="w-full overflow-hidden"
-                        style={{
-                            gridColumn: `span ${item.span} / span ${item.span}`,
-                            height: window.innerWidth < 768 ? "50vw" : item.height,
-                        }}
-                    >
-                        <img
-                            className="w-full h-full object-cover"
-                            src={item.img}
-                            alt={`grid-img-${i}`}
-                        />
-                    </div>
+                {work?.images.map((item, i) => {
+                    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
+                    let height = "auto";
+                    let gridColumn = "span 12 / span 12";
 
-                ))}
+                    if (isMobile) {
+                        if (item.type === "portrait") {
+                            height = "70vh";
+                            gridColumn = "span 12 / span 12";
+                        } else {
+                            height = "30vh";
+                            gridColumn = "span 12 / span 12";
+                        }
+                    } else {
+                        if (item.type === "portrait") {
+                            height = "100vh";
+                            gridColumn = "span 6 / span 6";
+                        } else {
+                            height = "100vh";
+                            gridColumn = "span 12 / span 12";
+                        }
+                    }
+
+                    return (
+                        <div
+                            key={i}
+                            className="w-full overflow-hidden"
+                            style={{
+                                gridColumn,
+                                height,
+                            }}
+                        >
+                            <img
+                                className="w-full h-full object-cover"
+                                src={item.img}
+                                alt={`grid-img-${i}`}
+                            />
+                        </div>
+                    );
+                })}
             </div>
+
 
             <Footer />
 

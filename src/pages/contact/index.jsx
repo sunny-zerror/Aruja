@@ -38,7 +38,7 @@ const index = () => {
                     className=" ctct_clip_div h-[30%]  lg:h-full w-full lg:w-[25%]">
                     <img className='w-full  h-full lg:object-[17%] object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
                 </div>
-                <div className=" h-[70%] lg:h-full w-full lg:w-[75%] relative flex items-end justify-end">
+                <div className=" h-[70%] lg:h-full w-full lg:w-[75%] relative flex items-end justify-end pb-12 lg:pb-0">
                     <div className="absolute marq_op opacity-0 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full top-[20%] lg:top-[25%]">
                         <Marquee gradient gradientWidth={50} className='   h-full w-full scroller_none ' >
                             <p className='h-full  ml-[15vw]'>

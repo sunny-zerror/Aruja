@@ -78,7 +78,7 @@ const StickyWork = () => {
   return (
     <div>
       <div className="w-full px-3 lg:px-10 pt-10 lg:pt-28">
-        <div className="w-full relative mb-10 lg:mb-20  flex flex-col  items-center">
+        <div className="w-full relative mb-8 lg:mb-20  flex flex-col  items-center">
           <div className=" w-full lg:ml-3 mb-5 h-fit text-xs lg:text-sm font-black">
             <p>OUR WORK</p>
           </div>
@@ -87,58 +87,30 @@ const StickyWork = () => {
               <p>From</p>
               <h2>Homes</h2>
               <p>To</p>
+              <p>WorkPlaces, </p>
             </div>
-            <div className="w-full flex justify-end">
-              <div className=" move_txt_child w-[40%] flex justify-between">
-                <p>WorkPlaces, </p>
-                <p>our </p>
-                <h2>designs </h2>
+            <div className=" w-[70%]  lg:w-[85%] flex justify-end lg:pl-10 gap-2 lg:gap-5">
+              <div className=" move_txt_child w-[50%] flex justify-between">
+                <h2>designed </h2>
+                <h2> to </h2>
+                <p>flow</p>
               </div>
             </div>
-            <div className=" move_txt_child w-0 flex gap-2 justify-between">
-              <h2>create</h2>
-              <p> seamless,</p>
-              <p> natural</p>
-            </div>
-            <div className="flex  justify-between gap-2">
-              <div className=" w-[35%]  opacity-0  md:w-[15%] uppercase text-[8px] lg:text-sm">
-                <p>our interiors are designed to be functional, timeless, and personal.</p>
-                <button>
-                  <div className=' mt-3 lg:mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
-                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                    <p className=' text-[8px] lg:text-sm '>
-                      View more
-                    </p>
-                    <div className="block relative">
-                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
-                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
-                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
-                    </div>
+            <div className=" mt-3 w-[60%] md:w-[30%] lg:w-[15%] uppercase text-[12px] lg:text-sm">
+              <p>our interiors are designed to be functional, timeless, and personal.</p>
+              <button>
+                <div className=' mt-3 lg:mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
+                  <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                  <p className=' text-[12px] lg:text-sm '>
+                    View more
+                  </p>
+                  <div className="block relative">
+                    <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
+                    <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
+                    <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
                   </div>
-                </button>
-              </div>
-              <div className=" w-[35%] translate-y-8 lg:translate-y-5 absolute  md:w-[15%] uppercase text-[8px] lg:text-sm">
-                <p>our interiors are designed to be functional, timeless, and personal.</p>
-                <button>
-                  <div className=' mt-3 lg:mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
-                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                    <p className=' text-[8px] lg:text-sm '>
-                      View more
-                    </p>
-                    <div className="block relative">
-                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
-                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
-                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
-                    </div>
-                  </div>
-                </button>
-              </div>
-              <div className=" w-[70%]  lg:w-[85%] flex justify-end lg:pl-10 gap-2 lg:gap-5">
-                <div className=" move_txt_child w-[50%] flex justify-between">
-                  <h2> flow </h2>
-                  <p>everywhere.”</p>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -175,7 +147,7 @@ const StickyWork = () => {
                     />
                   </div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square gap-5 relative z-0`}>
-                    <p className="text-lg w-[70%] leading-tight">{item.desc}</p>
+                    <p className=" text-sm lg:text-lg w-[70%] leading-tight">{item.desc}</p>
                   </div>
                   <div className="w-full aspect-square gap-5 relative z-0"></div>
                 </div>
@@ -192,7 +164,7 @@ const StickyWork = () => {
                   <div className="w-full aspect-square"></div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square flex flex-col text-end items-end justify-between relative z-0`}>
                     <p className="text-2xl whitespace-nowrap">/ 0{idx + 1}</p>
-                    <p className="text-lg w-[70%] leading-tight">{item.desc}</p>
+                    <p className=" text-sm lg:text-lg w-[70%] leading-tight">{item.desc}</p>
                   </div>
                   <div className="w-full aspect-square relative z-50">
                     <img
@@ -220,7 +192,7 @@ const StickyWork = () => {
                   </div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square flex flex-col justify-between relative z-0`}>
                     <p className="text-2xl whitespace-nowrap">/ 0{idx + 1}</p>
-                    <p className="text-lg w-[70%] leading-tight">{item.desc}</p>
+                    <p className=" text-sm lg:text-lg w-[70%] leading-tight">{item.desc}</p>
                   </div>
                   <div className="w-full aspect-square"></div>
                   <div className="w-full aspect-square"></div>
@@ -246,7 +218,7 @@ const StickyWork = () => {
                     />
                   </div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square relative z-0`}>
-                    <p className="text-lg w-[70%] leading-tight">{item.desc}</p>
+                    <p className=" text-sm lg:text-lg w-[70%] leading-tight">{item.desc}</p>
                   </div>
                 </div>
               );

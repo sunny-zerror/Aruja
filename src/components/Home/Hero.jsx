@@ -425,21 +425,20 @@ const Hero = () => {
                         </div>
 
 
-                        <div className=" number_div w-full absolute bottom-[-20vh] left-0 h-[20vh]   grid space-y-10 lg:space-y-0 content-center  grid-cols-2 lg:flex lg:items-center lg:justify-between px-3 lg:px-24">
-                            <div className=" lg:text-start block">
+                        <div className=" number_div w-full absolute bottom-[-20vh] left-0 h-[20vh]    grid space-y-10 md:space-y-0 content-center  grid-cols-2 md:flex md:items-center md:justify-between px-3 md:px-24">
+                            <div className="text-start block pl-12 md:pl-0 ">
                                 <h2 className=' text-5xl lg:text-8xl'>15+</h2>
                                 <p className='uppercase text-xs lg:text-sm font-extrabold'>projects</p>
                             </div>
-                            <div className=" lg:text-start block">
-                                <div className=' text-5xl lg:text-8xl flex justify-center lg:justify-start items-center'> <h2> 45K+</h2> <p className=' text-xl lg:text-3xl lowercase lg:-translate-y-[3px]'>SQ. ft.</p> </div>
+                            <div className=" text-start block">
+                                <div className=' text-5xl lg:text-8xl flex justify-start items-center'> <h2> 45K+</h2> <p className=' text-xl md:text-3xl lowercase md:-translate-y-[3px]'>SQ. ft.</p> </div>
                                 <p className='uppercase text-xs lg:text-sm font-extrabold'>Space Designed</p>
                             </div>
-                            <div className=" lg:text-start block">
-                                <div className=' text-5xl lg:text-8xl flex justify-center lg:justify-start items-center'> <h2> 5+</h2> <p className='text-xl lg:text-3xlcapitalize  lg:-translate-y-[2px]'>Yrs</p> </div>
-
+                            <div className=" text-start block pl-12 md:pl-0">
+                                <div className=' text-5xl lg:text-8xl flex  justify-start items-center'> <h2> 5+</h2> <p className='text-xl md:text-3xlcapitalize  md:-translate-y-[2px]'>Yrs</p> </div>
                                 <p className='uppercase text-xs lg:text-sm font-extrabold'>Experience</p>
                             </div>
-                            <div className=" lg:text-start block">
+                            <div className="text-start block">
                                 <h2 className=' text-5xl lg:text-8xl'>100%</h2>
                                 <p className='uppercase text-xs lg:text-sm font-extrabold'>Transparency</p>
                             </div>

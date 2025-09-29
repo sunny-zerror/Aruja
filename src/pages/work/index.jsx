@@ -253,16 +253,16 @@ const Index = () => {
 
   return (
     <div
-      className="w-full pt-16 lg:pt-12  relative   flex-col justify-between">
-      <div className="w-full center">
-        <div className="leading-none overflow-hidden flex gap-2 uppercase translate-x-1  pr-4 lg:pr-12 text-[16.9vw] lg:text-[17.9vw]">
+      className="w-full pt-10 lg:pt-0  relative   flex-col justify-between">
+      <div className="w-full  center translate-y-[7vw] lg:translate-y-[4.1vw] overflow-hidden">
+        <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[15vw] ">
           <p className="wrk_anim_txt translate-y-[105%] ">our</p>
           <h2 className="wrk_anim_txt translate-y-[105%]  italic">work</h2>
         </div>
       </div>
 
-      <div className="w-full  relative  center ">
-        <div className=" text-sm lg:text-base absolute top-4 lg:top-2 z-[99] w-[60%] lg:w-[18%]">
+      <div className="w-full relative   lg:flex items-center justify-center ">
+        <div className=" text-sm px-3 lg:text-base absolute  top-[8.5vw] lg:top-[4.1vw] z-[99] w-fit">
           <div className="leading-none font-semibold">
             <div className="block overflow-hidden">
               <p className='wrk_anim_txt translate-y-[105%]'   >Every project at arujaK is crafted with</p>
@@ -274,7 +274,7 @@ const Index = () => {
               <p className='wrk_anim_txt translate-y-[105%]'   >Explore some of our featured spaces:</p>
             </div>
           </div>
-          <div className="flex mt-2 lg:mt-3 font-semibold gap-5">
+          <div className="flex mt-3 font-semibold gap-5">
             <button
               onClick={() => setView("vertical")}
               className={`  block overflow-hidden  uppercase text-sm transition-opacity duration-300 ${view === "vertical" ? "underline opacity-100" : "opacity-50"
@@ -336,7 +336,7 @@ const Index = () => {
 
       <div
         ref={verticalRef}
-        className={`w-full mt-32 lg:mt-44 mb-10 lg:mb-24 px-3 lg:px-10 grid gap-y-5 lg:gap-y-14 gap-x-3 lg:gap-x-5 grid-cols-1 lg:grid-cols-2`}
+        className={`w-full mt-32 md:mt-44 mb-10 lg:mb-24 px-3 lg:px-10 grid gap-y-5 lg:gap-y-14 gap-x-3 lg:gap-x-5 grid-cols-1 md:grid-cols-2`}
         style={{ opacity: 1, display: "grid" }}
       >
         {worksData.map((item, idx) => (
