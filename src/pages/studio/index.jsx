@@ -105,6 +105,18 @@ const index = () => {
 
     useEffect(() => {
 
+        gsap.to(".slide_ttx", {
+            width: "100%",
+            duration: 6,
+            ease: "linear",
+            scrollTrigger: {
+                trigger: ".slide_ttx",
+                start: "top 100%",
+                end: "bottom 50%",
+                scrub: true,
+                // markers: true,
+            }
+        })
         gsap.fromTo(".parlx_img_eff", {
             y: -100,
         }, {
@@ -113,6 +125,20 @@ const index = () => {
             ease: "linear",
             scrollTrigger: {
                 trigger: ".par_img_pren",
+                start: "top 100%",
+                end: "bottom 0%",
+                scrub: true,
+                // markers: true,
+            }
+        })
+        gsap.fromTo(".parlx_img_eff_2", {
+            y: -100,
+        }, {
+            y: 100,
+            duration: 6,
+            ease: "linear",
+            scrollTrigger: {
+                trigger: ".par_img_pren_2",
                 start: "top 100%",
                 end: "bottom 0%",
                 scrub: true,
@@ -555,7 +581,7 @@ const index = () => {
                     <h2 className=" anim_txt translate-y-[100%] italic   ">studio</h2>
                 </div>
             </div>
-            
+
             <div
                 style={{
                     clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)"
@@ -613,22 +639,25 @@ const index = () => {
 
             <div className="w-full py-20 lg:py-44 px-3 lg:px-10 gap-5 lg:gap-20 flex flex-col lg:flex-row justify-between items-stretch">
                 <div className=" w-full lg:w-[70vw] flex flex-col justify-between">
-                    <div>
-                        <p className=" text-xs lg:text-sm uppercase font-black">the studio</p>
-                        <div className="mt-3 lg:mt-5 uppercase leading-none text-[10vw] md:text-8xl">
-                            <div className="flex gap-4">
-                                <p>behind</p>
-                                <h2>the</h2>
-                            </div>
-                            <div className="flex justify-end gap-4 w-full">
-                                <p>Design</p>
+                    <div className="mt-3 lg:mt-5 overflow-hidden uppercase leading-none text-[9vw] md:text-8xl">
+                        <div className=" slide_ttx flex w-[90%] justify-between">
+                            <p>the</p>
+                            <p>person</p>
+                            <h2>behind</h2>
+                        </div>
+                        <div className="w-full flex justify-end">
+                            <div className=" slide_ttx flex justify-between w-[50%]">
+                                <p>akto</p>
                                 <h2>Studio</h2>
                             </div>
                         </div>
                     </div>
 
-                    <div className=" hidden  w-full lg:flex justify-end">
-                        <div className="leading-tight text-lg w-[40%] capitalize font-semibold">
+                    <div className=" hidden  w-full lg:flex justify-between">
+                        <div className=" h-full flex items-end ">
+                            <img className='w-[20%]' src="/icons/footerMonogram/1.svg" alt="" />
+                        </div>
+                        <div className="leading-tight text-lg w-[50%] capitalize font-semibold">
                             <p className="text-end">
                                 “ Personal vision, professional execution.
                             </p>
@@ -645,11 +674,13 @@ const index = () => {
                 </div>
 
                 <div className=" w-full  lg:w-[30vw]  lg:h-fit overflow-hidden">
-                    <img
-                        className="w-full aspect-[6/7] object-cover"
-                        src="/Images/studioPage/behind_studio.webp"
-                        alt="loading"
-                    />
+                    <div className=" overflow-hidden h-fit  w-full aspect-[6/7] par_img_pren_2">
+                        <img
+                            className="w-full parlx_img_eff_2 scale-110 aspect-[6/7] object-cover"
+                            src="/Images/studioPage/behind_studio.webp"
+                            alt="loading"
+                        />
+                    </div>
                     <div className="leading-tight lg:hidden  mt-3 w-full capitalize">
                         <p className='text-sm leading-tight md:text-lg lg:text-3xl'>
                             “ Personal vision, professional execution.
@@ -683,7 +714,7 @@ const index = () => {
                             className={`w-full  ${idx === 4 ? "border-none" : "border-b-[1px]"
                                 } h-[10vh] lg:h-[20vh] group text-3xl lg:text-8xl uppercase flex items-center justify-between`}
                         >
-                            <motion.div className=" cursor-box pointer-events-none z-[-1] lg:opacity-0 aspect-square w-[50vw] md:w-[30vw] lg:w-[20vw]  overflow-hidden fixed top-1/2 lg:top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:left-0"
+                            <motion.div className=" cursor-box pointer-events-none z-[-1] lg:opacity-1 aspect-square w-[50vw] md:w-[30vw] lg:w-[20vw]  overflow-hidden fixed top-1/2 lg:top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:left-0"
                                 style={{ x: mousePosition.x, y: mousePosition.y }}>
                                 <img className='w-full h-full object-cover' src={item.img} alt="loading" />
                             </motion.div>
@@ -710,7 +741,7 @@ const index = () => {
 
 
             <div className=" solution_paren w-full h-screen bg-[#454738] text-[#FFFDF6] ">
-                <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-16 text-3xl lg:text-6xl gap-4">
+                <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-24 text-3xl lg:text-6xl gap-4">
                     <p>Our</p>
                     <h2 className='italic '>solution</h2>
                 </div>

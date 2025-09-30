@@ -10,103 +10,143 @@ import { useRouter } from 'next/router';
 gsap.registerPlugin(SplitText);
 
 const worksData = [
-  {
-    title: "Beyond the Frame",
-    HeroImg: "/Images/HomePage/HeroImg.png",
-    images: [
-      { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    title: "Urban Calm",
-    HeroImg: "/Images/HomePage/cdcs.webp",
-    images: [
-      { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    title: "The Flexible Studio",
-    HeroImg: "/Images/HomePage/erec.webp",
-    images: [
-      { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    title: "Sleek Sanctuary",
-    HeroImg: "/Images/HomePage/FooterImg.webp",
-    images: [
-      { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    title: "Beyond the Frame",
-    HeroImg: "/Images/HomePage/HeroImg.png",
-    images: [
-      { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    title: "Urban Calm",
-    HeroImg: "/Images/HomePage/cdcs.webp",
-    images: [
-      { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    title: "The Flexible Studio",
-    HeroImg: "/Images/HomePage/erec.webp",
-    images: [
-      { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    title: "Sleek Sanctuary",
-    HeroImg: "/Images/HomePage/FooterImg.webp",
-    images: [
-      { span: 6, height: "50vw", img: "/Images/HomePage/cdcs.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/HeroImg.png" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/FooterImg.webp" },
-      { span: 12, height: "100vh", img: "/Images/HomePage/erec.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/wmdsc.webp" },
-      { span: 6, height: "50vw", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-]
+    {   
+        id: 1,
+        title: "Beyond the Frame",
+        HeroImg: "/Images/HomePage/HeroImg.png",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {
+        id: 2,
+        title: "Urban Calm",
+        HeroImg: "/Images/HomePage/cdcs.webp",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {
+        id: 3,
+        title: "The Flexible Studio",
+        HeroImg: "/Images/HomePage/erec.webp",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {
+        id: 4,
+        title: "Sleek Sanctuary",
+        HeroImg: "/Images/HomePage/FooterImg.webp",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {   
+        id: 5,
+        title: "Beyond the Frame",
+        HeroImg: "/Images/HomePage/HeroImg.png",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {
+        id: 6,
+        title: "Urban Calm",
+        HeroImg: "/Images/HomePage/cdcs.webp",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {
+        id: 7,
+        title: "The Flexible Studio",
+        HeroImg: "/Images/HomePage/erec.webp",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {
+        id: 8,
+        title: "Sleek Sanctuary",
+        HeroImg: "/Images/HomePage/FooterImg.webp",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+];
 
 const Index = () => {
   const router = useRouter();
@@ -249,8 +289,6 @@ const Index = () => {
     })
   });
 
-
-
   return (
     <div
       className="w-full pt-14 lg:pt-12  relative   flex-col justify-between">
@@ -312,7 +350,7 @@ const Index = () => {
             {worksData.map((item, idx) => (
               <div
                 key={idx}
-                onClick={() => navigate(router, `/work/${item.title}`)}
+                onClick={() => navigate(router, `/work/${item.id}`)}
                 className="shrink-0 cursor-pointer w-[80vw] md:w-[23.25vw] lg:w-[22.8vw] h-full">
                 <div className="text-sm font-semibold block overflow-hidden mb-2 uppercase">
                   <p className='wrk_anim_txt hori_wrk_anim_txt_title translate-y-[105%] '>

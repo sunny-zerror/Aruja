@@ -19,31 +19,9 @@ const Header = () => {
     if (currentPath === "/studio") return;
     if (currentPath === "/work") return;
     if (currentPath === "/contact") return;
-    const hasSeenLoader = sessionStorage.getItem("hasSeenLoader");
-    if (hasSeenLoader === "true") {
-      gsap.to(".header", { display: "flex" });
-    } else {
-      gsap.to(".header", { display: "flex", delay: 2.5 });
-    }
+    if (currentPath === "/services") return;
+      gsap.to(".header", { display: "flex", delay: 2.25 });
   }, [])
-
-
-  const handleNav = (e) => {
-    e.preventDefault();
-    window.location.href = "/?scroll=services";
-  };
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const scrollTarget = urlParams.get("scroll");
-
-    if (scrollTarget === "services") {
-      setTimeout(() => {
-        const section = document.querySelector("#services");
-        section?.scrollIntoView({ behavior: "smooth" });
-      }, 1300);
-    }
-  }, []);
-
 
   const openMenu = () => {
     if (window.lenis) lenis.stop();
@@ -84,7 +62,7 @@ const Header = () => {
   return (
     <>
       <div
-        className=" open_menu right-[-100%] w-full h-[100dvh] bg-[#FFFDF6] text-[#2E2D2B] p-5 fixed z-[99999]">
+        className=" open_menu right-[-100%] w-full h-[100dvh] bg-[#FFFDF6] text-[#2E2D2B] p-5 fixed z-[9999999]">
         <div className=" absolute  right-5 w-full flex justify-end">
           <RiCloseLine size={30} onClick={closeMenu} />
         </div>
@@ -97,27 +75,14 @@ const Header = () => {
               work
             </p>
           </div>
-           {
-            currentPath === "/" ? (
-              <a href="#services"
-                onClick={closeMenu}
-                className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
-                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-                <p className='anii'>
-                  services
-                </p>
-              </a>
-            ) : (
-              <a href="#services"
-                onClick={(e) => { handleNav(e); closeMenu(); }}
-                className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
-                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-                <p className='anii'>
-                  services
-                </p>
-              </a>
-            )
-          }
+          <div
+            onClick={() => { navigate(router, "/services"), closeMenu() }}
+            className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+            <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+            <p className='anii'>
+              services
+            </p>
+          </div>
           <div
             onClick={() => { navigate(router, "/studio"), closeMenu() }}
             className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
@@ -136,12 +101,13 @@ const Header = () => {
         </div>
       </div>
 
-      <div className={` header  ${(currentPath === "/studio" || currentPath === "/work" || currentPath === "/contact") ? "flex" : "hidden"}  w-full  p-3 lg:p-5 lg:px-10 z-[999] items-center justify-between fixed top-0 left-0`}>
+      <div className={` header  ${(currentPath === "/services" || currentPath === "/studio" || currentPath === "/work" || currentPath === "/contact") ? "flex" : "hidden"}  w-full  p-3 lg:p-5 lg:px-10 z-[999999] items-center justify-between fixed top-0 left-0`}>
         <div className="">
-          <a href="/"
+          <a 
+          href="/"
             onClick={() => navigate(router, "/")}
           >
-            <img className=' w-[13vw] lg:w-[5vw]' src="/logo.png" alt="loading" />
+            <img className=' hover:scale-110 transition-all duration-300 w-[13vw] cursor-pointer lg:w-[5vw]' src="/logo.png" alt="loading" />
           </a>
         </div>
         <div className="flex items-center gap-10  h-full">
@@ -154,26 +120,17 @@ const Header = () => {
               work
             </p>
           </a>
-          {
-            currentPath === "/" ? (
-              <a href="#services"
-                className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
-                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-                <p className='font-semibold'>
-                  services
-                </p>
-              </a>
-            ) : (
-              <a href="#services"
-                onClick={handleNav}
-                className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
-                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-                <p className='font-semibold'>
-                  services
-                </p>
-              </a>
-            )
-          }
+
+          <a
+            //  href="services"
+            onClick={() => navigate(router, "/services")}
+            className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
+            <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+            <p className='font-semibold'>
+              services
+            </p>
+          </a>
+
           <a
             // href="/studio"
             onClick={() => navigate(router, "/studio")}

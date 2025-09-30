@@ -13,42 +13,22 @@ const Hero = () => {
     CustomEase.create("in-out-quint", "0.83,0,0.17,1");
 
     useEffect(() => {
-        const hasSeenLoader = sessionStorage.getItem("hasSeenLoader");
+        gsap.from(".left_txt_2a", {
+            left: "93%",
+            opacity: 0,
+            duration: 1.2,
+            delay: 1.7,
+            ease: "in-out-quint",
+        });
+        gsap.from(".right_txt_2a", {
+            right: "91.5%",
+            opacity: 0,
+            duration: 1.2,
+            delay: 1.7,
+            ease: "in-out-quint",
+        });
 
-        if (hasSeenLoader === "true") {
-            gsap.from(".left_txt_2a", {
-                left: "93%",
-                opacity: 0,
-                duration: 1.2,
-                ease: "in-out-quint",
-            });
-            gsap.from(".right_txt_2a", {
-                right: "91.5%",
-                opacity: 0,
-                duration: 1.2,
-                ease: "in-out-quint",
-            });
-            gsap.from(".anim_txt", { y: 100, duration: 1, stagger: 0.1, delay: 0.5, ease: "in-out-quint" })
-        } else {
-            gsap.from(".left_txt_2a", {
-                left: "93%",
-                opacity: 0,
-                duration: 1.2,
-                delay: 1.7,
-                ease: "in-out-quint",
-            });
-            gsap.from(".right_txt_2a", {
-                right: "91.5%",
-                opacity: 0,
-                duration: 1.2,
-                delay: 1.7,
-                ease: "in-out-quint",
-            });
-
-            gsap.from(".anim_txt", { y: 100, duration: 1, stagger: 0.1, delay: 2.2, ease: "in-out-quint" })
-
-        }
-
+        gsap.from(".anim_txt", { y: 100, duration: 1, stagger: 0.1, delay: 2.2, ease: "in-out-quint" })
 
         var tl = gsap.timeline({
             scrollTrigger: {
@@ -351,9 +331,9 @@ const Hero = () => {
     return (
         <div>
             <div className=" hero_paren  w-full center h-screen relative overflow-hidden">
-                <p className='  left_txt_2a text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[99] '>Designed</p>
-                <p className=' right_txt_2a  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[99] '>For you </p>
-
+                <p className='  left_txt_2a text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
+                <p className=' right_txt_2a  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
+                <img className='w-[3%] absolute bottom-2 left-1/2 -translate-x-1/2 z-[1]' src="/icons/footerMonogram/1.svg" alt="" />
                 <img className='hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="loading" />
                 <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
                     <div className="block overflow-hidden">

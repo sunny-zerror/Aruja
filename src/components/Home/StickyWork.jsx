@@ -42,7 +42,7 @@ const StickyWork = () => {
       ease:"linear",
       // clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       stagger: {
-        each: 0.2,
+        each: 0.3,
         duration: 0.2,
       },
       scrollTrigger: {
@@ -139,21 +139,23 @@ const StickyWork = () => {
             </div>
           </div>
           <div className=" hidden lg:block move_txt_on_scroll overflow-hidden leading-none uppercase text-2xl  md:text-[6vw] lg:space-y-5 w-full">
-            <div className="flex move_txt_child whitespace-nowrap w-0 justify-between  gap-2">
-              <p>Seamless  </p>
-              <h2>design</h2>
-              <p>flows</p>
+            <div className="flex move_txt_child whitespace-nowrap w-[80%] justify-between  gap-2">
+              <p>interios   </p>
+              <h2>that</h2>
+              <p>addapt</p>
             </div>
-            <div className=" w-full px-10 flex justify-end ">
+            <div className=" w-full  flex justify-end ">
               <div className=" move_txt_child whitespace-nowrap w-[50%] flex justify-between">
-                <p>from  </p>
-                <h2>homes  </h2>
-                <p>to </p>
+                <p> to   </p>
+                <h2> habits,   </h2>
+                <p> not </p>
               </div>
             </div>
-            <div className="flex move_txt_child md:px-20 lg:px-36 whitespace-nowrap w-0 justify-between  gap-2">
-              <h2> every   </h2>
-              <p>workplace</p>
+            <div className="flex move_txt_child  whitespace-nowrap w-[80%] justify-between">
+              <h2> the   </h2>
+              <p> other </p>
+              <p>  way</p>
+              <p>around</p>
             </div>
             <div className="w-full lg:flex justify-center">
               <div className=" mt-5 w-[60%] md:w-[30%] lg:w-[20%] lg:text-center uppercase text-[12px] lg:text-sm">

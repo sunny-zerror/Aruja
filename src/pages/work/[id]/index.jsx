@@ -4,10 +4,12 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Footer from '@/components/common/Footer';
 import { usePageReady } from '@/components/hooks/usePageReady';
+import useNavigation from '@/store/useNavigation';
 gsap.registerPlugin(ScrollTrigger);
 
 const worksData = [
     {
+        id: 1,
         title: "Beyond the Frame",
         HeroImg: "/Images/HomePage/HeroImg.png",
         images: [
@@ -24,6 +26,7 @@ const worksData = [
         ],
     },
     {
+        id: 2,
         title: "Urban Calm",
         HeroImg: "/Images/HomePage/cdcs.webp",
         images: [
@@ -40,6 +43,7 @@ const worksData = [
         ],
     },
     {
+        id: 3,
         title: "The Flexible Studio",
         HeroImg: "/Images/HomePage/erec.webp",
         images: [
@@ -56,6 +60,7 @@ const worksData = [
         ],
     },
     {
+        id: 4,
         title: "Sleek Sanctuary",
         HeroImg: "/Images/HomePage/FooterImg.webp",
         images: [
@@ -72,8 +77,60 @@ const worksData = [
         ],
     },
     {
-        title: "Heritage Reimagined",
-        HeroImg: "/Images/HomePage/wmdsc.webp",
+        id: 5,
+        title: "Beyond the Frame",
+        HeroImg: "/Images/HomePage/HeroImg.png",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {
+        id: 6,
+        title: "Urban Calm",
+        HeroImg: "/Images/HomePage/cdcs.webp",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {
+        id: 7,
+        title: "The Flexible Studio",
+        HeroImg: "/Images/HomePage/erec.webp",
+        images: [
+            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+            { type: "portrait", img: "/Images/HomePage/erec.webp" },
+            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+        ],
+    },
+    {
+        id: 8,
+        title: "Sleek Sanctuary",
+        HeroImg: "/Images/HomePage/FooterImg.webp",
         images: [
             { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
             { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
@@ -89,19 +146,15 @@ const worksData = [
     },
 ];
 
-
 const index = () => {
 
+    const { navigate } = useNavigation();
     const router = useRouter();
-    const title = router.query.id;
+    const id = parseInt(router.query.id);
 
-    const decodedTitle = decodeURIComponent(title || "");
-    const work = worksData.find((item) => item.title === decodedTitle);
+    const work = worksData.find((item) => item.id === parseInt(id));
 
-
-
-    useEffect(() => {
-
+    usePageReady(() => {
         gsap.to(".paex_img", {
             y: 500,
             duration: 4,
@@ -114,10 +167,6 @@ const index = () => {
                 // markers: true,
             }
         })
-
-    }, [work])
-
-    usePageReady(() => {
         gsap.to(".id_anim_txt", {
             transform: "translateY(0%)",
             stagger: 0.05,
@@ -125,6 +174,32 @@ const index = () => {
             duration: 2,
         });
     });
+
+    useEffect(() => {
+        if (!id) return;
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        gsap.set(".id_anim_txt", { yPercent: 105 });
+        gsap.to(".paex_img", {
+            y: 500,
+            duration: 4,
+            ease: "linear",
+            scrollTrigger: {
+                trigger: ".stic_image_pent",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+                // markers: true,
+            },
+        });
+
+        gsap.to(".id_anim_txt", {
+            yPercent: 0,
+            stagger: 0.05,
+            ease: "ease-secondary",
+            duration: 2,
+        });
+    }, [id]);
+
 
     return (
         <div>
@@ -242,7 +317,7 @@ const index = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full gap-3 lg:gap-5 pt-3 lg:pt-5 px-3 lg:px-10 mb-10 lg:mb-20 grid grid-cols-12">
+            <div className="w-full gap-3 lg:gap-5 pt-3 lg:pt-5 px-3 lg:px-10 mb-5 lg:mb-10 grid grid-cols-12">
                 {work?.images.map((item, i) => {
                     const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
@@ -285,6 +360,42 @@ const index = () => {
                     );
                 })}
             </div>
+
+            <div className="w-full  font-light gap-5 text-2xl lg:text-3xl border-t h-10 lg:h-20 border-black/20 center uppercase flex justify-between">
+                <button
+                    className="flex group gap-2 items-center group"
+                    onClick={() => {
+                        const currentIndex = worksData.findIndex((work) => work.id === id);
+                        if (currentIndex === -1) return;
+                        const prevIndex = (currentIndex - 1 + worksData.length) % worksData.length;
+                        navigate(router, `/work/${worksData[prevIndex].id}`);
+                    }}
+                >
+                    <div className="flex ">
+                        <p className=' translate-x-1/2 group-hover:scale-100 origin-right scale-0 transition-all duration-300'>←</p>
+                        <p className=' group-hover:scale-0 origin-left transition-all duration-300'>←</p>
+                    </div>
+                    <h2>Prev</h2>
+                </button>
+                <div className=" h-full w-[1px] bg-black/20"></div>
+                <button
+                    className="flex gap-2 items-center group"
+                    onClick={() => {
+                        const currentIndex = worksData.findIndex((work) => work.id === id);
+                        if (currentIndex === -1) return;
+                        const nextIndex = (currentIndex + 1) % worksData.length;
+                        navigate(router, `/work/${worksData[nextIndex].id}`);
+                    }}
+                >
+                    <h2>Next</h2>
+                    <div className="flex ">
+                        <p className=' group-hover:scale-0 origin-right transition-all duration-300'>→</p>
+                        <p className=' -translate-x-1/2 group-hover:scale-100 origin-left scale-0 transition-all duration-300'>→</p>
+                    </div>
+                </button>
+
+            </div>
+
 
 
             <Footer />

@@ -13,6 +13,17 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+.custm_review_scroller::-webkit-scrollbar{
+  background: #c7c7c7; 
+  width: 3px;
+  border-radius: 10px;
+
+}
+.custm_review_scroller::-webkit-scrollbar-thumb {
+  background: #2e2d2ba9; 
+  border-radius: 10px;
+  cursor: pointer;
+}
 .scroller_none::-webkit-scrollbar {
   display: none;
 }

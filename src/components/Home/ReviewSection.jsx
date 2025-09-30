@@ -5,6 +5,27 @@ import { Draggable } from "gsap/dist/Draggable";
 
 gsap.registerPlugin(ScrollToPlugin, Draggable);
 
+const reviewData = [
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Mariam Sajeev",
+  role:"Entrepreneur",
+  desc:"Aruja really understands the core of our brand, especially when it comes to aesthetics and color combinations. She has a sharp eye for detail and always provides thoughtful, budget-friendly options that align with our needs — something I truly appreciate."
+},
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Deveshi Jhunjhunwala",
+  role:"Entrepreneur",
+  desc:"We consulted with Aruja for our living room furniture and it past our expectations! She not only reccomended the pieces but also got them made and shipped all the way to Mumbai. It was a very seamless process and Aruja was a delight to work with."
+},
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Riya Dangayach Kothari",
+  role:"Entrepreneur",
+  desc:"Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
+},
+]
+
 const ReviewSection = () => {
   const scrollRef = useRef(null);
   const scrollRef2 = useRef(null);
@@ -65,51 +86,46 @@ const ReviewSection = () => {
           </div>
         </div>
 
-        {/* Content */}
+        {/* for mobile */}
         <div
           ref={scrollRef2}
-          className="w-full h-[200px] lg:h-[300px] lg:hidden overflow-x-scroll lg:overscroll-none scroller_none gap-5 flex mt-10 lg:mt-14"
+          className="w-full h-[220px] lg:h-[300px] lg:hidden overflow-x-scroll lg:overscroll-none scroller_none gap-5 flex mt-10 lg:mt-14"
         >
-          <div className=" w-[150px] lg:w-[220px] h-[200px] lg:h-[300px] overflow-hidden shrink-0">
-            <img
-              className="w-full h-full object-cover"
-              src="/Images/HomePage/reviews/heroReview.png"
-              alt="loading"
-            />
-          </div>
-
           {/* Scrollable reviews */}
           <div
             ref={scrollRef}
             className="scroller_none  relative flex gap-5 shrink-0"
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+            {reviewData.map((item) => (
               <div
                 key={item}
                 className="h-full w-[300px] lg:w-[450px] flex flex-col justify-between border border-black/50 shrink-0 px-5 lg:px-8 py-3 lg:py-5"
               >
                 <div className="w-full flex items-center gap-3">
-                  <div className="size-12 rounded-full overflow-hidden">
+                  <div className="size-12 shrink-0 rounded-full overflow-hidden">
                     <img
                       className="w-full h-full object-cover"
-                      src="/Images/HomePage/reviews/pic.png"
+                      src={item.pic}
                       alt="loading"
                     />
                   </div>
                   <div>
-                    <p className=" text-2xl lg:text-3xl capitalize">Ananya Singh</p>
-                    <p className=" text-xs lg:text-sm uppercase">Entrepreneur</p>
+                    <p className=" text-xl lg:text-3xl leading-none capitalize">{item.name}</p>
+                    <p className=" text-xs lg:text-sm uppercase">{item.role}</p>
                   </div>
                 </div>
-                <h2 className=" text-lg lg:text-2xl leading-none capitalize">
-                  “arujaK turned our vision into reality with clarity and zero
-                  delays”.
+                <div className="w-full h-[50%]  overflow-y-scroll custm_review_scroller">
+                <h2 className=" text-base lg:text-xl leading-tight capitalize">
+                  {item.desc}
                 </h2>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
+
+        {/* for desktop */}
         <div className="w-full hidden h-[200px] lg:h-[300px] overflow-x-scroll lg:overscroll-none scroller_none gap-5 lg:flex mt-10 lg:mt-14">
           <div className=" w-[150px] lg:w-[220px] h-[200px] lg:h-[300px] overflow-hidden shrink-0">
             <img
@@ -124,28 +140,29 @@ const ReviewSection = () => {
             ref={scrollRef}
             className="w-full scroller_none relative lg:overflow-x-scroll gap-5 flex"
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+            {reviewData.map((item) => (
               <div
-                key={item}
+                key={item.name}
                 className="h-full w-[300px] lg:w-[450px] flex flex-col justify-between border border-black/50 shrink-0 px-5 lg:px-8 py-3 lg:py-5"
               >
                 <div className="w-full flex items-center gap-3">
                   <div className="size-12 rounded-full overflow-hidden">
                     <img
                       className="w-full h-full object-cover"
-                      src="/Images/HomePage/reviews/pic.png"
+                      src={item.pic}
                       alt="loading"
                     />
                   </div>
                   <div>
-                    <p className=" text-2xl lg:text-3xl capitalize">Ananya Singh</p>
-                    <p className=" text-xs lg:text-sm uppercase">Entrepreneur</p>
+                    <p className=" text-2xl  capitalize">{item.name}</p>
+                    <p className=" text-xs lg:text-sm uppercase">{item.role}</p>
                   </div>
                 </div>
-                <h2 className=" text-lg lg:text-2xl leading-none capitalize">
-                  “arujaK turned our vision into reality with clarity and zero
-                  delays”.
+                <div className="w-full h-[50%]  overflow-y-scroll custm_review_scroller">
+                <h2 className=" text-lg lg:text-xl leading-tight capitalize">
+                  {item.desc}
                 </h2>
+                </div>
               </div>
             ))}
           </div>
