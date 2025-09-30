@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import Link from 'next/link';
 import Lenis from "lenis";
+import AOS from "aos";
 import React, { useEffect, useRef, useState } from 'react'
 import Footer from '@/components/common/Footer';
 import { usePageReady } from '@/components/hooks/usePageReady';
@@ -10,142 +11,142 @@ import { useRouter } from 'next/router';
 gsap.registerPlugin(SplitText);
 
 const worksData = [
-    {   
-        id: 1,
-        title: "Beyond the Frame",
-        HeroImg: "/Images/HomePage/HeroImg.png",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 2,
-        title: "Urban Calm",
-        HeroImg: "/Images/HomePage/cdcs.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 3,
-        title: "The Flexible Studio",
-        HeroImg: "/Images/HomePage/erec.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 4,
-        title: "Sleek Sanctuary",
-        HeroImg: "/Images/HomePage/FooterImg.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {   
-        id: 5,
-        title: "Beyond the Frame",
-        HeroImg: "/Images/HomePage/HeroImg.png",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 6,
-        title: "Urban Calm",
-        HeroImg: "/Images/HomePage/cdcs.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 7,
-        title: "The Flexible Studio",
-        HeroImg: "/Images/HomePage/erec.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 8,
-        title: "Sleek Sanctuary",
-        HeroImg: "/Images/HomePage/FooterImg.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
+  {
+    id: 1,
+    title: "Beyond the Frame",
+    HeroImg: "/Images/HomePage/HeroImg.png",
+    images: [
+      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Urban Calm",
+    HeroImg: "/Images/HomePage/cdcs.webp",
+    images: [
+      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+    ],
+  },
+  {
+    id: 3,
+    title: "The Flexible Studio",
+    HeroImg: "/Images/HomePage/erec.webp",
+    images: [
+      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Sleek Sanctuary",
+    HeroImg: "/Images/HomePage/FooterImg.webp",
+    images: [
+      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+    ],
+  },
+  {
+    id: 5,
+    title: "Beyond the Frame",
+    HeroImg: "/Images/HomePage/HeroImg.png",
+    images: [
+      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+    ],
+  },
+  {
+    id: 6,
+    title: "Urban Calm",
+    HeroImg: "/Images/HomePage/cdcs.webp",
+    images: [
+      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+    ],
+  },
+  {
+    id: 7,
+    title: "The Flexible Studio",
+    HeroImg: "/Images/HomePage/erec.webp",
+    images: [
+      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+    ],
+  },
+  {
+    id: 8,
+    title: "Sleek Sanctuary",
+    HeroImg: "/Images/HomePage/FooterImg.webp",
+    images: [
+      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
+      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
+      { type: "portrait", img: "/Images/HomePage/erec.webp" },
+      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
+      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
+    ],
+  },
 ];
 
 const Index = () => {
@@ -158,6 +159,16 @@ const Index = () => {
 
   const scrollWrapper = useRef(null);
   const scrollContent = useRef(null);
+
+useEffect(() => {
+  AOS.init({
+    duration: 500,
+    easing: "linear",
+    once: false, // set to true if you only want animation once
+  });
+  AOS.refresh(); // only once here
+}, []);
+
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -176,6 +187,7 @@ const Index = () => {
 
     const raf = (time) => {
       lenis.raf(time);
+              AOS.refresh(); 
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
@@ -379,11 +391,14 @@ const Index = () => {
       >
         {worksData.map((item, idx) => (
           <div
+            
             key={idx}
             onClick={() => navigate(router, `/work/${item.title}`)}
             className="shrink-0 cursor-pointer w-full aspect-[14/9] lg:aspect-video">
             <div className=" block overflow-hidden text-sm lg:text-base font-semibold mb-0.5 lg:mb-2 uppercase">
-              <p className='wrk_anim_txt ver_wrk_anim_txt_title translate-y-[105%] '>
+              <p
+                data-aos="clip"
+                data-aos-delay={idx * 100}  className='wrk_anim_txt ver_wrk_anim_txt_title translate-y-[105%] '>
                 {item.title}
               </p>
             </div>
@@ -391,6 +406,8 @@ const Index = () => {
               style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
               className=" ver_clip_div clip_div w-full h-full overflow-hidden">
               <img
+               data-aos="clip"
+                data-aos-delay={idx * 100} 
                 className="w-full h-full object-cover"
                 src={item.HeroImg}
                 alt="loading"

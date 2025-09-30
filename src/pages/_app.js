@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import LenisScroll from "@/components/LenisScroll";
 import "@/styles/globals.css";
 import "@/styles/Fonts.css";
+import 'aos/dist/aos.css';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useRouter } from "next/router";

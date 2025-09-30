@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react'
+import AOS from "aos";
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Footer from '@/components/common/Footer';
@@ -201,6 +202,17 @@ const index = () => {
     }, [id]);
 
 
+    useEffect(() => {
+    AOS.init({
+      duration: 500,   
+      easing: "ease-secondary",
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  });
+
     return (
         <div>
             <div className="  w-full h-[100vh] lg:h-[170vh] relative text-[#FFFDF4] ">
@@ -345,6 +357,8 @@ const index = () => {
                     return (
                         <div
                             key={i}
+                            data-aos="fade"
+                            data-aos-anchor-placement="center-bottom"
                             className="w-full overflow-hidden"
                             style={{
                                 gridColumn,

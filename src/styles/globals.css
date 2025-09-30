@@ -1,26 +1,25 @@
 @import "tailwindcss";
 
-*{
-  scroll-behavior: smooth ;
+* {
+  scroll-behavior: smooth;
   user-select: none;
 }
 body {
   overflow-x: hidden;
   width: 100%;
-  background-color: #FFFDF6;
-  color: #2E2D2B;
+  background-color: #fffdf6;
+  color: #2e2d2b;
 }
 body::-webkit-scrollbar {
   display: none;
 }
-.custm_review_scroller::-webkit-scrollbar{
-  background: #c7c7c7; 
+.custm_review_scroller::-webkit-scrollbar {
+  background: #c7c7c7;
   width: 3px;
   border-radius: 10px;
-
 }
 .custm_review_scroller::-webkit-scrollbar-thumb {
-  background: #2e2d2ba9; 
+  background: #2e2d2ba9;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -37,12 +36,20 @@ button {
 }
 
 .text-clip-img {
-  background-image: url('/Images/HomePage/FooterImg.webp'); /* Correct path */
-  background-size: 140vw 140vh; 
-  background-position: 21% -10%; 
+  background-image: url("/Images/HomePage/FooterImg.webp"); /* Correct path */
+  background-size: 140vw 140vh;
+  background-position: 21% -10%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   display: inline-block; /* ensure clip works properly */
 }
 
+[data-aos="clip"] {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path .5s linear;
+}
+
+[data-aos="clip"].aos-animate {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}

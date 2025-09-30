@@ -1,5 +1,6 @@
 import Lenis from "lenis";
 import React, { useEffect } from "react";
+import AOS from "aos";
 
 const LenisScroll = ({ children }) => {
 
@@ -24,6 +25,7 @@ const LenisScroll = ({ children }) => {
 
     const raf = (time) => {
       lenis.raf(time);
+        AOS.refresh(); 
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
