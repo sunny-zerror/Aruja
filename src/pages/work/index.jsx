@@ -253,8 +253,8 @@ const Index = () => {
 
   return (
     <div
-      className="w-full pt-10 lg:pt-0  relative   flex-col justify-between">
-      <div className="w-full  center translate-y-[7vw] lg:translate-y-[4.1vw] overflow-hidden">
+      className="w-full pt-14 lg:pt-12  relative   flex-col justify-between">
+      <div className="w-full  lg:flex px-3 mb-5 lg:mb-0 justify-center translate-y-[7vw] lg:translate-y-[4.1vw] overflow-hidden">
         <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[15vw] ">
           <p className="wrk_anim_txt translate-y-[105%] ">our</p>
           <h2 className="wrk_anim_txt translate-y-[105%]  italic">work</h2>
@@ -304,7 +304,7 @@ const Index = () => {
         style={{ opacity: 1, display: "flex" }}
       >
         <div
-          ref={scrollWrapper} className="w-full flex items-end pb-10 md:pb-[1vw] absolute h-screen z-[9] top-0 left-0 px-3 lg:px-10 pr-3 lg:pr-10 overflow-x-auto scroller_none">
+          ref={scrollWrapper} className="w-full flex items-end pb-10 md:pb-[1vw] absolute h-[100dvh] z-[9] top-0 left-0 px-3 lg:px-10 pr-3 lg:pr-10 overflow-x-auto scroller_none">
           <div
             ref={scrollContent}
             className=" gap-3 lg:gap-5  flex "
@@ -336,7 +336,7 @@ const Index = () => {
 
       <div
         ref={verticalRef}
-        className={`w-full mt-32 md:mt-44 mb-10 lg:mb-24 px-3 lg:px-10 grid gap-y-5 lg:gap-y-14 gap-x-3 lg:gap-x-5 grid-cols-1 md:grid-cols-2`}
+        className={`w-full mt-44 mb-10 lg:mb-24 px-3 lg:px-10 grid gap-y-5 lg:gap-y-14 gap-x-3 lg:gap-x-5 grid-cols-1 md:grid-cols-2`}
         style={{ opacity: 1, display: "grid" }}
       >
         {worksData.map((item, idx) => (

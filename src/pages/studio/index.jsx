@@ -42,22 +42,22 @@ const solutionData = [
     {
         title: "Transparent Scope of Work Documents",
         desc: "Every project begins with a clearly outlined scope, defining deliverables, inclusions, and phases.",
-        icon: "/icons/solutionIcons/ring.svg"
+        icon: "/icons/solutionIcons/stack.svg"
     },
     {
         title: "Project Management System PMS",
         desc: "From tracking orders and budgets to real-time project timelines, we use an internal PMS tailored to design execution.",
-        icon: "/icons/solutionIcons/steps.svg"
+        icon: "/icons/solutionIcons/settingsWheel.svg"
     },
     {
         title: "Checklists for Drawing Sets",
         desc: "Creating meticulous checklists to ensure everyone working on the project has a clear, accurate, and unified understanding of the design intent, finishes, and spatial arrangements.",
-        icon: "/icons/solutionIcons/checklist.svg"
+        icon: "/icons/solutionIcons/pointer.svg"
     },
     {
         title: "Checklists for Site Supervision",
         desc: "We standardize communication with vendors and site teams using structured checklists for everything from electricals to furniture placement.",
-        icon: "/icons/solutionIcons/readingMan.svg"
+        icon: "/icons/solutionIcons/intersectionCircle.svg"
     },
     {
         title: "Full -Kitting",
@@ -71,7 +71,6 @@ const solutionData = [
     },
 
 ]
-
 
 const index = () => {
     const router = useRouter();
@@ -113,7 +112,7 @@ const index = () => {
             duration: 6,
             ease: "linear",
             scrollTrigger: {
-                trigger: ".parlx_img_eff",
+                trigger: ".par_img_pren",
                 start: "top 100%",
                 end: "bottom 0%",
                 scrub: true,
@@ -371,7 +370,7 @@ const index = () => {
                 }
             })
             tl.to(".scroll_solut", {
-                xPercent: -580,
+                xPercent: -530,
                 ease: "linear",
             }, "parallel")
 
@@ -549,7 +548,7 @@ const index = () => {
 
 
     return (
-        <div className="w-full relative pt-10 lg:pt-0 flex-col center">
+        <div className="w-full relative  pt-14 lg:pt-12 flex-col center">
             <div className="w-full z-[99]  translate-y-[7vw] lg:translate-y-[4.1vw]  center block overflow-hidden">
                 <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-2    flex center gap-2 lg:gap-6  uppercase text-[15vw]">
                     <p className=" anim_txt translate-y-[100%]   ">The</p>
@@ -567,7 +566,7 @@ const index = () => {
                     alt="loading" />
             </div>
 
-            <div className="w-full py-10 lg:py-44 overflow-hidden center studio_desc">
+            <div className="w-full py-20 lg:py-44 overflow-hidden center studio_desc">
                 <div className="  text-lg md:text-4xl lg:text-6xl leading-tight flex flex-col  items-center   capitalize">
                     <div className='block relative overflow-hidden pb-2'>
                         <div className=" opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
@@ -590,29 +589,29 @@ const index = () => {
 
             <div className="w-full px-3 lg:px-10 gap-y-5 lg:gap-y-0 flex-col md:flex-row  justify-between flex">
                 <div className=" w-full md:w-[60%] h-full">
-                    <div className="w-full overflow-hidden aspect-[16/10] ">
-                        <img className=' parlx_img_eff w-full h-full object-cover' src="/Images/HomePage/erec.webp" alt="loading" />
+                    <div className="w-full par_img_pren overflow-hidden aspect-[16/10] ">
+                        <img className=' parlx_img_eff scale-150 lg:scale-110 w-full h-full object-cover' src="/Images/HomePage/erec.webp" alt="loading" />
                     </div>
                     <p className='uppercase text-xs md:text-sm font-black mt-5 md:mt-10'>About us</p>
                     <p className=' text-sm leading-tight md:text-lg lg:text-3xl mt-3 md:mt-5'>Form follows function. Flow shapes design. Based in India, we are a multidisciplinary interior design studio rooted in the principle that form follows function. Our spaces are built on flow — spatial, emotional, and practical. Every project is a study in proportion, purpose, and precision.</p>
                 </div>
-                <div className=" md:hidden w-full flex   ">
-                    <div className="w-[50%] overflow-hidden h-full flex items-end aspect-[10/14] ">
-                        <img className='  parlx_img_eff w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
+                <div className=" mt-10 md:hidden w-full flex   ">
+                    <div className="w-[50%] par_img_pren overflow-hidden h-full flex items-end aspect-[10/14] ">
+                        <img className='  parlx_img_eff scale-[2.5] lg:scale-110 w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
                     </div>
                     <div className="w-1/2  aspect-[10/14] pl-2 h-full flex items-end">
                         <p className=' text-xs md:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
                     </div>
                 </div>
                 <div className=" hidden md:block w-[23.5%] h-full ">
-                    <div className="w-full flex overflow-hidden items-end aspect-[10/16] ">
-                        <img className=' parlx_img_eff w-full aspect-[4/5] object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
+                    <div className="w-full flex par_img_pren overflow-hidden items-end aspect-[10/16] ">
+                        <img className=' parlx_img_eff scale-[150] lg:scale-110 w-full aspect-[4/5] object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
                     </div>
                     <p className=' text-sm lg:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
                 </div>
             </div>
 
-            <div className="w-full py-10 lg:py-44 px-3 lg:px-10 gap-5 lg:gap-20 flex flex-col lg:flex-row justify-between items-stretch">
+            <div className="w-full py-20 lg:py-44 px-3 lg:px-10 gap-5 lg:gap-20 flex flex-col lg:flex-row justify-between items-stretch">
                 <div className=" w-full lg:w-[70vw] flex flex-col justify-between">
                     <div>
                         <p className=" text-xs lg:text-sm uppercase font-black">the studio</p>
@@ -651,22 +650,22 @@ const index = () => {
                         src="/Images/studioPage/behind_studio.webp"
                         alt="loading"
                     />
-                    <div className="leading-tight lg:hidden  mt-3 w-full capitalize font-semibold">
-                        <p className='text-sm'>
+                    <div className="leading-tight lg:hidden  mt-3 w-full capitalize">
+                        <p className='text-sm leading-tight md:text-lg lg:text-3xl'>
                             “ Personal vision, professional execution.
                             Founded with the intent to balance aesthetics with function, arujaK
                             reflects the eye and passion of its founder. Each project carries
                             personal attention — not just a template.”
                         </p>
-                        <p className=" text-end uppercase font-semibold mt-2 ">
+                        <p className=" text-end text-sm uppercase font-semibold mt-2 ">
                             - Aruja Kothari tantia
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div className="w-full pb-10 lg:pb-44 px-3 lg:px-10">
-                <p className='uppercase text-xs lg:text-sm font-black'>THe Process</p>
+            <div className="w-full pb-20 lg:pb-44 px-3 lg:px-10">
+                <p className='uppercase text-xs mb-5 lg:text-sm font-black'>THe Process</p>
                 <div onMouseMove={mouseMove} onMouseEnter={mouseMove} onMouseLeave={mouseLeave} className="w-full ">
 
                     {processData.map((item, idx) => (
@@ -711,7 +710,7 @@ const index = () => {
 
 
             <div className=" solution_paren w-full h-screen bg-[#454738] text-[#FFFDF6] ">
-                <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-16 text-3xl lg:text-8xl gap-4">
+                <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-16 text-3xl lg:text-6xl gap-4">
                     <p>Our</p>
                     <h2 className='italic '>solution</h2>
                 </div>
@@ -719,9 +718,9 @@ const index = () => {
                 <div className=" h-[70%] lg:h-[75%] w-full overflow-hidden  flex items-center">
                     <div className=" scroll_solut w-full flex px-3 lg:px-10 scroller_none ">
                         {solutionData.map((item, idx) => (
-                            <div key={idx} className=" w-[100vw]  lg:w-[30vw] shrink-0 space-y-10 ">
-                                <div className="size-24">
-                                    <img className={` transition-all duration-300 icon_${idx} ${idx === 0 ? "opacity-100" : "opacity-30"} `} src={item.icon} alt="loading" />
+                            <div key={idx} className=" w-[90vw]  lg:w-[30vw] shrink-0 space-y-10 ">
+                                <div className=" size-16  lg:size-24">
+                                    <img className={` w-full  transition-all duration-300 icon_${idx} ${idx === 0 ? "opacity-100" : "opacity-30"} `} src={item.icon} alt="loading" />
                                 </div>
                                 <div className="w-full h-[3px] bg-[#fffdf646] relative ">
                                     <div className="w-full h-full relative overflow-hidden">
@@ -738,10 +737,10 @@ const index = () => {
                                         <div className={`  ${idx === 0 ? "  bg-[#FFFDF6] h-[20px] w-[20px] " : "bg-[#fffdf646] h-[0px] w-[0px]"} transition-all duration-300 inside_dot_${idx}  rounded-full  `}></div>
                                     </div>
                                 </div>
-                                <div className={` transition-all duration-300 content_box_${idx} w-[90%]  lg:w-[70%] ${idx === 0 ? "opacity-100" : "opacity-30"} `}  >
-                                    <p className='text-2xl leading-tight font-semibold'>0{idx + 1}/</p>
-                                    <p className='uppercase leading-tight font-semibold text-2xl'>{item.title}</p>
-                                    <p className=' font-semibold mt-5 leading-tight'>{item.desc}</p>
+                                <div className={` transition-all duration-300 content_box_${idx} w-[80%]  lg:w-[70%] ${idx === 0 ? "opacity-100" : "opacity-30"} `}  >
+                                    <p className=' text-lg lg:text-2xl leading-tight font-semibold'>0{idx + 1}/</p>
+                                    <p className='uppercase leading-tight font-semibold  text-lg lg:text-2xl'>{item.title}</p>
+                                    <p className=' text-sm lg:text-base font-semibold mt-5 leading-tight'>{item.desc}</p>
                                 </div>
                             </div>
                         ))}

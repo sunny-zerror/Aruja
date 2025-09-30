@@ -19,7 +19,12 @@ const Header = () => {
     if (currentPath === "/studio") return;
     if (currentPath === "/work") return;
     if (currentPath === "/contact") return;
-    gsap.to(".header", { display: "flex", delay: 2.28 });
+    const hasSeenLoader = sessionStorage.getItem("hasSeenLoader");
+    if (hasSeenLoader === "true") {
+      gsap.to(".header", { display: "flex" });
+    } else {
+      gsap.to(".header", { display: "flex", delay: 2.5 });
+    }
   }, [])
 
 
@@ -35,7 +40,7 @@ const Header = () => {
       setTimeout(() => {
         const section = document.querySelector("#services");
         section?.scrollIntoView({ behavior: "smooth" });
-      }, 3000);
+      }, 1300);
     }
   }, []);
 
@@ -92,14 +97,27 @@ const Header = () => {
               work
             </p>
           </div>
-          <a href="/#services"
-            onClick={closeMenu}
-            className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
-            <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-            <p className='anii'>
-              services
-            </p>
-          </a>
+           {
+            currentPath === "/" ? (
+              <a href="#services"
+                onClick={closeMenu}
+                className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+                <p className='anii'>
+                  services
+                </p>
+              </a>
+            ) : (
+              <a href="#services"
+                onClick={(e) => { handleNav(e); closeMenu(); }}
+                className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+                <p className='anii'>
+                  services
+                </p>
+              </a>
+            )
+          }
           <div
             onClick={() => { navigate(router, "/studio"), closeMenu() }}
             className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
@@ -134,14 +152,26 @@ const Header = () => {
               work
             </p>
           </a>
-          <a href="#services"
-            onClick={handleNav}
-            className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
-            <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-            <p className='font-semibold'>
-              services
-            </p>
-          </a>
+          {
+            currentPath === "/" ? (
+              <a href="#services"
+                className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
+                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+                <p className='font-semibold'>
+                  services
+                </p>
+              </a>
+            ) : (
+              <a href="#services"
+                onClick={handleNav}
+                className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
+                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+                <p className='font-semibold'>
+                  services
+                </p>
+              </a>
+            )
+          }
           <a
             // href="/studio"
             onClick={() => navigate(router, "/studio")}

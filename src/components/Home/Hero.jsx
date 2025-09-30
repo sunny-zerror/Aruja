@@ -13,30 +13,49 @@ const Hero = () => {
     CustomEase.create("in-out-quint", "0.83,0,0.17,1");
 
     useEffect(() => {
+        const hasSeenLoader = sessionStorage.getItem("hasSeenLoader");
 
-        gsap.from(".left_txt_2a", {
-            left: "93%",
-            opacity: 0,
-            duration: 1.2,
-            delay: 1.7,
-            ease: "in-out-quint",
-        });
-        gsap.from(".right_txt_2a", {
-            right: "91.5%",
-            opacity: 0,
-            duration: 1.2,
-            delay: 1.7,
-            ease: "in-out-quint",
-        });
+        if (hasSeenLoader === "true") {
+            gsap.from(".left_txt_2a", {
+                left: "93%",
+                opacity: 0,
+                duration: 1.2,
+                ease: "in-out-quint",
+            });
+            gsap.from(".right_txt_2a", {
+                right: "91.5%",
+                opacity: 0,
+                duration: 1.2,
+                ease: "in-out-quint",
+            });
+            gsap.from(".anim_txt", { y: 100, duration: 1, stagger: 0.1, delay: 0.5, ease: "in-out-quint" })
+        } else {
+            gsap.from(".left_txt_2a", {
+                left: "93%",
+                opacity: 0,
+                duration: 1.2,
+                delay: 1.7,
+                ease: "in-out-quint",
+            });
+            gsap.from(".right_txt_2a", {
+                right: "91.5%",
+                opacity: 0,
+                duration: 1.2,
+                delay: 1.7,
+                ease: "in-out-quint",
+            });
 
-        gsap.from(".anim_txt", { y: 100, duration: 1, stagger: 0.1, delay: 2.2, ease: "in-out-quint" })
+            gsap.from(".anim_txt", { y: 100, duration: 1, stagger: 0.1, delay: 2.2, ease: "in-out-quint" })
+
+        }
 
 
         var tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".hero_paren",
                 start: "top top",
-                end: "+=6000",
+                end: "+=8000",
+                anticipatePin: 1,
                 scrub: true,
                 pin: true,
                 // markers: true,

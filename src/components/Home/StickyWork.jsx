@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import { useRouter } from 'next/router';
+import useNavigation from '@/store/useNavigation';
 gsap.registerPlugin(ScrollTrigger);
 
 const data = [
@@ -24,7 +26,31 @@ const data = [
 
 const StickyWork = () => {
 
+  const router = useRouter();
+  const { navigate } = useNavigation();
+
   useEffect(() => {
+
+    gsap.fromTo(".clip_wrk", {
+      // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+      y:20,
+      opacity: 0
+    }, {
+      opacity: 1,
+      y:0,
+      // duration: .5,
+      ease:"linear",
+      // clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      stagger: {
+        each: 0.2,
+        duration: 0.2,
+      },
+      scrollTrigger: {
+        trigger: ".clip_wrk",
+        start: "top 50%",
+        // markers: true,
+      },
+    })
 
     var tl2 = gsap.timeline({
       scrollTrigger: {
@@ -82,43 +108,80 @@ const StickyWork = () => {
           <div className=" w-full lg:ml-3 mb-5 h-fit text-xs lg:text-sm font-black">
             <p>OUR WORK</p>
           </div>
-          <div className=" move_txt_on_scroll overflow-hidden leading-none uppercase text-2xl  md:text-[6vw] lg:space-y-5 w-full">
-            <div className="flex move_txt_child w-0 justify-between  gap-2">
-              <p>From</p>
-              <h2>Homes</h2>
-              <p>To</p>
-              <p>WorkPlaces, </p>
+          <div className=" lg:hidden  overflow-hidden leading-none uppercase text-2xl  md:text-[6vw] lg:space-y-5 w-full">
+            <div className="flex  flex-wrap w-full leading-none  gap-x-2">
+              <p>Seamless  </p>
+              <h2>design</h2>
+              <p>flows</p>
+              <p>from  </p>
+              <h2>homes  </h2>
+              <p>to </p>
+              <h2> every   </h2>
+              <p>workplace</p>
             </div>
-            <div className=" w-[70%]  lg:w-[85%] flex justify-end lg:pl-10 gap-2 lg:gap-5">
-              <div className=" move_txt_child w-[50%] flex justify-between">
-                <h2>designed </h2>
-                <h2> to </h2>
-                <p>flow</p>
+            <div className="w-full lg:flex justify-center">
+              <div className=" mt-5 w-[60%] md:w-[30%] lg:w-[20%] lg:text-center uppercase text-[12px] lg:text-sm">
+                <p>our interiors are designed to be functional, timeless, and personal.</p>
+                <button onClick={() => navigate(router, "/studio")}>
+                  <div className=' mt-3 lg:mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
+                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                    <p className=' text-[12px] lg:text-sm '>
+                      View more
+                    </p>
+                    <div className="block relative">
+                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
+                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
+                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
+                    </div>
+                  </div>
+                </button>
               </div>
             </div>
-            <div className=" mt-3 w-[60%] md:w-[30%] lg:w-[15%] uppercase text-[12px] lg:text-sm">
-              <p>our interiors are designed to be functional, timeless, and personal.</p>
-              <button>
-                <div className=' mt-3 lg:mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
-                  <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                  <p className=' text-[12px] lg:text-sm '>
-                    View more
-                  </p>
-                  <div className="block relative">
-                    <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
-                    <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
-                    <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
+          </div>
+          <div className=" hidden lg:block move_txt_on_scroll overflow-hidden leading-none uppercase text-2xl  md:text-[6vw] lg:space-y-5 w-full">
+            <div className="flex move_txt_child whitespace-nowrap w-0 justify-between  gap-2">
+              <p>Seamless  </p>
+              <h2>design</h2>
+              <p>flows</p>
+            </div>
+            <div className=" w-full px-10 flex justify-end ">
+              <div className=" move_txt_child whitespace-nowrap w-[50%] flex justify-between">
+                <p>from  </p>
+                <h2>homes  </h2>
+                <p>to </p>
+              </div>
+            </div>
+            <div className="flex move_txt_child md:px-20 lg:px-36 whitespace-nowrap w-0 justify-between  gap-2">
+              <h2> every   </h2>
+              <p>workplace</p>
+            </div>
+            <div className="w-full lg:flex justify-center">
+              <div className=" mt-5 w-[60%] md:w-[30%] lg:w-[20%] lg:text-center uppercase text-[12px] lg:text-sm">
+                <p>our interiors are designed to be functional, timeless, and personal.</p>
+                <button onClick={() => navigate(router, "/studio")}>
+                  <div className=' mt-3 lg:mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
+                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                    <p className=' text-[12px] lg:text-sm '>
+                      View more
+                    </p>
+                    <div className="block relative">
+                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
+                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
+                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
+                    </div>
                   </div>
-                </div>
-              </button>
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="w-full grid grid-cols-2 space-y-5 gap-3 md:hidden">
           {data.map((item, idx) => (
-            <div key={idx} className="w-full">
-              <img className='w-full aspect-square mb-1' src={item.img} alt="loading" />
+            <div key={idx} className=" clip_wrk w-full">
+              <div className=" overflow-hidden w-full">
+                <img className='w-full aspect-square mb-1' src={item.img} alt="loading" />
+              </div>
               <div className="w-full text-xs space-y-2 ">
                 <p>/ 0{idx + 1}</p>
                 <p className='leading-tight'>{item.desc}</p>
