@@ -138,7 +138,9 @@ const Header = () => {
 
       <div className={` header  ${(currentPath === "/studio" || currentPath === "/work" || currentPath === "/contact") ? "flex" : "hidden"}  w-full  p-3 lg:p-5 lg:px-10 z-[999] items-center justify-between fixed top-0 left-0`}>
         <div className="">
-          <a href="/">
+          <a href="/"
+            onClick={() => navigate(router, "/")}
+          >
             <img className=' w-[13vw] lg:w-[5vw]' src="/logo.png" alt="loading" />
           </a>
         </div>
