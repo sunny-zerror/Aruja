@@ -6,54 +6,31 @@ import { Draggable } from "gsap/dist/Draggable";
 gsap.registerPlugin(ScrollToPlugin, Draggable);
 
 const reviewData = [
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Mariam Sajeev",
-  role:"Manager",
-  desc:"Aruja really understands the core of our brand, especially when it comes to aesthetics and color combinations. She has a sharp eye for detail and always provides thoughtful, budget-friendly options that align with our needs — something I truly appreciate."
-},
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Deveshi Jhunjhunwala",
-  role:"Interior Designer",
-  desc:"We consulted with Aruja for our living room furniture and it past our expectations! She not only reccomended the pieces but also got them made and shipped all the way to Mumbai. It was a very seamless process and Aruja was a delight to work with."
-},
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Riya Dangayach Kothari",
-  role:"Bussiness Owner",
-  desc:"Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
-},
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Roshni Bahri Leal",
-  role:"Founder",
-  desc:"Aruja and her team were great to work with! She got our vision perfectly and had amazing ideas to bring my Pinterest board to life. She was able to adapt to the UK furniture market with ease and worked within our budget. She has been reliable, friendly, and understanding!"
-},
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Mariam Sajeev",
-  role:"Manager",
-  desc:"Aruja really understands the core of our brand, especially when it comes to aesthetics and color combinations. She has a sharp eye for detail and always provides thoughtful, budget-friendly options that align with our needs — something I truly appreciate."
-},
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Deveshi Jhunjhunwala",
-  role:"Interior Designer",
-  desc:"We consulted with Aruja for our living room furniture and it past our expectations! She not only reccomended the pieces but also got them made and shipped all the way to Mumbai. It was a very seamless process and Aruja was a delight to work with."
-},
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Riya Dangayach Kothari",
-  role:"Bussiness Owner",
-  desc:"Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
-},
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Roshni Bahri Leal",
-  role:"Founder",
-  desc:"Aruja and her team were great to work with! She got our vision perfectly and had amazing ideas to bring my Pinterest board to life. She was able to adapt to the UK furniture market with ease and worked within our budget. She has been reliable, friendly, and understanding!"
-},
+  {
+    pic: "/Images/HomePage/reviews/pic.png",
+    name: "Mariam Sajeev",
+    role: "office space ",
+    desc: "Aruja really understands the core of our brand, especially when it comes to aesthetics and color combinations. She has a sharp eye for detail and always provides thoughtful, budget-friendly options that align with our needs — something I truly appreciate."
+  },
+  {
+    pic: "/Images/HomePage/reviews/pic.png",
+    name: "Deveshi Jhunjhunwala",
+    role: "living room renovation ",
+    desc: "We consulted with Aruja for our living room furniture and it past our expectations! She not only reccomended the pieces but also got them made and shipped all the way to Mumbai. It was a very seamless process and Aruja was a delight to work with."
+  },
+  {
+    pic: "/Images/HomePage/reviews/pic.png",
+    name: "Riya Dangayach Kothari",
+    role: "office space ",
+    desc: "Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
+  },
+  {
+    pic: "/Images/HomePage/reviews/pic.png",
+    name: "Roshni Bahri Leal",
+    role: "house renovation",
+    desc: "Aruja and her team were great to work with! She got our vision perfectly and had amazing ideas to bring my Pinterest board to life. She was able to adapt to the UK furniture market with ease and worked within our budget. She has been reliable, friendly, and understanding!"
+  },
+
 ]
 
 const ReviewSection = () => {
@@ -126,7 +103,7 @@ const ReviewSection = () => {
             ref={scrollRef}
             className="scroller_none  relative flex gap-5 shrink-0"
           >
-            {reviewData.map((item , i) => (
+            {reviewData.map((item, i) => (
               <div
                 key={i}
                 className="h-full w-[300px] lg:w-[450px] flex flex-col justify-between border border-black/50 shrink-0 px-3 lg:px-8 py-3 lg:py-5"
@@ -141,13 +118,13 @@ const ReviewSection = () => {
                   </div> */}
                   <div>
                     <p className=" text-xl lg:text-3xl leading-none capitalize">{item.name}</p>
-                    <p className=" text-xs lg:text-sm uppercase">{item.role}</p>
+                  <p className=" text-xs mt-1 lg:text-sm uppercase">({item.role})</p>
                   </div>
                 </div>
                 <div className="w-full h-[50%]  overflow-y-auto custm_review_scroller">
-                <p className=" text-base lg:text-xl leading-tight capitalize">
-                  {item.desc}
-                </p>
+                  <p className=" text-base lg:text-xl leading-tight capitalize">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -170,12 +147,12 @@ const ReviewSection = () => {
             ref={scrollRef}
             className="w-full scroller_none relative lg:overflow-x-scroll gap-5 flex"
           >
-            {reviewData.map((item , i) => (
+            {reviewData.map((item, i) => (
               <div
-              key={i}
-              className="h-full w-[300px] relative lg:w-[330px] flex flex-col justify-between border border-black/50 shrink-0 px-5 lg:px-5 py-3 lg:py-3"
+                key={i}
+                className="h-full w-[300px] relative lg:w-[330px] flex flex-col justify-between border border-black/50 shrink-0 px-5 lg:px-5 py-3 lg:py-3"
               >
-              <div className="w-full h-10 bg-gradient-to-b from-transparent to-white absolute left-0 bottom-0 z-[1]"></div>
+                <div className="w-full h-10 bg-gradient-to-b from-transparent to-white absolute left-0 bottom-0 z-[1]"></div>
                 <div className="w-full flex items-start gap-3">
                   {/* <div className="size-12 shrink-0 rounded-full overflow-hidden">
                     <img
@@ -186,13 +163,13 @@ const ReviewSection = () => {
                   </div> */}
                   <div>
                     <p className=" text-2xl  capitalize leading-none">{item.name}</p>
-                    <p className=" text-xs lg:text-sm uppercase">{item.role}</p>
+                    <p className=" text-xs lg:text-sm uppercase">({item.role})</p>
                   </div>
                 </div>
                 <div className="w-full h-[40%]  overflow-y-auto custm_review_scroller">
-                <p className=" text-base leading-tight capitalize">
-                  {item.desc}
-                </p>
+                  <p className=" text-base leading-tight capitalize">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
