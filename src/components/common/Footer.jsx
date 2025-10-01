@@ -35,6 +35,7 @@ const Footer = () => {
             </div>
 
             <div className="uppercase flex flex-col items-end lg:items-start gap-y-1 lg:gap-y-2">
+              <a href="https://www.instagram.com/arujak?igsh=djZua2NuaGo1YTE5&utm_source=qr"  target="_blank" rel="noopener noreferrer" >
               <button>
                 <div className='  text-xs lg:text-base relative w-fit group overflow-hidden uppercase flex items-center lg:gap-2'>
                   <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
@@ -48,6 +49,7 @@ const Footer = () => {
                   </div>
                 </div>
               </button>
+              </a>
               <a href="https://www.linkedin.com/company/studio-arujak" target="_blank" rel="noopener noreferrer">
               <button>
                 <div className=' text-xs lg:text-base relative w-fit group overflow-hidden uppercase flex items-center lg:gap-2'>

@@ -118,15 +118,16 @@ const index = () => {
                                     </p>
                                 </div>
                                 <div className="flex gap-5 lg:gap-10 ">
+                                    <a href="https://www.instagram.com/arujak?igsh=djZua2NuaGo1YTE5&utm_source=qr" target="_blank" rel="noopener noreferrer" >
                                     <button>
                                         <div className='  relative w-fit group overflow-hidden uppercase flex items-center gap-2'>
                                             <div className=" belo_link  w-0 group-hover:left-[100%]   transition-all duration-300 h-[1px]  bg-[#2E2D2B]  bottom-0 left-0 absolute"></div>
                                             <p className='ctct_anim_txt text-lg lg:text-2xl  translate-y-[105%]'  >
                                                 instagram
                                             </p>
-
                                         </div>
                                     </button>
+                                    </a>
                                     <a href="https://www.linkedin.com/company/studio-arujak/" target="_blank" rel="noopener noreferrer">
                                     <button>
                                         <div className=' relative w-fit group overflow-hidden uppercase flex items-center gap-2'>
