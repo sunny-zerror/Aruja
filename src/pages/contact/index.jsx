@@ -47,7 +47,6 @@ const index = () => {
                             <p className='h-full  ml-[10vw] flex gap-10 items-center'>
                                 toss It Here”<img className='w-8' src="/icons/footerMonogram/1.svg" alt="" />
                             </p>
-                            
                         </Marquee>
                     </div>
                     <div className=" hidden lg:block absolute marq_op opacity-0 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full top-[10vh] lg:top-[25%]">
@@ -128,15 +127,16 @@ const index = () => {
 
                                         </div>
                                     </button>
+                                    <a href="https://www.linkedin.com/company/studio-arujak/" target="_blank" rel="noopener noreferrer">
                                     <button>
                                         <div className=' relative w-fit group overflow-hidden uppercase flex items-center gap-2'>
                                             <div className=" belo_link w-0 group-hover:left-[100%]   transition-all duration-300 h-[1px]  bg-[#2E2D2B]  bottom-0 left-0 absolute"></div>
                                             <p className='ctct_anim_txt text-lg lg:text-2xl translate-y-[105%]'  >
                                                 linkedIn
                                             </p>
-
                                         </div>
                                     </button>
+                                    </a>
                                 </div>
 
                             </div>

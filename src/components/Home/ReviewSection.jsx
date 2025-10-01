@@ -9,56 +9,50 @@ const reviewData = [
 {
   pic:"/Images/HomePage/reviews/pic.png",
   name:"Mariam Sajeev",
-  role:"Entrepreneur",
+  role:"Manager",
   desc:"Aruja really understands the core of our brand, especially when it comes to aesthetics and color combinations. She has a sharp eye for detail and always provides thoughtful, budget-friendly options that align with our needs — something I truly appreciate."
 },
 {
   pic:"/Images/HomePage/reviews/pic.png",
   name:"Deveshi Jhunjhunwala",
-  role:"Entrepreneur",
+  role:"Interior Designer",
   desc:"We consulted with Aruja for our living room furniture and it past our expectations! She not only reccomended the pieces but also got them made and shipped all the way to Mumbai. It was a very seamless process and Aruja was a delight to work with."
 },
 {
   pic:"/Images/HomePage/reviews/pic.png",
   name:"Riya Dangayach Kothari",
-  role:"Entrepreneur",
+  role:"Bussiness Owner",
   desc:"Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
+},
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Roshni Bahri Leal",
+  role:"Founder",
+  desc:"Aruja and her team were great to work with! She got our vision perfectly and had amazing ideas to bring my Pinterest board to life. She was able to adapt to the UK furniture market with ease and worked within our budget. She has been reliable, friendly, and understanding!"
 },
 {
   pic:"/Images/HomePage/reviews/pic.png",
   name:"Mariam Sajeev",
-  role:"Entrepreneur",
+  role:"Manager",
   desc:"Aruja really understands the core of our brand, especially when it comes to aesthetics and color combinations. She has a sharp eye for detail and always provides thoughtful, budget-friendly options that align with our needs — something I truly appreciate."
 },
 {
   pic:"/Images/HomePage/reviews/pic.png",
   name:"Deveshi Jhunjhunwala",
-  role:"Entrepreneur",
+  role:"Interior Designer",
   desc:"We consulted with Aruja for our living room furniture and it past our expectations! She not only reccomended the pieces but also got them made and shipped all the way to Mumbai. It was a very seamless process and Aruja was a delight to work with."
 },
 {
   pic:"/Images/HomePage/reviews/pic.png",
   name:"Riya Dangayach Kothari",
-  role:"Entrepreneur",
+  role:"Bussiness Owner",
   desc:"Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
 },
 {
   pic:"/Images/HomePage/reviews/pic.png",
-  name:"Mariam Sajeev",
-  role:"Entrepreneur",
-  desc:"Aruja really understands the core of our brand, especially when it comes to aesthetics and color combinations. She has a sharp eye for detail and always provides thoughtful, budget-friendly options that align with our needs — something I truly appreciate."
-},
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Deveshi Jhunjhunwala",
-  role:"Entrepreneur",
-  desc:"We consulted with Aruja for our living room furniture and it past our expectations! She not only reccomended the pieces but also got them made and shipped all the way to Mumbai. It was a very seamless process and Aruja was a delight to work with."
-},
-{
-  pic:"/Images/HomePage/reviews/pic.png",
-  name:"Riya Dangayach Kothari",
-  role:"Entrepreneur",
-  desc:"Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
+  name:"Roshni Bahri Leal",
+  role:"Founder",
+  desc:"Aruja and her team were great to work with! She got our vision perfectly and had amazing ideas to bring my Pinterest board to life. She was able to adapt to the UK furniture market with ease and worked within our budget. She has been reliable, friendly, and understanding!"
 },
 ]
 

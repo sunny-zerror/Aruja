@@ -48,6 +48,7 @@ const Footer = () => {
                   </div>
                 </div>
               </button>
+              <a href="https://www.linkedin.com/company/studio-arujak" target="_blank" rel="noopener noreferrer">
               <button>
                 <div className=' text-xs lg:text-base relative w-fit group overflow-hidden uppercase flex items-center lg:gap-2'>
                   <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
@@ -61,6 +62,7 @@ const Footer = () => {
                   </div>
                 </div>
               </button>
+              </a>
 
             </div>
           </div>
