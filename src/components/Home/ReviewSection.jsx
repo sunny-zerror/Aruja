@@ -24,6 +24,42 @@ const reviewData = [
   role:"Entrepreneur",
   desc:"Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
 },
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Mariam Sajeev",
+  role:"Entrepreneur",
+  desc:"Aruja really understands the core of our brand, especially when it comes to aesthetics and color combinations. She has a sharp eye for detail and always provides thoughtful, budget-friendly options that align with our needs — something I truly appreciate."
+},
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Deveshi Jhunjhunwala",
+  role:"Entrepreneur",
+  desc:"We consulted with Aruja for our living room furniture and it past our expectations! She not only reccomended the pieces but also got them made and shipped all the way to Mumbai. It was a very seamless process and Aruja was a delight to work with."
+},
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Riya Dangayach Kothari",
+  role:"Entrepreneur",
+  desc:"Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
+},
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Mariam Sajeev",
+  role:"Entrepreneur",
+  desc:"Aruja really understands the core of our brand, especially when it comes to aesthetics and color combinations. She has a sharp eye for detail and always provides thoughtful, budget-friendly options that align with our needs — something I truly appreciate."
+},
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Deveshi Jhunjhunwala",
+  role:"Entrepreneur",
+  desc:"We consulted with Aruja for our living room furniture and it past our expectations! She not only reccomended the pieces but also got them made and shipped all the way to Mumbai. It was a very seamless process and Aruja was a delight to work with."
+},
+{
+  pic:"/Images/HomePage/reviews/pic.png",
+  name:"Riya Dangayach Kothari",
+  role:"Entrepreneur",
+  desc:"Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
+},
 ]
 
 const ReviewSection = () => {
@@ -41,7 +77,7 @@ const ReviewSection = () => {
         gsap.to(scrollRef2.current, {
           scrollTo: { x: targetX },
           duration: 1.5,
-          ease: "power3.out",
+          ease: "ease-secondary",
         });
       }
     } else {
@@ -54,7 +90,7 @@ const ReviewSection = () => {
         gsap.to(scrollRef.current, {
           scrollTo: { x: targetX },
           duration: 1.5,
-          ease: "power3.out",
+          ease: "ease-secondary",
         });
       }
     }
@@ -89,35 +125,35 @@ const ReviewSection = () => {
         {/* for mobile */}
         <div
           ref={scrollRef2}
-          className="w-full h-[220px] lg:h-[300px] lg:hidden overflow-x-scroll lg:overscroll-none scroller_none gap-5 flex mt-10 lg:mt-14"
+          className="w-full h-[350px] lg:h-[300px] lg:hidden overflow-x-scroll lg:overscroll-none scroller_none gap-5 flex mt-10 lg:mt-14"
         >
           {/* Scrollable reviews */}
           <div
             ref={scrollRef}
             className="scroller_none  relative flex gap-5 shrink-0"
           >
-            {reviewData.map((item) => (
+            {reviewData.map((item , i) => (
               <div
-                key={item}
-                className="h-full w-[300px] lg:w-[450px] flex flex-col justify-between border border-black/50 shrink-0 px-5 lg:px-8 py-3 lg:py-5"
+                key={i}
+                className="h-full w-[300px] lg:w-[450px] flex flex-col justify-between border border-black/50 shrink-0 px-3 lg:px-8 py-3 lg:py-5"
               >
                 <div className="w-full flex items-center gap-3">
-                  <div className="size-12 shrink-0 rounded-full overflow-hidden">
+                  {/* <div className="size-12 shrink-0 rounded-full overflow-hidden">
                     <img
                       className="w-full h-full object-cover"
                       src={item.pic}
                       alt="loading"
                     />
-                  </div>
+                  </div> */}
                   <div>
                     <p className=" text-xl lg:text-3xl leading-none capitalize">{item.name}</p>
                     <p className=" text-xs lg:text-sm uppercase">{item.role}</p>
                   </div>
                 </div>
-                <div className="w-full h-[50%]  overflow-y-scroll custm_review_scroller">
-                <h2 className=" text-base lg:text-xl leading-tight capitalize">
+                <div className="w-full h-[50%]  overflow-y-auto custm_review_scroller">
+                <p className=" text-base lg:text-xl leading-tight capitalize">
                   {item.desc}
-                </h2>
+                </p>
                 </div>
               </div>
             ))}
@@ -126,8 +162,8 @@ const ReviewSection = () => {
 
 
         {/* for desktop */}
-        <div className="w-full hidden h-[200px] lg:h-[300px] overflow-x-scroll lg:overscroll-none scroller_none gap-5 lg:flex mt-10 lg:mt-14">
-          <div className=" w-[150px] lg:w-[220px] h-[200px] lg:h-[300px] overflow-hidden shrink-0">
+        <div className="w-full hidden h-[200px] lg:h-[400px] overflow-x-scroll lg:overscroll-none scroller_none gap-5 lg:flex mt-10 lg:mt-14">
+          <div className=" w-[150px] lg:w-[280px] h-[200px] lg:h-full overflow-hidden shrink-0">
             <img
               className="w-full h-full object-cover"
               src="/Images/HomePage/reviews/heroReview.png"
@@ -140,28 +176,29 @@ const ReviewSection = () => {
             ref={scrollRef}
             className="w-full scroller_none relative lg:overflow-x-scroll gap-5 flex"
           >
-            {reviewData.map((item) => (
+            {reviewData.map((item , i) => (
               <div
-                key={item.name}
-                className="h-full w-[300px] lg:w-[450px] flex flex-col justify-between border border-black/50 shrink-0 px-5 lg:px-8 py-3 lg:py-5"
+              key={i}
+              className="h-full w-[300px] relative lg:w-[330px] flex flex-col justify-between border border-black/50 shrink-0 px-5 lg:px-5 py-3 lg:py-3"
               >
-                <div className="w-full flex items-center gap-3">
-                  <div className="size-12 rounded-full overflow-hidden">
+              <div className="w-full h-10 bg-gradient-to-b from-transparent to-white absolute left-0 bottom-0 z-[1]"></div>
+                <div className="w-full flex items-start gap-3">
+                  {/* <div className="size-12 shrink-0 rounded-full overflow-hidden">
                     <img
                       className="w-full h-full object-cover"
                       src={item.pic}
                       alt="loading"
                     />
-                  </div>
+                  </div> */}
                   <div>
-                    <p className=" text-2xl  capitalize">{item.name}</p>
+                    <p className=" text-2xl  capitalize leading-none">{item.name}</p>
                     <p className=" text-xs lg:text-sm uppercase">{item.role}</p>
                   </div>
                 </div>
-                <div className="w-full h-[50%]  overflow-y-scroll custm_review_scroller">
-                <h2 className=" text-lg lg:text-xl leading-tight capitalize">
+                <div className="w-full h-[40%]  overflow-y-auto custm_review_scroller">
+                <p className=" text-base leading-tight capitalize">
                   {item.desc}
-                </h2>
+                </p>
                 </div>
               </div>
             ))}

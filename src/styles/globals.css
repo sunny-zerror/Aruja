@@ -46,10 +46,10 @@ button {
 }
 
 [data-aos="clip"] {
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  transition: clip-path .5s linear;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: clip-path 1s cubic-bezier(0.16, 1, 0.35, 1);
 }
 
 [data-aos="clip"].aos-animate {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }

@@ -216,9 +216,9 @@ const MobileHero = () => {
     return (
         <div>
             <div className=" hero_paren_mob  w-full center h-screen relative overflow-hidden">
-                <p className='  left_txt_2a_mob text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[99] '>Designed</p>
-                <p className=' right_txt_2a_mob  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[99] '>For you </p>
-
+                <p className='  left_txt_2a_mob text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
+                <p className=' right_txt_2a_mob  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
+                <img className='bottom-0 lg:-bottom-4 left-1/2 -translate-x-1/2 absolute w-[25%] z-[1]  lg:w-[7%]' src="/mono_white.png" alt="" />
                 <img className='hero_bg_img_mob top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="loading" />
                 <div className=" leading-none absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
                     <div className="block overflow-hidden">

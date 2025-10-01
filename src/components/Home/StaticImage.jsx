@@ -94,12 +94,12 @@ const StaticImage = () => {
                     </div>
                     <div className=" det_1 absolute w-full flex items-center text-center md:text-start flex-col md:flex-row md:justify-between px-3 lg:px-10">
                         <div className="md:w-[20%]">
-                            <p className=' text-sm lg:text-base capitalize'>Big blue</p>
-                            <p className=' md:hidden text-sm lg:text-base capitalize'>Corporate film</p>
+                            <p className=' text-sm lg:text-base capitalize'>andheri east</p>
+                            <p className=' md:hidden text-sm lg:text-base capitalize'>mumbai</p>
                         </div>
-                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>Wild Blueberry</h2>
+                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>Ridanko office</h2>
                         <div className="hidden md:block w-[20%] text-end">
-                            <p className=' text-sm lg:text-base capitalize'>Corporate film</p>
+                            <p className=' text-sm lg:text-base capitalize'>mumbai</p>
                         </div>
                     </div>
                 </div>
@@ -114,12 +114,12 @@ const StaticImage = () => {
                     </div>
                     <div className=" det_2 absolute w-full flex items-center text-center md:text-start flex-col md:flex-row md:justify-between px-3 lg:px-10">
                         <div className="md:w-[20%]  md:text-start">
-                            <p className=' text-sm lg:text-base capitalize'>Pool club</p>
+                            <p className=' text-sm lg:text-base capitalize'>andheri east</p>
                             <p className=' md:hidden text-sm lg:text-base capitalize'>Film</p>
                         </div>
-                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>the best of summer</h2>
+                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>the laundary house</h2>
                         <div className=" hidden md:block w-[20%] text-end">
-                            <p className=' text-sm lg:text-base capitalize'>Film</p>
+                            <p className=' text-sm lg:text-base capitalize'>mumbai</p>
                         </div>
                     </div>
                 </div>
@@ -134,12 +134,12 @@ const StaticImage = () => {
                     </div>
                     <div className="absolute w-full flex items-center text-center md:text-start flex-col md:flex-row md:justify-between px-3 lg:px-10">
                         <div className="md:w-[20%] whitespace-nowrap  md:text-start">
-                            <p className=' text-sm lg:text-base capitalize'>Genome Quebec</p>
-                            <p className=' md:hidden text-sm lg:text-base capitalize'>Film</p>
+                            <p className=' text-sm lg:text-base capitalize'>andheri east</p>
+                            <p className=' md:hidden text-sm lg:text-base capitalize'>mumbai</p>
                         </div>
-                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>Genomics</h2>
+                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>vivanta apartment</h2>
                         <div className=" hidden md:block w-[20%] text-end">
-                            <p className=' text-sm lg:text-base capitalize'>Film</p>
+                            <p className=' text-sm lg:text-base capitalize'>mumbai</p>
                         </div>
                     </div>
                 </div>

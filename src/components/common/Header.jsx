@@ -20,7 +20,7 @@ const Header = () => {
     if (currentPath === "/work") return;
     if (currentPath === "/contact") return;
     if (currentPath === "/services") return;
-      gsap.to(".header", { display: "flex", delay: 2.25 });
+    gsap.to(".header", { display: "flex", delay: 2.25 });
   }, [])
 
   const openMenu = () => {
@@ -75,14 +75,7 @@ const Header = () => {
               work
             </p>
           </div>
-          <div
-            onClick={() => { navigate(router, "/services"), closeMenu() }}
-            className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
-            <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-            <p className='anii'>
-              services
-            </p>
-          </div>
+
           <div
             onClick={() => { navigate(router, "/studio"), closeMenu() }}
             className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
@@ -91,6 +84,17 @@ const Header = () => {
               studio
             </p>
           </div>
+
+
+          <div
+            onClick={() => { navigate(router, "/services"), closeMenu() }}
+            className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+            <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+            <p className='anii'>
+              services
+            </p>
+          </div>
+
 
           <div
             onClick={() => { navigate(router, "/contact"), closeMenu() }}
@@ -103,11 +107,13 @@ const Header = () => {
 
       <div className={` header  ${(currentPath === "/services" || currentPath === "/studio" || currentPath === "/work" || currentPath === "/contact") ? "flex" : "hidden"}  w-full  p-3 lg:p-5 lg:px-10 z-[999999] items-center justify-between fixed top-0 left-0`}>
         <div className="">
-          <a 
-          href="/"
+          <a
+            href="/"
+            className='relative block center  group'
             onClick={() => navigate(router, "/")}
           >
-            <img className=' hover:scale-110 transition-all duration-300 w-[13vw] cursor-pointer lg:w-[5vw]' src="/logo.png" alt="loading" />
+            <img className=' group-hover:opacity-0  transition-all duration-300 w-[13vw] cursor-pointer lg:w-[5vw]' src="/logo.png" alt="loading" />
+            <img className=' opacity-0  group-hover:opacity-100 absolute top-0 left-0 transition-all duration-300 translate-x-4 w-[121vw] cursor-pointer lg:w-[3vw]' src="/monogram.svg" alt="loading" />
           </a>
         </div>
         <div className="flex items-center gap-10  h-full">
@@ -122,6 +128,16 @@ const Header = () => {
           </a>
 
           <a
+            // href="/studio"
+            onClick={() => navigate(router, "/studio")}
+            className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
+            <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+            <p className='font-semibold'>
+              studio
+            </p>
+          </a>
+
+          <a
             //  href="services"
             onClick={() => navigate(router, "/services")}
             className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
@@ -131,15 +147,7 @@ const Header = () => {
             </p>
           </a>
 
-          <a
-            // href="/studio"
-            onClick={() => navigate(router, "/studio")}
-            className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
-            <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-            <p className='font-semibold'>
-              studio
-            </p>
-          </a>
+
 
           <a
             // href="/contact"

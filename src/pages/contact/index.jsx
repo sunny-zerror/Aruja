@@ -36,33 +36,29 @@ const index = () => {
                 <div
                     style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
                     className=" ctct_clip_div h-[40%]  lg:h-full w-full center lg:w-[25%]">
-                    <img className="w-[50%] lg:w-[70%]" src="/icons/footerMonogram/1.svg" alt="" />
+                    <img className="w-full h-full object-cover" src="/Images/ContactPageImg.webp" alt="" />
                 </div>
                 <div className=" h-[60%]  lg:h-full w-full lg:w-[75%] relative flex flex-col lg:flex-row items-end gap-y-5  pb-5 lg:gap-y-5 justify-end">
                     <div className=" lg:hidden  marq_op opacity-0 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full ">
                         <Marquee gradient gradientWidth={50} className='   h-full w-full scroller_none ' >
                             <p className='h-full  ml-[10vw] flex gap-10 items-center'>
-                                chew on this <img className='w-8' src="/icons/footerMonogram/1.svg" alt="" />
+                                “Got a Thought? <img className='w-8' src="/icons/footerMonogram/1.svg" alt="" />
                             </p>
                             <p className='h-full  ml-[10vw] flex gap-10 items-center'>
-                                chew on this <img className='w-8' src="/icons/footerMonogram/1.svg" alt="" />
+                                toss It Here”<img className='w-8' src="/icons/footerMonogram/1.svg" alt="" />
                             </p>
-                            <p className='h-full  ml-[10vw] flex gap-10 items-center'>
-                                chew on this <img className='w-8' src="/icons/footerMonogram/1.svg" alt="" />
-                            </p>
+                            
                         </Marquee>
                     </div>
                     <div className=" hidden lg:block absolute marq_op opacity-0 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full top-[10vh] lg:top-[25%]">
                         <Marquee gradient gradientWidth={50} className='   h-full w-full scroller_none ' >
                             <p className='h-full  ml-[5vw] flex gap-20 items-center'>
-                                chew on this <img className='w-20' src="/icons/footerMonogram/1.svg" alt="" />
+                                “Got a Thought? <img className='w-20' src="/icons/footerMonogram/1.svg" alt="" />
                             </p>
                             <p className='h-full  ml-[5vw] flex gap-20 items-center'>
-                                chew on this <img className='w-20' src="/icons/footerMonogram/1.svg" alt="" />
+                                toss It Here”<img className='w-20' src="/icons/footerMonogram/1.svg" alt="" />
                             </p>
-                            <p className='h-full  ml-[5vw] flex gap-20 items-center'>
-                                chew on this <img className='w-20' src="/icons/footerMonogram/1.svg" alt="" />
-                            </p>
+                           
                         </Marquee>
                     </div>
 

@@ -160,14 +160,14 @@ const Index = () => {
   const scrollWrapper = useRef(null);
   const scrollContent = useRef(null);
 
-useEffect(() => {
-  AOS.init({
-    duration: 500,
-    easing: "linear",
-    once: false, // set to true if you only want animation once
-  });
-  AOS.refresh(); // only once here
-}, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-secondary",
+      once: false,
+    });
+    AOS.refresh();
+  }, []);
 
 
   useEffect(() => {
@@ -187,7 +187,7 @@ useEffect(() => {
 
     const raf = (time) => {
       lenis.raf(time);
-              AOS.refresh(); 
+      AOS.refresh();
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
@@ -204,13 +204,13 @@ useEffect(() => {
       gsap.to(verticalRef.current, {
         autoAlpha: 1,
         duration: 0.6,
-        ease: "power2.out",
+        ease: "ease-secondary",
         display: "grid",
       });
       gsap.to(horizontalRef.current, {
         autoAlpha: 0,
         duration: 0,
-        ease: "power2.out",
+        ease: "ease-secondary",
         display: "none",
       });
       const clips = document.querySelectorAll(".ver_clip_div");
@@ -221,14 +221,14 @@ useEffect(() => {
 
       gsap.to(clips, {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        ease: "power2.out",
+        ease: "ease-secondary",
         duration: 0.8,
         stagger: 0.05,
       });
 
       gsap.to(texts, {
         yPercent: 0,
-        ease: "power4.out",
+        ease: "ease-secondary",
         duration: 0.8,
         stagger: 0.05,
       });
@@ -236,13 +236,13 @@ useEffect(() => {
       gsap.to(horizontalRef.current, {
         autoAlpha: 1,
         duration: 0.6,
-        ease: "power2.out",
+        ease: "ease-secondary",
         display: "flex",
       });
       gsap.to(verticalRef.current, {
         autoAlpha: 0,
         duration: 0,
-        ease: "power2.out",
+        ease: "ease-secondary",
         display: "none",
       });
       const clips = document.querySelectorAll(".hori_clip_div");
@@ -253,14 +253,14 @@ useEffect(() => {
 
       gsap.to(clips, {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        ease: "power2.out",
+        ease: "ease-secondary",
         duration: 0.8,
         stagger: 0.05,
       });
 
       gsap.to(texts, {
         yPercent: 0,
-        ease: "power4.out",
+        ease: "ease-secondary",
         duration: 0.8,
         stagger: 0.05,
       });
@@ -391,14 +391,14 @@ useEffect(() => {
       >
         {worksData.map((item, idx) => (
           <div
-            
             key={idx}
             onClick={() => navigate(router, `/work/${item.title}`)}
             className="shrink-0 cursor-pointer w-full aspect-[14/9] lg:aspect-video">
             <div className=" block overflow-hidden text-sm lg:text-base font-semibold mb-0.5 lg:mb-2 uppercase">
               <p
+                data-aos-anchor-placement="top-bottom"
                 data-aos="clip"
-                data-aos-delay={idx * 100}  className='wrk_anim_txt ver_wrk_anim_txt_title translate-y-[105%] '>
+                data-aos-delay={idx * 100} className='wrk_anim_txt ver_wrk_anim_txt_title translate-y-[105%] '>
                 {item.title}
               </p>
             </div>
@@ -406,8 +406,9 @@ useEffect(() => {
               style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
               className=" ver_clip_div clip_div w-full h-full overflow-hidden">
               <img
-               data-aos="clip"
-                data-aos-delay={idx * 100} 
+                data-aos="clip"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-delay={idx * 100}
                 className="w-full h-full object-cover"
                 src={item.HeroImg}
                 alt="loading"

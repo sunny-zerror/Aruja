@@ -17,8 +17,8 @@ const Footer = () => {
   return (
     <div className="w-full  border-t border-black/20 p-3 lg:p-10  items-stretch">
       <div className="flex items-stretch">
-        <div className=" center aspect-[3/4]">
-        <img className="w-[70%]" src="/icons/footerMonogram/1.svg" alt="" />
+        <div className=" flex items-end aspect-[3/4]">
+        <img className="w-[70%]" src="/footerLogo.png" alt="" />
         </div>
 
         <div className="w-full flex flex-col justify-between pl-3 lg:pl-10">

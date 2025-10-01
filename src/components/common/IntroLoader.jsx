@@ -89,23 +89,17 @@ const IntroLoader = () => {
 
     }, [])
 
-
-
     return (
         <div>
             <div className=" loader_parent pointer-events-none w-full h-screen fixed top-0 left-0 bg-black z-[99]">
-
-
                 <div className="loader_div uppercase text-white text-xs font-semibold absolute left-1 top-[40%] -translate-y-1/2 leading-none">
                     <p>{count} percent</p>
                     <p>Loaded experience</p>
                 </div>
-
-                <p className='  left_txt text-xs lg:text-sm font-semibold  uppercase absolute top-1/2 left-1 -translate-y-1/2  text-white'>Looking for</p>
-                <p className=' right_txt  text-xs lg:text-sm font-semibold  uppercase absolute top-1/2 right-1 -translate-y-1/2  text-white'>new emotions ?</p>
-
-                <p className='center_txt text-2xl lg:text-4xl font-light    tracking-[1.2vw] uppercase absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white'>Aruja</p>
-
+                <p className='left_txt text-xs lg:text-sm font-semibold  uppercase absolute top-1/2 left-1 -translate-y-1/2  text-white'>Looking for</p>
+                <p className='right_txt text-xs lg:text-sm font-semibold  uppercase absolute top-1/2 right-1 -translate-y-1/2  text-white'>new emotions ?</p>
+                <h2 className='center_txt text-2xl lg:text-4xl font-light uppercase absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white'>studio akto</h2>
+                <img className=' center_txt bottom-0 lg:-bottom-4 left-1/2 -translate-x-1/2 absolute w-[25%]  lg:w-[7%]' src="/mono_white.png" alt="" />
             </div>
         </div>
     )

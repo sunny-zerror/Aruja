@@ -333,7 +333,7 @@ const Hero = () => {
             <div className=" hero_paren  w-full center h-screen relative overflow-hidden">
                 <p className='  left_txt_2a text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
                 <p className=' right_txt_2a  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
-                <img className='w-[3%] absolute bottom-2 left-1/2 -translate-x-1/2 z-[1]' src="/icons/footerMonogram/1.svg" alt="" />
+                <img className='-bottom-4 left-1/2 -translate-x-1/2 absolute z-[1] w-[7%]' src="/mono_white.png" alt="" />
                 <img className='hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="loading" />
                 <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
                     <div className="block overflow-hidden">
@@ -374,7 +374,7 @@ const Hero = () => {
                                 <div className='block relative overflow-hidden lg:pb-2'>
                                     <div className=" opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
                                     <p>
-                                        At arujaK, design is more than decoration
+                                        At arujaK, design is more than 
                                     </p>
                                 </div>
                                 <div className="flex  relative overflow-hidden lg:pb-2 pr-2 gap-2">

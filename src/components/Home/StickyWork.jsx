@@ -33,13 +33,13 @@ const StickyWork = () => {
 
     gsap.fromTo(".clip_wrk", {
       // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-      y:20,
+      y: 20,
       opacity: 0
     }, {
       opacity: 1,
-      y:0,
+      y: 0,
       // duration: .5,
-      ease:"linear",
+      ease: "linear",
       // clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       stagger: {
         each: 0.3,
@@ -138,11 +138,11 @@ const StickyWork = () => {
               </div>
             </div>
           </div>
-          <div className=" hidden lg:block move_txt_on_scroll overflow-hidden leading-none uppercase text-2xl  md:text-[6vw] lg:space-y-5 w-full">
+          <div className=" hidden lg:block move_txt_on_scroll overflow-hidden leading-none uppercase text-2xl  md:text-[6vw]  w-full">
             <div className="flex move_txt_child whitespace-nowrap w-[80%] justify-between  gap-2">
-              <p>interios   </p>
+              <p>Interiors</p>
               <h2>that</h2>
-              <p>addapt</p>
+              <p>adapt</p>
             </div>
             <div className=" w-full  flex justify-end ">
               <div className=" move_txt_child whitespace-nowrap w-[50%] flex justify-between">
@@ -158,7 +158,7 @@ const StickyWork = () => {
               <p>around</p>
             </div>
             <div className="w-full lg:flex justify-center">
-              <div className=" mt-5 w-[60%] md:w-[30%] lg:w-[20%] lg:text-center uppercase text-[12px] lg:text-sm">
+              <div className=" mt-16 w-[60%] md:w-[30%] lg:w-[20%] lg:text-center uppercase text-[12px] lg:text-sm">
                 <p>our interiors are designed to be functional, timeless, and personal.</p>
                 <button onClick={() => navigate(router, "/studio")}>
                   <div className=' mt-3 lg:mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
