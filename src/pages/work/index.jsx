@@ -415,7 +415,7 @@ const Index = () => {
           {worksData.map((item, idx) => (
             <div
               key={idx}
-              onClick={() => navigate(router, `/work/${item.title}`)}
+              onClick={() => navigate(router, `/work/${item.id}`)}
               className="shrink-0 cursor-pointer w-full aspect-[14/9] lg:aspect-video">
               <div className=" block overflow-hidden text-sm lg:text-base font-semibold mb-0.5 lg:mb-2 uppercase">
                 <p
