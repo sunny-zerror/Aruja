@@ -3,9 +3,28 @@ import gsap from 'gsap'
 import CustomEase from 'gsap/dist/CustomEase'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { usePageReady } from '@/components/hooks/usePageReady';
+import SeoHeader from '@/components/seo/SeoHeader';
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const ServiceSlider = () => {
+
+    const meta = {
+        title: "Studio AKTO — Interior Design Studio",
+        description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
+        canonical: "https://studioakto.com/",
+        og: {
+            title: "Studio AKTO — Interior Design Studio",
+            description: "Proportion-led interiors across residential, commercial & hospitality.",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "Studio AKTO",
+            description: "Precision and design systems for contemporary spaces.",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        robots: "index,follow"
+    };
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -80,7 +99,9 @@ const ServiceSlider = () => {
 
 
     return (
-        <div>
+        <>
+            <SeoHeader meta={meta} />
+
             <div id='services' className=" serv_slider_paren w-full center  text-[#FFFDF6] h-screen relative">
                 <img
                     className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/HomePage/cdcs.webp" alt="loading" />
@@ -200,7 +221,7 @@ const ServiceSlider = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

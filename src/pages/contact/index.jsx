@@ -1,9 +1,28 @@
 import { usePageReady } from '@/components/hooks/usePageReady';
+import SeoHeader from '@/components/seo/SeoHeader';
 import gsap from 'gsap';
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 
 const index = () => {
+
+    const meta = {
+        title: "Studio AKTO — Interior Design Studio",
+        description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
+        canonical: "https://studioakto.com/",
+        og: {
+            title: "Studio AKTO — Interior Design Studio",
+            description: "Proportion-led interiors across residential, commercial & hospitality.",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "Studio AKTO",
+            description: "Precision and design systems for contemporary spaces.",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        robots: "index,follow"
+    };
 
     usePageReady(() => {
         gsap.to(".marq_op", {
@@ -31,7 +50,8 @@ const index = () => {
     });
 
     return (
-        <div>
+        <>
+            <SeoHeader meta={meta} />
             <div className="w-full relative h-[100dvh] flex flex-col-reverse lg:flex-row  ">
                 <div
                     style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
@@ -57,7 +77,7 @@ const index = () => {
                             <p className='h-full  ml-[5vw] flex gap-20 items-center'>
                                 toss It Here”<img className='w-20' src="/icons/footerMonogram/1.svg" alt="" />
                             </p>
-                           
+
                         </Marquee>
                     </div>
 
@@ -119,24 +139,24 @@ const index = () => {
                                 </div>
                                 <div className="flex gap-5 lg:gap-10 ">
                                     <a href="https://www.instagram.com/arujak?igsh=djZua2NuaGo1YTE5&utm_source=qr" target="_blank" rel="noopener noreferrer" >
-                                    <button>
-                                        <div className='  relative w-fit group overflow-hidden uppercase flex items-center gap-2'>
-                                            <div className=" belo_link  w-0 group-hover:left-[100%]   transition-all duration-300 h-[1px]  bg-[#2E2D2B]  bottom-0 left-0 absolute"></div>
-                                            <p className='ctct_anim_txt text-lg lg:text-2xl  translate-y-[105%]'  >
-                                                instagram
-                                            </p>
-                                        </div>
-                                    </button>
+                                        <button>
+                                            <div className='  relative w-fit group overflow-hidden uppercase flex items-center gap-2'>
+                                                <div className=" belo_link  w-0 group-hover:left-[100%]   transition-all duration-300 h-[1px]  bg-[#2E2D2B]  bottom-0 left-0 absolute"></div>
+                                                <p className='ctct_anim_txt text-lg lg:text-2xl  translate-y-[105%]'  >
+                                                    instagram
+                                                </p>
+                                            </div>
+                                        </button>
                                     </a>
                                     <a href="https://www.linkedin.com/company/studio-arujak/" target="_blank" rel="noopener noreferrer">
-                                    <button>
-                                        <div className=' relative w-fit group overflow-hidden uppercase flex items-center gap-2'>
-                                            <div className=" belo_link w-0 group-hover:left-[100%]   transition-all duration-300 h-[1px]  bg-[#2E2D2B]  bottom-0 left-0 absolute"></div>
-                                            <p className='ctct_anim_txt text-lg lg:text-2xl translate-y-[105%]'  >
-                                                linkedIn
-                                            </p>
-                                        </div>
-                                    </button>
+                                        <button>
+                                            <div className=' relative w-fit group overflow-hidden uppercase flex items-center gap-2'>
+                                                <div className=" belo_link w-0 group-hover:left-[100%]   transition-all duration-300 h-[1px]  bg-[#2E2D2B]  bottom-0 left-0 absolute"></div>
+                                                <p className='ctct_anim_txt text-lg lg:text-2xl translate-y-[105%]'  >
+                                                    linkedIn
+                                                </p>
+                                            </div>
+                                        </button>
                                     </a>
                                 </div>
 
@@ -147,7 +167,7 @@ const index = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

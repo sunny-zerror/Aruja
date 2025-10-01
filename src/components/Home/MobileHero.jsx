@@ -252,7 +252,7 @@ const MobileHero = () => {
                                 <div className='block relative overflow-hidden lg:pb-2'>
                                     <div className=" opa_slide_1_mob absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
                                     <p>
-                                        At arujaK, design is more than decoration
+                                        At AKTO, design is more than
                                     </p>
                                 </div>
                                 <div className="flex  relative overflow-hidden lg:pb-2 pr-2 gap-2">

@@ -8,6 +8,7 @@ import CustomEase from 'gsap/dist/CustomEase';
 import { usePageReady } from '@/components/hooks/usePageReady';
 import useNavigation from '@/store/useNavigation';
 import { useRouter } from 'next/router';
+import SeoHeader from '@/components/seo/SeoHeader';
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const processData = [
@@ -73,6 +74,25 @@ const solutionData = [
 ]
 
 const index = () => {
+
+    const meta = {
+        title: "Studio AKTO — Interior Design Studio",
+        description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
+        canonical: "https://studioakto.com/",
+        og: {
+            title: "Studio AKTO — Interior Design Studio",
+            description: "Proportion-led interiors across residential, commercial & hospitality.",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "Studio AKTO",
+            description: "Precision and design systems for contemporary spaces.",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        robots: "index,follow"
+    };
+
     const router = useRouter();
     const { navigate } = useNavigation();
     CustomEase.create("ease-secondary", "0.16, 1, 0.35, 1");
@@ -574,233 +594,236 @@ const index = () => {
 
 
     return (
-        <div className="w-full relative  pt-14 lg:pt-12 flex-col center">
-            <div className="w-full z-[99]  translate-y-[7vw] lg:translate-y-[4.1vw]  center block overflow-hidden">
-                <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-2    flex center gap-2 lg:gap-6  uppercase text-[15vw]">
-                    <p className=" anim_txt translate-y-[100%]   ">The</p>
-                    <h2 className=" anim_txt translate-y-[100%] italic   ">studio</h2>
+        <>
+            <SeoHeader meta={meta} />
+            <div className="w-full relative  pt-14 lg:pt-12 flex-col center">
+                <div className="w-full z-[99]  translate-y-[7vw] lg:translate-y-[4.1vw]  center block overflow-hidden">
+                    <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-2    flex center gap-2 lg:gap-6  uppercase text-[15vw]">
+                        <p className=" anim_txt translate-y-[100%]   ">The</p>
+                        <h2 className=" anim_txt translate-y-[100%] italic   ">studio</h2>
+                    </div>
                 </div>
-            </div>
 
-            <div
-                style={{
-                    clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)"
-                }}
-                className=" mt-6  lg:mt-10 stic_image_pent_c w-full h-[100vh] lg:h-[140vh] overflow-hidden center">
-                <img className=' paex_img_cdc brightness-[.9] w-full h-full object-cover'
-                    src="/Images/HomePage/FooterImg.webp"
-                    alt="loading" />
-            </div>
+                <div
+                    style={{
+                        clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)"
+                    }}
+                    className=" mt-6  lg:mt-10 stic_image_pent_c w-full h-[100vh] lg:h-[140vh] overflow-hidden center">
+                    <img className=' paex_img_cdc brightness-[.9] w-full h-full object-cover'
+                        src="/Images/HomePage/FooterImg.webp"
+                        alt="loading" />
+                </div>
 
-            <div className="w-full py-20 lg:py-44 overflow-hidden center studio_desc">
-                <div className="  text-lg md:text-4xl lg:text-6xl leading-tight flex flex-col  items-center   capitalize">
-                    <div className='block relative overflow-hidden pb-2'>
-                        <div className=" opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
-                        <p className='whitespace-nowrap' >
-                            design is more than decoration
-                        </p>
-                    </div>
-                    <div className="flex  relative overflow-hidden pb-2 pr-2 gap-2">
-                        <div className=" opa_slide_2 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
-                        <p className='whitespace-nowrap' >it’s about </p>
-                        <h2 className='whitespace-nowrap' > <i>creating spaces</i> </h2>
-                        <p className='whitespace-nowrap' >that flow with</p>
-                    </div>
-                    <div className='block relative overflow-hidden pb-2 '>
-                        <div className=" opa_slide_3 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
-                        <p className='whitespace-nowrap'  >purpose, proportion, and precision.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="w-full px-3 lg:px-10 gap-y-5 lg:gap-y-0 flex-col md:flex-row  justify-between flex">
-                <div className=" w-full md:w-[60%] h-full">
-                    <div className="w-full par_img_pren overflow-hidden aspect-[16/10] ">
-                        <img className=' parlx_img_eff scale-150 lg:scale-110 w-full h-full object-cover' src="/Images/HomePage/erec.webp" alt="loading" />
-                    </div>
-                    <p className='uppercase text-xs md:text-sm font-black mt-5 md:mt-10'>About us</p>
-                    <p className=' text-sm leading-tight md:text-lg lg:text-3xl mt-3 md:mt-5'>Form follows function. Flow shapes design. Based in India, we are a multidisciplinary interior design studio rooted in the principle that form follows function. Our spaces are built on flow — spatial, emotional, and practical. Every project is a study in proportion, purpose, and precision.</p>
-                </div>
-                <div className=" mt-10 md:hidden w-full flex   ">
-                    <div className="w-[50%] par_img_pren overflow-hidden h-full flex items-end aspect-[10/14] ">
-                        <img className='  parlx_img_eff scale-[2.5] lg:scale-110 w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
-                    </div>
-                    <div className="w-1/2  aspect-[10/14] pl-2 h-full flex items-end">
-                        <p className=' text-xs md:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
-                    </div>
-                </div>
-                <div className=" hidden md:block w-[23.5%] h-full ">
-                    <div className="w-full flex par_img_pren overflow-hidden items-end aspect-[10/16] ">
-                        <img className=' parlx_img_eff scale-[150] lg:scale-110 w-full aspect-[4/5] object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
-                    </div>
-                    <p className=' text-sm lg:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
-                </div>
-            </div>
-
-            <div className="w-full py-20 lg:py-44 px-3 lg:px-10 gap-5 lg:gap-20 flex flex-col lg:flex-row justify-between items-stretch">
-                <div className=" w-full lg:w-[70vw] flex flex-col justify-between">
-                    <div className="mt-3 lg:mt-5 overflow-hidden uppercase leading-none text-[9vw] md:text-8xl">
-                        <div className=" slide_ttx flex w-[90%] justify-between">
-                            <p>the</p>
-                            <p>person</p>
-                            <h2>behind</h2>
+                <div className="w-full py-20 lg:py-44 overflow-hidden center studio_desc">
+                    <div className="  text-lg md:text-4xl lg:text-6xl leading-tight flex flex-col  items-center   capitalize">
+                        <div className='block relative overflow-hidden pb-2'>
+                            <div className=" opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
+                            <p className='whitespace-nowrap' >
+                                design is more than decoration
+                            </p>
                         </div>
-                        <div className="w-full flex justify-end">
-                            <div className=" slide_ttx flex justify-between w-[50%]">
-                                <p>akto</p>
-                                <h2>Studio</h2>
+                        <div className="flex  relative overflow-hidden pb-2 pr-2 gap-2">
+                            <div className=" opa_slide_2 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
+                            <p className='whitespace-nowrap' >it’s about </p>
+                            <h2 className='whitespace-nowrap' > <i>creating spaces</i> </h2>
+                            <p className='whitespace-nowrap' >that flow with</p>
+                        </div>
+                        <div className='block relative overflow-hidden pb-2 '>
+                            <div className=" opa_slide_3 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
+                            <p className='whitespace-nowrap'  >purpose, proportion, and precision.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="w-full px-3 lg:px-10 gap-y-5 lg:gap-y-0 flex-col md:flex-row  justify-between flex">
+                    <div className=" w-full md:w-[60%] h-full">
+                        <div className="w-full par_img_pren overflow-hidden aspect-[16/10] ">
+                            <img className=' parlx_img_eff scale-150 lg:scale-110 w-full h-full object-cover' src="/Images/HomePage/erec.webp" alt="loading" />
+                        </div>
+                        <p className='uppercase text-xs md:text-sm font-black mt-5 md:mt-10'>About us</p>
+                        <p className=' text-sm leading-tight md:text-lg lg:text-3xl mt-3 md:mt-5'>Form follows function. Flow shapes design. Based in India, we are a multidisciplinary interior design studio rooted in the principle that form follows function. Our spaces are built on flow — spatial, emotional, and practical. Every project is a study in proportion, purpose, and precision.</p>
+                    </div>
+                    <div className=" mt-10 md:hidden w-full flex   ">
+                        <div className="w-[50%] par_img_pren overflow-hidden h-full flex items-end aspect-[10/14] ">
+                            <img className='  parlx_img_eff scale-[2.5] lg:scale-110 w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
+                        </div>
+                        <div className="w-1/2  aspect-[10/14] pl-2 h-full flex items-end">
+                            <p className=' text-xs md:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
+                        </div>
+                    </div>
+                    <div className=" hidden md:block w-[23.5%] h-full ">
+                        <div className="w-full flex par_img_pren overflow-hidden items-end aspect-[10/16] ">
+                            <img className=' parlx_img_eff scale-[150] lg:scale-110 w-full aspect-[4/5] object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
+                        </div>
+                        <p className=' text-sm lg:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
+                    </div>
+                </div>
+
+                <div className="w-full py-20 lg:py-44 px-3 lg:px-10 gap-5 lg:gap-20 flex flex-col lg:flex-row justify-between items-stretch">
+                    <div className=" w-full lg:w-[70vw] flex flex-col justify-between">
+                        <div className="mt-3 lg:mt-5 overflow-hidden uppercase leading-none text-[9vw] md:text-8xl">
+                            <div className=" slide_ttx flex w-[90%] justify-between">
+                                <p>the</p>
+                                <p>person</p>
+                                <h2>behind</h2>
+                            </div>
+                            <div className="w-full flex justify-end">
+                                <div className=" slide_ttx flex justify-between w-[50%]">
+                                    <p>akto</p>
+                                    <h2>Studio</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className=" hidden  w-full lg:flex justify-between">
+                            <div className=" h-full flex items-end ">
+                                <img className='w-[20%]' src="/icons/footerMonogram/1.svg" alt="" />
+                            </div>
+                            <div className="leading-tight text-lg w-[50%] capitalize font-semibold">
+                                <p className="text-end">
+                                    “ Personal vision, professional execution.
+                                </p>
+                                <p>
+                                    Founded with the intent to balance aesthetics with function, arujaK
+                                    reflects the eye and passion of its founder. Each project carries
+                                    personal attention — not just a template.”
+                                </p>
+                                <p className="text-lg uppercase font-semibold mt-5">
+                                    - Aruja Kothari tantia
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <div className=" hidden  w-full lg:flex justify-between">
-                        <div className=" h-full flex items-end ">
-                            <img className='w-[20%]' src="/icons/footerMonogram/1.svg" alt="" />
+                    <div className=" w-full  lg:w-[30vw]  lg:h-fit overflow-hidden">
+                        <div className=" overflow-hidden h-fit  w-full aspect-[6/7] par_img_pren_2">
+                            <img
+                                className="w-full parlx_img_eff_2 scale-110 aspect-[6/7] object-cover"
+                                src="/Images/studioPage/behind_studio.webp"
+                                alt="loading"
+                            />
                         </div>
-                        <div className="leading-tight text-lg w-[50%] capitalize font-semibold">
-                            <p className="text-end">
+                        <div className="leading-tight lg:hidden  mt-3 w-full capitalize">
+                            <p className='text-sm leading-tight md:text-lg lg:text-3xl'>
                                 “ Personal vision, professional execution.
-                            </p>
-                            <p>
                                 Founded with the intent to balance aesthetics with function, arujaK
                                 reflects the eye and passion of its founder. Each project carries
                                 personal attention — not just a template.”
                             </p>
-                            <p className="text-lg uppercase font-semibold mt-5">
+                            <p className=" text-end text-sm uppercase font-semibold mt-2 ">
                                 - Aruja Kothari tantia
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div className=" w-full  lg:w-[30vw]  lg:h-fit overflow-hidden">
-                    <div className=" overflow-hidden h-fit  w-full aspect-[6/7] par_img_pren_2">
-                        <img
-                            className="w-full parlx_img_eff_2 scale-110 aspect-[6/7] object-cover"
-                            src="/Images/studioPage/behind_studio.webp"
-                            alt="loading"
-                        />
-                    </div>
-                    <div className="leading-tight lg:hidden  mt-3 w-full capitalize">
-                        <p className='text-sm leading-tight md:text-lg lg:text-3xl'>
-                            “ Personal vision, professional execution.
-                            Founded with the intent to balance aesthetics with function, arujaK
-                            reflects the eye and passion of its founder. Each project carries
-                            personal attention — not just a template.”
-                        </p>
-                        <p className=" text-end text-sm uppercase font-semibold mt-2 ">
-                            - Aruja Kothari tantia
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <div className="w-full pb-20 lg:pb-44 px-3 lg:px-10">
+                    <p className='uppercase text-xs mb-5 lg:text-sm font-black'>THe Process</p>
+                    <div onMouseMove={mouseMove} onMouseEnter={mouseMove} onMouseLeave={mouseLeave} className="w-full ">
 
-            <div className="w-full pb-20 lg:pb-44 px-3 lg:px-10">
-                <p className='uppercase text-xs mb-5 lg:text-sm font-black'>THe Process</p>
-                <div onMouseMove={mouseMove} onMouseEnter={mouseMove} onMouseLeave={mouseLeave} className="w-full ">
-
-                    {processData.map((item, idx) => (
-                        <motion.div
-                            onMouseEnter={() => setHovered(idx)}
-                            onMouseLeave={() => setHovered(null)}
-                            style={{
-                                clipPath: "polygon(0 0, 0 100%, 100% 100%, 100% 0)",
-                            }}
-                            key={idx}
-                            animate={{
-                                borderColor: hovered === idx ? "rgba(0,0,0,1)" : "rgba(0,0,0,0.2)",
-                            }}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className={`w-full  ${idx === 4 ? "border-none" : "border-b-[1px]"
-                                } h-[10vh] lg:h-[20vh] group text-3xl lg:text-8xl uppercase flex items-center justify-between`}
-                        >
-                            <motion.div className=" cursor-box pointer-events-none z-[-1] lg:opacity-1 aspect-square w-[50vw] md:w-[30vw] lg:w-[20vw]  overflow-hidden fixed top-1/2 lg:top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:left-0"
-                                style={{ x: mousePosition.x, y: mousePosition.y }}>
-                                <img className='w-full h-full object-cover' src={item.img} alt="loading" />
-                            </motion.div>
+                        {processData.map((item, idx) => (
                             <motion.div
-                                initial={{ opacity: 0.4 }}
-                                animate={{ opacity: hovered === idx ? 1 : 0.4 }}
+                                onMouseEnter={() => setHovered(idx)}
+                                onMouseLeave={() => setHovered(null)}
+                                style={{
+                                    clipPath: "polygon(0 0, 0 100%, 100% 100%, 100% 0)",
+                                }}
+                                key={idx}
+                                animate={{
+                                    borderColor: hovered === idx ? "rgba(0,0,0,1)" : "rgba(0,0,0,0.2)",
+                                }}
                                 transition={{ duration: 0.3, ease: "easeInOut" }}
+                                className={`w-full  ${idx === 4 ? "border-none" : "border-b-[1px]"
+                                    } h-[10vh] lg:h-[20vh] group text-3xl lg:text-8xl uppercase flex items-center justify-between`}
                             >
-                                <p>{item.number}</p>
+                                <motion.div className=" cursor-box pointer-events-none z-[-1] lg:opacity-1 aspect-square w-[50vw] md:w-[30vw] lg:w-[20vw]  overflow-hidden fixed top-1/2 lg:top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:left-0"
+                                    style={{ x: mousePosition.x, y: mousePosition.y }}>
+                                    <img className='w-full h-full object-cover' src={item.img} alt="loading" />
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0.4 }}
+                                    animate={{ opacity: hovered === idx ? 1 : 0.4 }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                >
+                                    <p>{item.number}</p>
+                                </motion.div>
+
+                                <motion.div
+                                    className="text-end"
+                                    initial={{ opacity: 0.4 }}
+                                    animate={{ opacity: hovered === idx ? 1 : 0.4 }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                >
+                                    <p>{item.title}</p>
+                                </motion.div>
                             </motion.div>
-
-                            <motion.div
-                                className="text-end"
-                                initial={{ opacity: 0.4 }}
-                                animate={{ opacity: hovered === idx ? 1 : 0.4 }}
-                                transition={{ duration: 0.3, ease: "easeInOut" }}
-                            >
-                                <p>{item.title}</p>
-                            </motion.div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-
-
-            <div className=" solution_paren w-full h-screen bg-[#454738] text-[#FFFDF6] ">
-                <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-24 text-3xl lg:text-6xl gap-4">
-                    <p>Our</p>
-                    <h2 className='italic '>solution</h2>
-                </div>
-
-                <div className=" h-[70%] lg:h-[75%] w-full overflow-hidden  flex items-center">
-                    <div className=" scroll_solut w-full flex px-3 lg:px-10 scroller_none ">
-                        {solutionData.map((item, idx) => (
-                            <div key={idx} className=" w-[90vw]  lg:w-[30vw] shrink-0 space-y-10 ">
-                                <div className=" size-16  lg:size-24">
-                                    <img className={` w-full  transition-all duration-300 icon_${idx} ${idx === 0 ? "opacity-100" : "opacity-30"} `} src={item.icon} alt="loading" />
-                                </div>
-                                <div className="w-full h-[3px] bg-[#fffdf646] relative ">
-                                    <div className="w-full h-full relative overflow-hidden">
-                                        <div className={` scroll_line_${idx} absolute bg-[#FFFDF6] h-full left-0 ${idx === 0 ? 'w-[70%]' : 'w-0'}`}></div>
-                                    </div>
-
-                                    {idx === 5 && (
-                                        <div className={` ${idx === 5 ? " border-[#fffdf646] " : ""} last_dot_border_${idx} size-9  absolute overflow-hidden border-[2px]  bg-[#454738] top-1/2 right-0 -translate-y-1/2 center rounded-full`}>
-                                            <div className={`  ${idx === 5 ? " bg-[#fffdf646] " : "bg-[#FFFDF6]"} transition-all duration-300 last_inside_dot_${idx} h-[0px] w-[0px]  rounded-full  `}></div>
-                                        </div>
-                                    )}
-
-                                    <div className={` ${idx === 0 ? "border-[#FFFDF6]  " : "border-[#fffdf646]"} dot_border_${idx} absolute size-9 border-[2px]  bg-[#454738] top-1/2 left-0 -translate-y-1/2 center rounded-full`}>
-                                        <div className={`  ${idx === 0 ? "  bg-[#FFFDF6] h-[20px] w-[20px] " : "bg-[#fffdf646] h-[0px] w-[0px]"} transition-all duration-300 inside_dot_${idx}  rounded-full  `}></div>
-                                    </div>
-                                </div>
-                                <div className={` transition-all duration-300 content_box_${idx} w-[80%]  lg:w-[70%] ${idx === 0 ? "opacity-100" : "opacity-30"} `}  >
-                                    <p className=' text-lg lg:text-2xl leading-tight font-semibold'>0{idx + 1}/</p>
-                                    <p className='uppercase leading-tight font-semibold  text-lg lg:text-2xl'>{item.title}</p>
-                                    <p className=' text-sm lg:text-base font-semibold mt-5 leading-tight'>{item.desc}</p>
-                                </div>
-                            </div>
                         ))}
-                        <div className=" w-[70vw] lg:w-[15vw] pb-24 ml-5  lg:ml-20 flex flex-col justify-center uppercase shrink-0 text-sm  ">
-                            <p>our interiors are designed to be functional, timeless, and personal.</p>
-                            <button
-                                onClick={() => navigate(router, "/contact")}
-                                className=' relative font-semibold uppercase border  mt-5 border-[#FFFDF6] text-[#FFFDF6] w-fit px-6 py-2'>
-                                <div className="w-full center h-full">
-                                    <p>
-                                        let's talk
-                                    </p>
-                                </div>
-                                <div
-                                    style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
-                                    className=" clip_btn absolute top-0 left-0 bg-[#FFFDF6] center text-[#454738] font-semibold w-full h-full">
-                                    <p>
-                                        let's talk
-                                    </p>
-                                </div>
-                            </button>
-                        </div>
+                    </div>
+                </div>
+
+
+                <div className=" solution_paren w-full h-screen bg-[#454738] text-[#FFFDF6] ">
+                    <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-24 text-3xl lg:text-6xl gap-4">
+                        <p>Our</p>
+                        <h2 className='italic '>solution</h2>
                     </div>
 
-                </div>
-            </div>
+                    <div className=" h-[70%] lg:h-[75%] w-full overflow-hidden  flex items-center">
+                        <div className=" scroll_solut w-full flex px-3 lg:px-10 scroller_none ">
+                            {solutionData.map((item, idx) => (
+                                <div key={idx} className=" w-[90vw]  lg:w-[30vw] shrink-0 space-y-10 ">
+                                    <div className=" size-16  lg:size-24">
+                                        <img className={` w-full  transition-all duration-300 icon_${idx} ${idx === 0 ? "opacity-100" : "opacity-30"} `} src={item.icon} alt="loading" />
+                                    </div>
+                                    <div className="w-full h-[3px] bg-[#fffdf646] relative ">
+                                        <div className="w-full h-full relative overflow-hidden">
+                                            <div className={` scroll_line_${idx} absolute bg-[#FFFDF6] h-full left-0 ${idx === 0 ? 'w-[70%]' : 'w-0'}`}></div>
+                                        </div>
 
-            <Footer />
-        </div>
+                                        {idx === 5 && (
+                                            <div className={` ${idx === 5 ? " border-[#fffdf646] " : ""} last_dot_border_${idx} size-9  absolute overflow-hidden border-[2px]  bg-[#454738] top-1/2 right-0 -translate-y-1/2 center rounded-full`}>
+                                                <div className={`  ${idx === 5 ? " bg-[#fffdf646] " : "bg-[#FFFDF6]"} transition-all duration-300 last_inside_dot_${idx} h-[0px] w-[0px]  rounded-full  `}></div>
+                                            </div>
+                                        )}
+
+                                        <div className={` ${idx === 0 ? "border-[#FFFDF6]  " : "border-[#fffdf646]"} dot_border_${idx} absolute size-9 border-[2px]  bg-[#454738] top-1/2 left-0 -translate-y-1/2 center rounded-full`}>
+                                            <div className={`  ${idx === 0 ? "  bg-[#FFFDF6] h-[20px] w-[20px] " : "bg-[#fffdf646] h-[0px] w-[0px]"} transition-all duration-300 inside_dot_${idx}  rounded-full  `}></div>
+                                        </div>
+                                    </div>
+                                    <div className={` transition-all duration-300 content_box_${idx} w-[80%]  lg:w-[70%] ${idx === 0 ? "opacity-100" : "opacity-30"} `}  >
+                                        <p className=' text-lg lg:text-2xl leading-tight font-semibold'>0{idx + 1}/</p>
+                                        <p className='uppercase leading-tight font-semibold  text-lg lg:text-2xl'>{item.title}</p>
+                                        <p className=' text-sm lg:text-base font-semibold mt-5 leading-tight'>{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                            <div className=" w-[70vw] lg:w-[15vw] pb-24 ml-5  lg:ml-20 flex flex-col justify-center uppercase shrink-0 text-sm  ">
+                                <p>our interiors are designed to be functional, timeless, and personal.</p>
+                                <button
+                                    onClick={() => navigate(router, "/contact")}
+                                    className=' relative font-semibold uppercase border  mt-5 border-[#FFFDF6] text-[#FFFDF6] w-fit px-6 py-2'>
+                                    <div className="w-full center h-full">
+                                        <p>
+                                            let's talk
+                                        </p>
+                                    </div>
+                                    <div
+                                        style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
+                                        className=" clip_btn absolute top-0 left-0 bg-[#FFFDF6] center text-[#454738] font-semibold w-full h-full">
+                                        <p>
+                                            let's talk
+                                        </p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <Footer />
+            </div>
+        </>
     )
 }
 

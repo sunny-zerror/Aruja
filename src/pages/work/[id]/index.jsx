@@ -6,6 +6,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Footer from '@/components/common/Footer';
 import { usePageReady } from '@/components/hooks/usePageReady';
 import useNavigation from '@/store/useNavigation';
+import SeoHeader from '@/components/seo/SeoHeader';
 gsap.registerPlugin(ScrollTrigger);
 
 const worksData = [
@@ -148,6 +149,23 @@ const worksData = [
 ];
 
 const index = () => {
+    const meta = {
+        title: "Studio AKTO — Interior Design Studio",
+        description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
+        canonical: "https://studioakto.com/",
+        og: {
+            title: "Studio AKTO — Interior Design Studio",
+            description: "Proportion-led interiors across residential, commercial & hospitality.",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "Studio AKTO",
+            description: "Precision and design systems for contemporary spaces.",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        robots: "index,follow"
+    };
 
     const { navigate } = useNavigation();
     const router = useRouter();
@@ -203,18 +221,20 @@ const index = () => {
 
 
     useEffect(() => {
-    AOS.init({
-      duration: 500,   
-      easing: "ease-secondary",
-    });
-  }, []);
+        AOS.init({
+            duration: 500,
+            easing: "ease-secondary",
+        });
+    }, []);
 
-  useEffect(() => {
-    AOS.refresh();
-  });
+    useEffect(() => {
+        AOS.refresh();
+    });
 
     return (
-        <div>
+        <>
+            <SeoHeader meta={meta} />
+
             <div className="  w-full h-[100vh] lg:h-[170vh] relative text-[#FFFDF4] ">
                 <div className=" stic_image_pent w-full h-full overflow-hidden center">
                     <img className=' paex_img brightness-90 w-full h-full object-cover'
@@ -410,11 +430,9 @@ const index = () => {
 
             </div>
 
-
-
             <Footer />
 
-        </div>
+        </>
     )
 }
 

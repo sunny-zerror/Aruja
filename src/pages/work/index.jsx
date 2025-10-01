@@ -8,6 +8,7 @@ import { usePageReady } from '@/components/hooks/usePageReady';
 import SplitText from 'gsap/dist/SplitText';
 import useNavigation from '@/store/useNavigation';
 import { useRouter } from 'next/router';
+import SeoHeader from '@/components/seo/SeoHeader';
 gsap.registerPlugin(SplitText);
 
 const worksData = [
@@ -150,6 +151,26 @@ const worksData = [
 ];
 
 const Index = () => {
+
+  const meta = {
+    title: "Studio AKTO — Interior Design Studio",
+    description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
+    canonical: "https://studioakto.com/",
+    og: {
+      title: "Studio AKTO — Interior Design Studio",
+      description: "Proportion-led interiors across residential, commercial & hospitality.",
+      image: "https://www.studioakto.com/logo.png"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Studio AKTO",
+      description: "Precision and design systems for contemporary spaces.",
+      image: "https://www.studioakto.com/logo.png"
+    },
+    robots: "index,follow"
+  };
+
+
   const router = useRouter();
   const { navigate } = useNavigation();
   const [view, setView] = useState("horizontal");
@@ -302,123 +323,126 @@ const Index = () => {
   });
 
   return (
-    <div
-      className="w-full pt-14 lg:pt-12  relative   flex-col justify-between">
-      <div className="w-full  lg:flex px-3 mb-5 lg:mb-0 justify-center translate-y-[7vw] lg:translate-y-[4.1vw] overflow-hidden">
-        <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[15vw] ">
-          <p className="wrk_anim_txt translate-y-[105%] ">our</p>
-          <h2 className="wrk_anim_txt translate-y-[105%]  italic">work</h2>
-        </div>
-      </div>
-
-      <div className="w-full relative   lg:flex items-center justify-center ">
-        <div className=" text-sm px-3 lg:text-base absolute  top-[8.5vw] lg:top-[4.1vw] z-[99] w-fit">
-          <div className="leading-none font-semibold">
-            <div className="block overflow-hidden">
-              <p className='wrk_anim_txt translate-y-[105%]'   >Every project at arujaK is crafted with</p>
-            </div>
-            <div className="block overflow-hidden">
-              <p className='wrk_anim_txt translate-y-[105%]'   >flow, proportion, and precision. </p>
-            </div>
-            <div className="block overflow-hidden">
-              <p className='wrk_anim_txt translate-y-[105%]'   >Explore some of our featured spaces:</p>
-            </div>
-          </div>
-          <div className="flex mt-3 font-semibold gap-5">
-            <button
-              onClick={() => setView("vertical")}
-              className={`  block overflow-hidden  uppercase text-sm transition-opacity duration-300 ${view === "vertical" ? "underline opacity-100" : "opacity-50"
-                }`}
-            >
-              <p className='wrk_anim_txt translate-y-[105%] '>
-                Vertical
-              </p>
-            </button>
-
-            <button
-              onClick={() => setView("horizontal")}
-              className={`  block overflow-hidden  uppercase text-sm transition-opacity duration-300 ${view === "horizontal" ? "underline opacity-100" : "opacity-50"
-                }`}
-            >
-              <p className='wrk_anim_txt translate-y-[105%] '>
-                Horizontal
-              </p>
-            </button>
-          </div>
-        </div>
-      </div>
-
+    <>
+      <SeoHeader meta={meta} />
       <div
-        ref={horizontalRef}
-        className="w-full"
-        style={{ opacity: 1, display: "flex" }}
-      >
-        <div
-          ref={scrollWrapper} className="w-full flex items-end pb-10 md:pb-[1vw] absolute h-[100dvh] z-[9] top-0 left-0 px-3 lg:px-10 pr-3 lg:pr-10 overflow-x-auto scroller_none">
-          <div
-            ref={scrollContent}
-            className=" gap-3 lg:gap-5  flex "
-          >
-            {worksData.map((item, idx) => (
-              <div
-                key={idx}
-                onClick={() => navigate(router, `/work/${item.id}`)}
-                className="shrink-0 cursor-pointer w-[80vw] md:w-[23.25vw] lg:w-[22.8vw] h-full">
-                <div className="text-sm font-semibold block overflow-hidden mb-2 uppercase">
-                  <p className='wrk_anim_txt hori_wrk_anim_txt_title translate-y-[105%] '>
-                    {item.title}
-                  </p>
-                </div>
-                <div
-                  style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                  className=" hori_clip_div clip_div w-full h-full overflow-hidden">
-                  <img
-                    className="w-full h-[250px] object-cover"
-                    src={item.HeroImg}
-                    alt="loading"
-                  />
-                </div>
+        className="w-full pt-14 lg:pt-12  relative   flex-col justify-between">
+        <div className="w-full  lg:flex px-3 mb-5 lg:mb-0 justify-center translate-y-[7vw] lg:translate-y-[4.1vw] overflow-hidden">
+          <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[15vw] ">
+            <p className="wrk_anim_txt translate-y-[105%] ">our</p>
+            <h2 className="wrk_anim_txt translate-y-[105%]  italic">work</h2>
+          </div>
+        </div>
+
+        <div className="w-full relative   lg:flex items-center justify-center ">
+          <div className=" text-sm px-3 lg:text-base absolute  top-[8.5vw] lg:top-[4.1vw] z-[99] w-fit">
+            <div className="leading-none font-semibold">
+              <div className="block overflow-hidden">
+                <p className='wrk_anim_txt translate-y-[105%]'   >Every project at arujaK is crafted with</p>
               </div>
-            ))}
+              <div className="block overflow-hidden">
+                <p className='wrk_anim_txt translate-y-[105%]'   >flow, proportion, and precision. </p>
+              </div>
+              <div className="block overflow-hidden">
+                <p className='wrk_anim_txt translate-y-[105%]'   >Explore some of our featured spaces:</p>
+              </div>
+            </div>
+            <div className="flex mt-3 font-semibold gap-5">
+              <button
+                onClick={() => setView("vertical")}
+                className={`  block overflow-hidden  uppercase text-sm transition-opacity duration-300 ${view === "vertical" ? "underline opacity-100" : "opacity-50"
+                  }`}
+              >
+                <p className='wrk_anim_txt translate-y-[105%] '>
+                  Vertical
+                </p>
+              </button>
+
+              <button
+                onClick={() => setView("horizontal")}
+                className={`  block overflow-hidden  uppercase text-sm transition-opacity duration-300 ${view === "horizontal" ? "underline opacity-100" : "opacity-50"
+                  }`}
+              >
+                <p className='wrk_anim_txt translate-y-[105%] '>
+                  Horizontal
+                </p>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div
-        ref={verticalRef}
-        className={`w-full mt-44 mb-10 lg:mb-24 px-3 lg:px-10 grid gap-y-5 lg:gap-y-14 gap-x-3 lg:gap-x-5 grid-cols-1 md:grid-cols-2`}
-        style={{ opacity: 1, display: "grid" }}
-      >
-        {worksData.map((item, idx) => (
+        <div
+          ref={horizontalRef}
+          className="w-full"
+          style={{ opacity: 1, display: "flex" }}
+        >
           <div
-            key={idx}
-            onClick={() => navigate(router, `/work/${item.title}`)}
-            className="shrink-0 cursor-pointer w-full aspect-[14/9] lg:aspect-video">
-            <div className=" block overflow-hidden text-sm lg:text-base font-semibold mb-0.5 lg:mb-2 uppercase">
-              <p
-                data-aos-anchor-placement="top-bottom"
-                data-aos="clip"
-                data-aos-delay={idx * 100} className='wrk_anim_txt ver_wrk_anim_txt_title translate-y-[105%] '>
-                {item.title}
-              </p>
-            </div>
+            ref={scrollWrapper} className="w-full flex items-end pb-10 md:pb-[1vw] absolute h-[100dvh] z-[9] top-0 left-0 px-3 lg:px-10 pr-3 lg:pr-10 overflow-x-auto scroller_none">
             <div
-              style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-              className=" ver_clip_div clip_div w-full h-full overflow-hidden">
-              <img
-                data-aos="clip"
-                data-aos-anchor-placement="top-bottom"
-                data-aos-delay={idx * 100}
-                className="w-full h-full object-cover"
-                src={item.HeroImg}
-                alt="loading"
-              />
+              ref={scrollContent}
+              className=" gap-3 lg:gap-5  flex "
+            >
+              {worksData.map((item, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => navigate(router, `/work/${item.id}`)}
+                  className="shrink-0 cursor-pointer w-[80vw] md:w-[23.25vw] lg:w-[22.8vw] h-full">
+                  <div className="text-sm font-semibold block overflow-hidden mb-2 uppercase">
+                    <p className='wrk_anim_txt hori_wrk_anim_txt_title translate-y-[105%] '>
+                      {item.title}
+                    </p>
+                  </div>
+                  <div
+                    style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
+                    className=" hori_clip_div clip_div w-full h-full overflow-hidden">
+                    <img
+                      className="w-full h-[250px] object-cover"
+                      src={item.HeroImg}
+                      alt="loading"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
+        </div>
+
+        <div
+          ref={verticalRef}
+          className={`w-full mt-44 mb-10 lg:mb-24 px-3 lg:px-10 grid gap-y-5 lg:gap-y-14 gap-x-3 lg:gap-x-5 grid-cols-1 md:grid-cols-2`}
+          style={{ opacity: 1, display: "grid" }}
+        >
+          {worksData.map((item, idx) => (
+            <div
+              key={idx}
+              onClick={() => navigate(router, `/work/${item.title}`)}
+              className="shrink-0 cursor-pointer w-full aspect-[14/9] lg:aspect-video">
+              <div className=" block overflow-hidden text-sm lg:text-base font-semibold mb-0.5 lg:mb-2 uppercase">
+                <p
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos="clip"
+                  data-aos-delay={idx * 100} className='wrk_anim_txt ver_wrk_anim_txt_title translate-y-[105%] '>
+                  {item.title}
+                </p>
+              </div>
+              <div
+                style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
+                className=" ver_clip_div clip_div w-full h-full overflow-hidden">
+                <img
+                  data-aos="clip"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-delay={idx * 100}
+                  className="w-full h-full object-cover"
+                  src={item.HeroImg}
+                  alt="loading"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+        {view === "vertical" && <Footer />}
       </div>
-      {view === "vertical" && <Footer />}
-    </div>
+    </>
   );
 };
 
