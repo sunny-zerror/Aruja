@@ -220,11 +220,11 @@ const MobileHero = () => {
                 <p className='  left_txt_2a_mob text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
                 <p className=' right_txt_2a_mob  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
                 <img className='bottom-0 lg:-bottom-4 left-1/2 -translate-x-1/2 absolute w-[25%] z-[1]  lg:w-[7%]' src="/mono_white.png" alt="" />
-                <Image
+                <img
                     src="/Images/HeroImg.webp"
                     alt="loading"
                     priority
-                    fill
+                    
                     className="hero_bg_img_mob top-0 left-0 h-full brightness-[.6] w-full object-cover"
                 />
                 <div className=" leading-none absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
@@ -245,10 +245,10 @@ const MobileHero = () => {
                     }}
                     className="hero_slide_1_mob w-full h-full origin-center absolute z-[2]"
                 >
-                    <Image
+                    <img
                         src="/Images/HomePage/heroSlider/Hero_animation_1.webp"
                         alt="loading"
-                        fill
+                        
                         className="hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3]"
                     />
                 </div>
@@ -259,10 +259,10 @@ const MobileHero = () => {
                     }}
                     className="hero_slide_2_mob w-full h-full origin-center absolute z-[3]"
                 >
-                    <Image
+                    <img
                         src="/Images/HomePage/heroSlider/Hero_animation_2.webp"
                         alt="loading"
-                        fill
+                        
                         className=" hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] "
                     />
                 </div>
@@ -309,28 +309,28 @@ const MobileHero = () => {
                         </div>
 
                         <div className="sq_img_1_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw]">
-                            <Image
+                            <img
                                 src="/Images/HomePage/heroSlider/About_1.webp"
                                 alt="loading"
-                                fill
+                                
                                 className="sq_img_in_1_mob scale-110 w-full h-full object-cover"
                             />
                         </div>
 
                         <div className="sq_img_2_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw]">
-                            <Image
+                            <img
                                 src="/Images/HomePage/heroSlider/About_2.webp"
                                 alt="loading"
-                                fill
+                                
                                 className="sq_img_in_2_mob scale-110 w-full h-full object-cover"
                             />
                         </div>
 
                         <div className="sq_img_3_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw]">
-                            <Image
+                            <img
                                 src="/Images/HomePage/heroSlider/About_3.webp"
                                 alt="loading"
-                                fill
+                                
                                 className="sq_img_in_3_mob scale-110 w-full h-full object-cover"
                             />
                         </div>

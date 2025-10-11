@@ -335,11 +335,11 @@ const Hero = () => {
                 <p className='  left_txt_2a text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
                 <p className=' right_txt_2a  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
                 <img className='-bottom-4 left-1/2 -translate-x-1/2 absolute z-[1] w-[7%]' src="/mono_white.png" alt="" />
-                <Image
+                <img
                     src="/Images/HeroImg.webp"
                     alt="loading"
                     priority
-                    fill
+                    
                     className="hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover"
                 />
                 <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
@@ -357,10 +357,10 @@ const Hero = () => {
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_1 w-full h-full origin-center  absolute z-[2] ">
-                    <Image
+                    <img
                         src="/Images/HomePage/heroSlider/Hero_animation_1.webp"
                         alt="loading"
-                        fill
+                        
                         className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
                     />
                 </div>
@@ -368,10 +368,10 @@ const Hero = () => {
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_2 w-full h-full origin-center  absolute z-[3] ">
-                    <Image
+                    <img
                         src="/Images/HomePage/heroSlider/Hero_animation_2.webp"
                         alt="loading"
-                        fill
+                        
                         className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
                     />
                 </div>
@@ -379,10 +379,10 @@ const Hero = () => {
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_3 w-full h-full origin-center  absolute z-[4] ">
-                    <Image
+                    <img
                         src="/Images/HomePage/heroSlider/Hero_animation_3.webp"
                         alt="loading"
-                        fill
+                        
                         className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
                     />
                 </div>
@@ -429,46 +429,46 @@ const Hero = () => {
                         </div>
 
                         <div className="sq_img_1 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw]">
-                            <Image
+                            <img
                                 src="/Images/HomePage/heroSlider/About_1.webp"
                                 alt="loading"
-                                fill
+                                
                                 className="sq_img_in_1 w-full h-full object-cover"
                             />
                         </div>
 
                         <div className="sq_img_2 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw]">
-                            <Image
+                            <img
                                 src="/Images/HomePage/heroSlider/About_2.webp"
                                 alt="loading"
-                                fill
+                                
                                 className="sq_img_in_2 w-full h-full object-cover"
                             />
                         </div>
 
                         <div className="sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw]">
-                            <Image
+                            <img
                                 src="/Images/HomePage/heroSlider/About_5.webp"
                                 alt="loading"
-                                fill
+                                
                                 className="sq_img_in_3 w-full h-full object-cover"
                             />
                         </div>
 
                         <div className="sq_img_4 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] right-3 lg:right-32 w-[50vw] md:w-[15vw]">
-                            <Image
+                            <img
                                 src="/Images/HomePage/heroSlider/About_4.webp"
                                 alt="loading"
-                                fill
+                                
                                 className="sq_img_in_4 w-full h-full object-cover"
                             />
                         </div>
 
                         <div className="sq_img_5 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-3 lg:left-32 w-[50vw] md:w-[15vw]">
-                            <Image
+                            <img
                                 src="/Images/HomePage/heroSlider/About_3.webp"
                                 alt="loading"
-                                fill
+                                
                                 className="sq_img_in_5 w-full h-full object-cover"
                             />
                         </div>

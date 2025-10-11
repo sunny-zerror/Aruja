@@ -118,10 +118,10 @@ const index = () => {
 
             <div className="  w-full h-[100vh] lg:h-[170vh] relative text-[#FFFDF4] ">
                 <div className=" stic_image_pent   w-full h-full overflow-hidden relative center">
-                    <Image
+                    <img
                         src={work?.HeroImg}
                         alt="loading"
-                        fill
+                        
                         className=" paex_img brightness-[.6] w-full h-full object-cover"
                     />
                 </div>
@@ -249,11 +249,11 @@ const index = () => {
                                 height,
                             }}
                         >
-                            <Image
+                            <img
                                 src={item.img}
                                 alt="loading"
-                                fill
-                                className="object-cover"
+                                
+                                className="object-cover w-full h-full"
                             />
                             
                         </div>

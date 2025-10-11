@@ -273,12 +273,10 @@ const Index = () => {
                   <div
                     style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
                     className=" hori_clip_div clip_div w-full h-[250px] overflow-hidden relative">
-                    <Image
+                    <img
                       src={item.HeroImg}
                       alt="loading"
-                      fill
-                      quality={20}
-                      className="object-cover"
+                      className="object-cover w-full h-full"
                     />
                   </div>
                 </div>
@@ -308,13 +306,12 @@ const Index = () => {
               <div
                 style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
                 className=" ver_clip_div clip_div w-full h-full overflow-hidden relative">
-                <Image
+                <img
                   data-aos="clip"
                   data-aos-anchor-placement="top-bottom"
                   data-aos-delay={idx * 100}
                   src={item.HeroImg}
                   alt="loading"
-                  fill
                   className="object-cover w-full h-full"
                 />
               </div>

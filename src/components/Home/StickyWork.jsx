@@ -180,11 +180,11 @@ const StickyWork = () => {
           {data.map((item, idx) => (
             <div key={idx} className=" clip_wrk w-full">
               <div className="relative w-full aspect-square mb-1">
-                <Image
+                <img
                   src={item.img}
                   alt="loading"
-                  fill
-                  className="object-cover"
+                  
+                  className="object-cover w-full h-full"
                 />
               </div>
               <div className="w-full text-xs space-y-2 ">
@@ -208,11 +208,11 @@ const StickyWork = () => {
                     <p className="  text-2xl whitespace-nowrap">/ 0{idx + 1}</p>
                   </div>
                   <div className="w-full aspect-square relative z-50">
-                    <Image
+                    <img
                       src={item.img}
                       alt={`sticky-${idx}`}
-                      fill
-                      className="object-cover"
+                      
+                      className="object-cover w-full h-full"
                     />
                   </div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square gap-5 relative z-0`}>
@@ -236,11 +236,11 @@ const StickyWork = () => {
                     <p className=" text-sm lg:text-lg w-[70%] leading-tight">{item.desc}</p>
                   </div>
                   <div className="w-full aspect-square relative z-50">
-                    <Image
+                    <img
                       src={item.img}
                       alt={`sticky-${idx}`}
-                      fill
-                      className="object-cover"
+                      
+                      className="object-cover w-full h-full"
                     />
                   </div>
                 </div>
@@ -254,11 +254,11 @@ const StickyWork = () => {
                   className={`sticky  sticky_elem_${idx}   w-full left-0 grid gap-5 pb-5 grid-cols-4 bottom-0`}
                 >
                   <div className="w-full aspect-square relative z-50">
-                    <Image
+                    <img
                       src={item.img}
                       alt={`sticky-${idx}`}
-                      fill
-                      className="object-cover"
+                      
+                      className="object-cover w-full h-full"
                     />
                   </div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square flex flex-col justify-between relative z-0`}>
@@ -282,11 +282,11 @@ const StickyWork = () => {
                     <p className="text-2xl whitespace-nowrap">/ 0{idx + 1}</p>
                   </div>
                   <div className="w-full aspect-square relative z-50">
-                    <Image
+                    <img
                       src={item.img}
                       alt={`sticky-${idx}`}
-                      fill
-                      className="object-cover"
+                      
+                      className="object-cover w-full h-full"
                     />
                   </div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square relative z-0`}>

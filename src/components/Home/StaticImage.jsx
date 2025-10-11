@@ -126,7 +126,7 @@ const StaticImage = () => {
                 <div
                     style={{ clipPath: "polygon(20% 10%, 80% 10%, 80% 90%, 20% 90%)" }}
                     className=" show_reel_3 absolute z-[3] w-full h-full scale-[.3]  center text-white">
-                    <video className='w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="/video/vid3.mp4"></video>
+                    <video className='w-full brightness-75 h-full object-cover' loop autoPlay muted playsInline src="/video/last_vid.mp4"></video>
                     <div className="absolute flex gap-3 lg:gap-10  top-10 ">
                         <h2> 3 </h2>
                         <h2> /</h2>
