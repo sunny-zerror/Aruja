@@ -428,21 +428,50 @@ const Hero = () => {
                             </button>
                         </div>
 
-                        <div className=" sq_img_1 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_1 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_1.webp" alt="loading" />
-                        </div>
-                        <div className=" sq_img_2 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_2 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_2.webp" alt="loading" />
-                        </div>
-                        <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_3 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_5.webp" alt="loading" /></div>
-                        <div className=" sq_img_4 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-32 w-[50vw] md:w-[15vw] ">
-                            <img className='sq_img_in_4 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_4.webp" alt="loading" />
-                        </div>
-                        <div className=" sq_img_5 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-32 w-[50vw] md:w-[15vw] ">
-                            <img className='sq_img_in_5 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_3.webp" alt="loading" />
+                        <div className="sq_img_1 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw]">
+                            <Image
+                                src="/Images/HomePage/heroSlider/About_1.webp"
+                                alt="loading"
+                                fill
+                                className="sq_img_in_1 w-full h-full object-cover"
+                            />
                         </div>
 
+                        <div className="sq_img_2 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw]">
+                            <Image
+                                src="/Images/HomePage/heroSlider/About_2.webp"
+                                alt="loading"
+                                fill
+                                className="sq_img_in_2 w-full h-full object-cover"
+                            />
+                        </div>
+
+                        <div className="sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw]">
+                            <Image
+                                src="/Images/HomePage/heroSlider/About_5.webp"
+                                alt="loading"
+                                fill
+                                className="sq_img_in_3 w-full h-full object-cover"
+                            />
+                        </div>
+
+                        <div className="sq_img_4 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] right-3 lg:right-32 w-[50vw] md:w-[15vw]">
+                            <Image
+                                src="/Images/HomePage/heroSlider/About_4.webp"
+                                alt="loading"
+                                fill
+                                className="sq_img_in_4 w-full h-full object-cover"
+                            />
+                        </div>
+
+                        <div className="sq_img_5 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-3 lg:left-32 w-[50vw] md:w-[15vw]">
+                            <Image
+                                src="/Images/HomePage/heroSlider/About_3.webp"
+                                alt="loading"
+                                fill
+                                className="sq_img_in_5 w-full h-full object-cover"
+                            />
+                        </div>
 
                         <div className=" number_div w-full absolute bottom-[-20vh] left-0 h-[20vh]    grid space-y-10 md:space-y-0 content-center  grid-cols-2 md:flex md:items-center md:justify-between px-3 md:px-24">
                             <div className="text-start block pl-12 md:pl-0 ">

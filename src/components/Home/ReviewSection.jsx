@@ -22,7 +22,7 @@ const reviewData = [
     pic: "/Images/HomePage/reviews/pic.png",
     name: "Riya Dangayach Kothari",
     role: "office space ",
-    desc: "Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic, details that reflect my journey and little touches that instantly take me back to my time in New York. It’s rare to find someone who can so seamlessly translate your personality and experiences into a space and Aruja did exactly that."
+    desc: "Designing a workspace that feels like “me” was no easy task but Aruja made it look effortless. My office isn’t just a workspace, it’s functional, flexible, and thoughtfully designed to adapt as I do. Every corner feels intentional- movable elements that keep it dynamic.  "
   },
   {
     pic: "/Images/HomePage/reviews/pic.png",
@@ -133,7 +133,7 @@ const ReviewSection = () => {
 
 
         {/* for desktop */}
-        <div className="w-full hidden h-[200px] lg:h-[400px] overflow-x-scroll lg:overscroll-none scroller_none gap-5 lg:flex mt-10 lg:mt-14">
+        <div className="w-full hidden h-[200px] lg:h-[350px] overflow-x-scroll lg:overscroll-none scroller_none gap-5 lg:flex mt-10 lg:mt-14">
           <div className=" w-[150px] lg:w-[280px] h-[200px] lg:h-full overflow-hidden shrink-0">
             <img
               className="w-full h-full object-cover"
@@ -150,9 +150,9 @@ const ReviewSection = () => {
             {reviewData.map((item, i) => (
               <div
                 key={i}
-                className="h-full w-[300px] relative lg:w-[330px] flex flex-col justify-between border border-black/50 shrink-0 px-5 lg:px-5 py-3 lg:py-3"
+                className="h-full w-[300px] relative lg:w-[500px] flex flex-col justify-between border border-black/50 shrink-0 px-5 lg:px-5 py-3 lg:py-5"
               >
-                <div className="w-full h-10 bg-gradient-to-b from-transparent to-white absolute left-0 bottom-0 z-[1]"></div>
+                {/* <div className="w-full h-10 bg-gradient-to-b from-transparent to-white absolute left-0 bottom-0 z-[1]"></div> */}
                 <div className="w-full flex items-start gap-3">
                   {/* <div className="size-12 shrink-0 rounded-full overflow-hidden">
                     <img
@@ -166,8 +166,8 @@ const ReviewSection = () => {
                     <p className=" text-xs lg:text-sm uppercase">({item.role})</p>
                   </div>
                 </div>
-                <div className="w-full h-[40%] pb-6  overflow-y-auto custm_review_scroller">
-                  <p className=" text-base leading-tight capitalize">
+                <div className="w-full ">
+                  <p className=" text-[17px] leading-tight capitalize">
                     {item.desc}
                   </p>
                 </div>

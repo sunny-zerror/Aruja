@@ -3,23 +3,24 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { useRouter } from 'next/router';
 import useNavigation from '@/store/useNavigation';
+import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const data = [
   {
-    img: "/Images/HomePage/stickyWork/project_1.webp",
+    img: "/Images/HomePage/stickyWork/Project_1.webp",
     desc: "A warm living space blending natural wood tones with a deep green sofa, creating a calm and grounded aesthetic.",
   },
   {
-    img: "/Images/HomePage/stickyWork/project_2.webp",
+    img: "/Images/HomePage/stickyWork/Project_2.webp",
     desc: "A cozy lounge setup where soft light filters through sheer curtains, highlighting clean lines and modern elegance.",
   },
   {
-    img: "/Images/HomePage/stickyWork/project_3.webp",
+    img: "/Images/HomePage/stickyWork/Project_3.webp",
     desc: "A sophisticated bathroom with rich maroon tones, gold accents, and a crystal chandelier adding timeless luxury.",
   },
   {
-    img: "/Images/HomePage/stickyWork/project_4.webp",
+    img: "/Images/HomePage/stickyWork/Project_4.webp",
     desc: "An office side-shelf styled with plans and frames bringing order and personality into the workspace.",
   },
 ]
@@ -178,8 +179,13 @@ const StickyWork = () => {
         <div className="w-full grid grid-cols-2 space-y-5 gap-3 md:hidden">
           {data.map((item, idx) => (
             <div key={idx} className=" clip_wrk w-full">
-              <div className=" overflow-hidden w-full">
-                <img className='w-full aspect-square mb-1' src={item.img} alt="loading" />
+              <div className="relative w-full aspect-square mb-1">
+                <Image
+                  src={item.img}
+                  alt="loading"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="w-full text-xs space-y-2 ">
                 <p>/ 0{idx + 1}</p>
@@ -202,10 +208,11 @@ const StickyWork = () => {
                     <p className="  text-2xl whitespace-nowrap">/ 0{idx + 1}</p>
                   </div>
                   <div className="w-full aspect-square relative z-50">
-                    <img
+                    <Image
                       src={item.img}
                       alt={`sticky-${idx}`}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square gap-5 relative z-0`}>
@@ -229,10 +236,11 @@ const StickyWork = () => {
                     <p className=" text-sm lg:text-lg w-[70%] leading-tight">{item.desc}</p>
                   </div>
                   <div className="w-full aspect-square relative z-50">
-                    <img
+                    <Image
                       src={item.img}
                       alt={`sticky-${idx}`}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 </div>
@@ -246,10 +254,11 @@ const StickyWork = () => {
                   className={`sticky  sticky_elem_${idx}   w-full left-0 grid gap-5 pb-5 grid-cols-4 bottom-0`}
                 >
                   <div className="w-full aspect-square relative z-50">
-                    <img
+                    <Image
                       src={item.img}
                       alt={`sticky-${idx}`}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square flex flex-col justify-between relative z-0`}>
@@ -273,10 +282,11 @@ const StickyWork = () => {
                     <p className="text-2xl whitespace-nowrap">/ 0{idx + 1}</p>
                   </div>
                   <div className="w-full aspect-square relative z-50">
-                    <img
+                    <Image
                       src={item.img}
                       alt={`sticky-${idx}`}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className={` opacity-0 sticky_txt_box_${idx} w-full aspect-square relative z-0`}>

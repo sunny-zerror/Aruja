@@ -241,15 +241,30 @@ const MobileHero = () => {
 
                 <div
                     style={{
-                        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
-                    }} className="hero_slide_1_mob w-full h-full origin-center  absolute z-[2] ">
-                    <img className=' hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] ' src="/Images/HomePage/heroSlider/Hero_animation_1.webp" alt="loading" />
+                        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
+                    }}
+                    className="hero_slide_1_mob w-full h-full origin-center absolute z-[2]"
+                >
+                    <Image
+                        src="/Images/HomePage/heroSlider/Hero_animation_1.webp"
+                        alt="loading"
+                        fill
+                        className="hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3]"
+                    />
                 </div>
+
                 <div
                     style={{
-                        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
-                    }} className="hero_slide_2_mob w-full h-full origin-center  absolute z-[3] ">
-                    <img className=' hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] ' src="/Images/HomePage/heroSlider/Hero_animation_2.webp" alt="loading" />
+                        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
+                    }}
+                    className="hero_slide_2_mob w-full h-full origin-center absolute z-[3]"
+                >
+                    <Image
+                        src="/Images/HomePage/heroSlider/Hero_animation_2.webp"
+                        alt="loading"
+                        fill
+                        className=" hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] "
+                    />
                 </div>
                 <div className=" hero_slide_4_mob overflow-hidden scale-[0] bg-[#FFFDF6] w-full h-full absolute z-[5]">
                     <div className="w-full h-screen relative flex-col gap-10 center text-center ">
@@ -293,16 +308,32 @@ const MobileHero = () => {
                             </button>
                         </div>
 
-                        <div className=" sq_img_1_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_1_mob scale-110  w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_1.webp" alt="loading" />
+                        <div className="sq_img_1_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw]">
+                            <Image
+                                src="/Images/HomePage/heroSlider/About_1.webp"
+                                alt="loading"
+                                fill
+                                className="sq_img_in_1_mob scale-110 w-full h-full object-cover"
+                            />
                         </div>
-                        <div className=" sq_img_2_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_2_mob scale-110 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_2.webp" alt="loading" />
+
+                        <div className="sq_img_2_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw]">
+                            <Image
+                                src="/Images/HomePage/heroSlider/About_2.webp"
+                                alt="loading"
+                                fill
+                                className="sq_img_in_2_mob scale-110 w-full h-full object-cover"
+                            />
                         </div>
-                        <div className=" sq_img_3_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_3_mob scale-110 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_3.webp" alt="loading" /></div>
 
-
+                        <div className="sq_img_3_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw]">
+                            <Image
+                                src="/Images/HomePage/heroSlider/About_3.webp"
+                                alt="loading"
+                                fill
+                                className="sq_img_in_3_mob scale-110 w-full h-full object-cover"
+                            />
+                        </div>
 
                         <div className=" number_div_mob w-full absolute bottom-[-20vh] left-0 h-[20vh]    grid space-y-5 md:space-y-0 content-center  grid-cols-1 md:flex md:items-center md:justify-between px-3 md:px-24">
                             <div className="text-start flex items-center justify-between  ">

@@ -16,27 +16,27 @@ const processData = [
     {
         number: "01",
         title: "design",
-        img: "/Images/HomePage/heroSlider/about_1.webp"
+        img: "/Images/HomePage/heroSlider/About_1.webp"
     },
     {
         number: "02",
         title: "Planning",
-        img: "/Images/HomePage/heroSlider/about_2.webp"
+        img: "/Images/HomePage/heroSlider/About_2.webp"
     },
     {
         number: "03",
         title: "Visualisation",
-        img: "/Images/HomePage/heroSlider/about_3.webp"
+        img: "/Images/HomePage/heroSlider/About_3.webp"
     },
     {
         number: "04",
         title: "execution",
-        img: "/Images/HomePage/heroSlider/about_4.webp"
+        img: "/Images/HomePage/heroSlider/About_4.webp"
     },
     {
         number: "05",
         title: "setup",
-        img: "/Images/HomePage/heroSlider/about_5.webp"
+        img: "/Images/HomePage/heroSlider/About_5.webp"
     },
 ]
 
@@ -76,23 +76,23 @@ const solutionData = [
 
 const index = () => {
 
-const meta = {
-  title: "STUDIO AKTO — ABOUT STUDIO",
-  description: "We are a multidisciplinary interior design studio crafting spaces that balance form, function, and flow. Discover our approach to residential, commercial, and hospitality interiors.",
-  canonical: "https://studioakto.com/studio",
-  og: {
-    title: "STUDIO AKTO — ABOUT STUDIO",
-    description: "Rooted in the principle that form follows function, Studio AKTO creates proportion-led interiors that respond to how people live and interact.",
-    image: "https://www.studioakto.com/logo.png" // Replace with a hero image if available
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "STUDIO AKTO — ABOUT STUDIO",
-    description: "Every project is a study in proportion, purpose, and precision. Explore how Studio AKTO designs thoughtful and experiential interiors.",
-    image: "https://www.studioakto.com/logo.png" // Replace with a hero image if available
-  },
-  robots: "index,follow"
-};
+    const meta = {
+        title: "STUDIO AKTO — ABOUT STUDIO",
+        description: "We are a multidisciplinary interior design studio crafting spaces that balance form, function, and flow. Discover our approach to residential, commercial, and hospitality interiors.",
+        canonical: "https://studioakto.com/studio",
+        og: {
+            title: "STUDIO AKTO — ABOUT STUDIO",
+            description: "Rooted in the principle that form follows function, Studio AKTO creates proportion-led interiors that respond to how people live and interact.",
+            image: "https://www.studioakto.com/logo.png" // Replace with a hero image if available
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "STUDIO AKTO — ABOUT STUDIO",
+            description: "Every project is a study in proportion, purpose, and precision. Explore how Studio AKTO designs thoughtful and experiential interiors.",
+            image: "https://www.studioakto.com/logo.png" // Replace with a hero image if available
+        },
+        robots: "index,follow"
+    };
 
 
     const router = useRouter();
@@ -682,7 +682,7 @@ const meta = {
 
                         <div className=" hidden  w-full lg:flex justify-between">
                             <div className=" h-full flex items-end ">
-                                <img className='w-[20%]' src="/icons/footerMonogram/1.svg" alt="" />
+                                <img className='w-[20%] -translate-y-2 ' src="/monogram.svg" alt="" />
                             </div>
                             <div className="leading-tight text-lg w-[50%] capitalize font-semibold">
                                 <p className="text-end">
