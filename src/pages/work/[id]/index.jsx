@@ -7,165 +7,28 @@ import Footer from '@/components/common/Footer';
 import { usePageReady } from '@/components/hooks/usePageReady';
 import useNavigation from '@/store/useNavigation';
 import SeoHeader from '@/components/seo/SeoHeader';
+import { worksData } from '@/store/WorksData';
+import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
-const worksData = [
-    {
-        id: 1,
-        title: "Beyond the Frame",
-        HeroImg: "/Images/HomePage/HeroImg.png",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 2,
-        title: "Urban Calm",
-        HeroImg: "/Images/HomePage/cdcs.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 3,
-        title: "The Flexible Studio",
-        HeroImg: "/Images/HomePage/erec.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 4,
-        title: "Sleek Sanctuary",
-        HeroImg: "/Images/HomePage/FooterImg.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 5,
-        title: "Beyond the Frame",
-        HeroImg: "/Images/HomePage/HeroImg.png",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 6,
-        title: "Urban Calm",
-        HeroImg: "/Images/HomePage/cdcs.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 7,
-        title: "The Flexible Studio",
-        HeroImg: "/Images/HomePage/erec.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-    {
-        id: 8,
-        title: "Sleek Sanctuary",
-        HeroImg: "/Images/HomePage/FooterImg.webp",
-        images: [
-            { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-            { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-            { type: "portrait", img: "/Images/HomePage/erec.webp" },
-            { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-            { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-        ],
-    },
-];
-
 const index = () => {
-    const meta = {
-        title: "Studio AKTO — Interior Design Studio",
-        description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
-        canonical: "https://studioakto.com/",
-        og: {
-            title: "Studio AKTO — Interior Design Studio",
-            description: "Proportion-led interiors across residential, commercial & hospitality.",
-            image: "https://www.studioakto.com/logo.png"
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Studio AKTO",
-            description: "Precision and design systems for contemporary spaces.",
-            image: "https://www.studioakto.com/logo.png"
-        },
-        robots: "index,follow"
-    };
+  const meta = {
+    title: "STUDIO AKTO - WORK & PROJECTS ",
+    description: "Explore Studio AKTO's portfolio of interiors across residential, commercial, and hospitality spaces.",
+    canonical: "https://studioakto.com/work",
+    og: {
+      title: "STUDIO AKTO - WORK & PROJECTS ",
+      description: "Discover our portfolio of proportion-led interior design projects for homes, offices, and hospitality.",
+      image: "https://www.studioakto.com/logo.png" // You can replace with a hero image from your work page
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "STUDIO AKTO - WORK & PROJECTS ",
+      description: "Showcasing our curated interior design projects for contemporary spaces.",
+      image: "https://www.studioakto.com/logo.png" // Optional: replace with a project highlight image
+    },
+    robots: "index,follow"
+  };
 
     const { navigate } = useNavigation();
     const router = useRouter();
@@ -186,6 +49,15 @@ const index = () => {
                 // markers: true,
             }
         })
+        gsap.fromTo(".id_anim_txt_2", {
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+        }, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            stagger: 0.05,
+            delay: 1,
+            ease: "ease-secondary",
+            duration: 2,
+        });
         gsap.to(".id_anim_txt", {
             transform: "translateY(0%)",
             stagger: 0.05,
@@ -211,6 +83,15 @@ const index = () => {
             },
         });
 
+        gsap.fromTo(".id_anim_txt_2", {
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+        }, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            stagger: 0.05,
+            delay: 1,
+            ease: "ease-secondary",
+            duration: 2,
+        });
         gsap.to(".id_anim_txt", {
             yPercent: 0,
             stagger: 0.05,
@@ -236,10 +117,13 @@ const index = () => {
             <SeoHeader meta={meta} />
 
             <div className="  w-full h-[100vh] lg:h-[170vh] relative text-[#FFFDF4] ">
-                <div className=" stic_image_pent w-full h-full overflow-hidden center">
-                    <img className=' paex_img brightness-90 w-full h-full object-cover'
+                <div className=" stic_image_pent   w-full h-full overflow-hidden relative center">
+                    <Image
                         src={work?.HeroImg}
-                        alt={work?.title} />
+                        alt="loading"
+                        fill
+                        className=" paex_img brightness-[.6] w-full h-full object-cover"
+                    />
                 </div>
                 <div className="absolute w-full bottom-20 lg:top-[30vw] px-3 lg:px-10 ">
                     <div className=" id_anim_txt   translate-y-[105%] block overflow-hidden text-5xl  lg:text-8xl font-semibold uppercase leading-none">
@@ -253,12 +137,14 @@ const index = () => {
                         </p>
                     </div>
 
-                    <div className="w-full text-xs md:text-base font-semibold mt-10 lg:mt-20 uppercase flex items-center justify-between md:grid md:grid-cols-12 ">
-                        <div className="w-full  block overflow-hidden md:col-span-6">
-                            <p className='id_anim_txt   translate-y-[105%]' >Grange, QLD</p>
+                    <div className="w-full text-xs md:text-base font-semibold mt-10 lg:mt-20 uppercase flex  justify-between md:grid md:grid-cols-12 ">
+                        <div className="w-full md:col-span-6">
+                            <div className="block overflow-hidden">
+                                <p className='id_anim_txt leading-none w-[60%]  translate-y-[105%]' >{work?.project_desc[0]}</p>
+                            </div>
                         </div>
                         <div className="w-full  block overflow-hidden  md:col-span-2">
-                            <p className='id_anim_txt   translate-y-[105%]' >Australia</p>
+                            <p className='id_anim_txt   translate-y-[105%]' >{work?.project_location}</p>
                         </div>
                         <div className="w-full  overflow-hidden flex justify-end whitespace-nowrap  md:col-span-4">
                             <p className='id_anim_txt   translate-y-[105%]' >(scroll to explore)</p>
@@ -269,50 +155,39 @@ const index = () => {
                     <div className="w-full text-xs md:text-base grid uppercase grid-cols-4 md:grid-cols-12 ">
 
                         <div className="w-full overflow-hidden opacity-0 hidden lg:block  lg:col-span-6 ">
-                            <p className='id_anim_txt   translate-y-[105%]' >Grange, QLD</p>
+                            <p className='id_anim_txt   translate-y-[105%]' >{work?.project_location}</p>
                         </div>
 
                         <div className=" w-full  col-span-2 md:col-span-6 lg:col-span-2">
                             <div className="  space-y-5  lg:space-y-10">
                                 <div className=" pt-10">
-                                    <div className=' block overflow-hidden capitalize font-semibold'>
+                                    <div className=' block mb-2 overflow-hidden capitalize font-semibold'>
                                         <p className='id_anim_txt  translate-y-[105%]'>
                                             Date Completed
                                         </p>
                                     </div>
                                     <div className=' block overflow-hidden capitalize font-black'>
                                         <p className='id_anim_txt  translate-y-[105%]'>
-                                            2024
+                                            {work?.completion_Data}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="">
-                                    <div className=' block overflow-hidden  capitalize font-semibold'>
-                                        <p className='id_anim_txt  translate-y-[105%]'>
-                                            Collaborators
+                                    <div className=' block mb-2 overflow-hidden  capitalize font-semibold'>
+                                        <p className='id_anim_txt_2'>
+                                            Design Highlights
                                         </p>
                                     </div>
                                     <div className=' font-black'>
-                                        <div className=' block overflow-hidden  '>
-                                            <p className='id_anim_txt  translate-y-[105%]'>
-                                                Porter and Co Construction
-                                            </p>
-                                        </div>
-                                        <div className=' block overflow-hidden  '>
-                                            <p className='id_anim_txt  translate-y-[105%]'>
-                                                ECRU Landscape Architecture
-                                            </p>
-                                        </div>
-                                        <div className=' block overflow-hidden  '>
-                                            <p className='id_anim_txt  translate-y-[105%]'>
-                                                Rogue Engineering
-                                            </p>
-                                        </div>
-                                        <div className=' block overflow-hidden  '>
-                                            <p className='id_anim_txt  translate-y-[105%]'>
-                                                Urbicus Town Planning
-                                            </p>
-                                        </div>
+                                        {
+                                            work?.tags.map((item, i) => (
+                                                <div key={i} className=' block overflow-hidden  '>
+                                                    <p className='id_anim_txt_2'>
+                                                        {item}
+                                                    </p>
+                                                </div>
+                                            ))
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -321,29 +196,18 @@ const index = () => {
                         <div className=" w-full  col-span-2 lg:col-span-4">
                             <div className=" space-y-5  lg:space-y-10">
                                 <div className="pt-10">
-                                    <div className=' block overflow-hidden capitalize font-semibold'>
+                                    <div className=' block mb-2 overflow-hidden capitalize font-semibold'>
                                         <p className='id_anim_txt  translate-y-[105%]'>
                                             Project Type
                                         </p>
                                     </div>
                                     <div className=' block overflow-hidden font-black'>
                                         <p className='id_anim_txt  translate-y-[105%]'>
-                                            New Build
+                                            {work?.project_type}
                                         </p>
                                     </div>
                                 </div>
-                                <div className="">
-                                    <div className=' block overflow-hidden capitalize font-semibold'>
-                                        <p className='id_anim_txt  translate-y-[105%]'>
-                                            Photography
-                                        </p>
-                                    </div>
-                                    <div className=' block overflow-hidden font-black'>
-                                        <p className='id_anim_txt  translate-y-[105%]'>
-                                            Andy Macpherson
-                                        </p>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -379,17 +243,19 @@ const index = () => {
                             key={i}
                             data-aos="fade"
                             data-aos-anchor-placement="center-bottom"
-                            className="w-full overflow-hidden"
+                            className="w-full overflow-hidden relative"
                             style={{
                                 gridColumn,
                                 height,
                             }}
                         >
-                            <img
-                                className="w-full h-full object-cover"
+                            <Image
                                 src={item.img}
-                                alt={`grid-img-${i}`}
+                                alt="loading"
+                                fill
+                                className="object-cover"
                             />
+                            
                         </div>
                     );
                 })}

@@ -7,19 +7,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const data = [
   {
-    img: "https://cdn.fame-estate.com/1_02b2655de9.jpg",
-    desc: "An office side-shelf styled with plans and frames bringing order and personality into the workspace.",
+    img: "/Images/HomePage/stickyWork/project_1.webp",
+    desc: "A warm living space blending natural wood tones with a deep green sofa, creating a calm and grounded aesthetic.",
   },
   {
-    img: "https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png",
-    desc: "An office side-shelf styled with plans and frames bringing order and personality into the workspace.",
+    img: "/Images/HomePage/stickyWork/project_2.webp",
+    desc: "A cozy lounge setup where soft light filters through sheer curtains, highlighting clean lines and modern elegance.",
   },
   {
-    img: "https://cdn.fame-estate.com/medium_service_01a01267d4.png",
-    desc: "An office side-shelf styled with plans and frames bringing order and personality into the workspace.",
+    img: "/Images/HomePage/stickyWork/project_3.webp",
+    desc: "A sophisticated bathroom with rich maroon tones, gold accents, and a crystal chandelier adding timeless luxury.",
   },
   {
-    img: "https://cdn.fame-estate.com/medium_damac_2cd1f341f0.png",
+    img: "/Images/HomePage/stickyWork/project_4.webp",
     desc: "An office side-shelf styled with plans and frames bringing order and personality into the workspace.",
   },
 ]
@@ -98,12 +98,9 @@ const StickyWork = () => {
 
   }, []);
 
-
-
-
   return (
     <div>
-      <div className="w-full px-3 lg:px-10 pt-10 lg:pt-28">
+      <div className="w-full px-3 lg:px-10 pt-14 lg:pt-28">
         <div className="w-full relative mb-8 lg:mb-20  flex flex-col  items-center">
           <div className=" w-full lg:ml-3 mb-5 h-fit text-xs lg:text-sm font-black">
             <p>OUR WORK</p>

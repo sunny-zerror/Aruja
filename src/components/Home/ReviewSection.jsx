@@ -137,7 +137,7 @@ const ReviewSection = () => {
           <div className=" w-[150px] lg:w-[280px] h-[200px] lg:h-full overflow-hidden shrink-0">
             <img
               className="w-full h-full object-cover"
-              src="/Images/HomePage/reviews/heroReview.png"
+              src="/Images/reviewImage.webp"
               alt="loading"
             />
           </div>
@@ -166,7 +166,7 @@ const ReviewSection = () => {
                     <p className=" text-xs lg:text-sm uppercase">({item.role})</p>
                   </div>
                 </div>
-                <div className="w-full h-[40%]  overflow-y-auto custm_review_scroller">
+                <div className="w-full h-[40%] pb-6  overflow-y-auto custm_review_scroller">
                   <p className=" text-base leading-tight capitalize">
                     {item.desc}
                   </p>

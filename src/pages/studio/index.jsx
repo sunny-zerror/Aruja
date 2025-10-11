@@ -9,33 +9,34 @@ import { usePageReady } from '@/components/hooks/usePageReady';
 import useNavigation from '@/store/useNavigation';
 import { useRouter } from 'next/router';
 import SeoHeader from '@/components/seo/SeoHeader';
+import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const processData = [
     {
         number: "01",
         title: "design",
-        img: "/Images/ContactPageImg.webp"
+        img: "/Images/HomePage/heroSlider/about_1.webp"
     },
     {
         number: "02",
         title: "Planning",
-        img: "/Images/HomePage/cdcs.webp"
+        img: "/Images/HomePage/heroSlider/about_2.webp"
     },
     {
         number: "03",
         title: "Visualisation",
-        img: "/Images/HomePage/erec.webp"
+        img: "/Images/HomePage/heroSlider/about_3.webp"
     },
     {
         number: "04",
         title: "execution",
-        img: "/Images/HomePage/okdv.webp"
+        img: "/Images/HomePage/heroSlider/about_4.webp"
     },
     {
         number: "05",
         title: "setup",
-        img: "/Images/HomePage/wmdsc.webp"
+        img: "/Images/HomePage/heroSlider/about_5.webp"
     },
 ]
 
@@ -75,23 +76,24 @@ const solutionData = [
 
 const index = () => {
 
-    const meta = {
-        title: "Studio AKTO — Interior Design Studio",
-        description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
-        canonical: "https://studioakto.com/",
-        og: {
-            title: "Studio AKTO — Interior Design Studio",
-            description: "Proportion-led interiors across residential, commercial & hospitality.",
-            image: "https://www.studioakto.com/logo.png"
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Studio AKTO",
-            description: "Precision and design systems for contemporary spaces.",
-            image: "https://www.studioakto.com/logo.png"
-        },
-        robots: "index,follow"
-    };
+const meta = {
+  title: "STUDIO AKTO — ABOUT STUDIO",
+  description: "We are a multidisciplinary interior design studio crafting spaces that balance form, function, and flow. Discover our approach to residential, commercial, and hospitality interiors.",
+  canonical: "https://studioakto.com/studio",
+  og: {
+    title: "STUDIO AKTO — ABOUT STUDIO",
+    description: "Rooted in the principle that form follows function, Studio AKTO creates proportion-led interiors that respond to how people live and interact.",
+    image: "https://www.studioakto.com/logo.png" // Replace with a hero image if available
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "STUDIO AKTO — ABOUT STUDIO",
+    description: "Every project is a study in proportion, purpose, and precision. Explore how Studio AKTO designs thoughtful and experiential interiors.",
+    image: "https://www.studioakto.com/logo.png" // Replace with a hero image if available
+  },
+  robots: "index,follow"
+};
+
 
     const router = useRouter();
     const { navigate } = useNavigation();
@@ -608,10 +610,13 @@ const index = () => {
                     style={{
                         clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)"
                     }}
-                    className=" mt-6  lg:mt-10 stic_image_pent_c w-full h-[100vh] lg:h-[140vh] overflow-hidden center">
-                    <img className=' paex_img_cdc brightness-[.9] w-full h-full object-cover'
-                        src="/Images/HomePage/FooterImg.webp"
-                        alt="loading" />
+                    className=" mt-6  lg:mt-10 stic_image_pent_c w-full h-[100vh] lg:h-[140vh] relative overflow-hidden center">
+                    <Image
+                        src="/Images/studioPage/studio_hero.webp"
+                        alt="loading"
+                        fill
+                        className=" paex_img_cdc brightness-[.9] w-full h-full object-cover"
+                    />
                 </div>
 
                 <div className="w-full py-20 lg:py-44 overflow-hidden center studio_desc">
@@ -638,14 +643,14 @@ const index = () => {
                 <div className="w-full px-3 lg:px-10 gap-y-5 lg:gap-y-0 flex-col md:flex-row  justify-between flex">
                     <div className=" w-full md:w-[60%] h-full">
                         <div className="w-full par_img_pren overflow-hidden aspect-[16/10] ">
-                            <img className=' parlx_img_eff scale-150 lg:scale-110 w-full h-full object-cover' src="/Images/HomePage/erec.webp" alt="loading" />
+                            <img className=' parlx_img_eff scale-150 lg:scale-110 w-full h-full object-cover  brightness-[.9] ' src="/Images/studioPage/left_portrait.webp" alt="loading" />
                         </div>
                         <p className='uppercase text-xs md:text-sm font-black mt-5 md:mt-10'>About us</p>
-                        <p className=' text-sm leading-tight md:text-lg lg:text-3xl mt-3 md:mt-5'>Form follows function. Flow shapes design. Based in India, we are a multidisciplinary interior design studio rooted in the principle that form follows function. Our spaces are built on flow — spatial, emotional, and practical. Every project is a study in proportion, purpose, and precision.</p>
+                        <p className=' text-sm leading-tight md:text-lg lg:text-3xl mt-3 md:mt-5'>We are a multidisciplinary interior design studio rooted in the principle that form follows function. Our spaces are built on flow: spatial, emotional, and experiential. We craft interiors that respond to how people live and interact. Every project is a study in proportion, purpose, and precision</p>
                     </div>
                     <div className=" mt-10 md:hidden w-full flex   ">
                         <div className="w-[50%] par_img_pren overflow-hidden h-full flex items-end aspect-[10/14] ">
-                            <img className='  parlx_img_eff scale-[2.5] lg:scale-110 w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
+                            <img className='  parlx_img_eff scale-[2.5] lg:scale-110 w-full h-full object-cover  brightness-[.9] ' src="/Images/studioPage/right_portrait.webp" alt="loading" />
                         </div>
                         <div className="w-1/2  aspect-[10/14] pl-2 h-full flex items-end">
                             <p className=' text-xs md:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
@@ -653,7 +658,7 @@ const index = () => {
                     </div>
                     <div className=" hidden md:block w-[23.5%] h-full ">
                         <div className="w-full flex par_img_pren overflow-hidden items-end aspect-[10/16] ">
-                            <img className=' parlx_img_eff scale-[150] lg:scale-110 w-full aspect-[4/5] object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
+                            <img className=' parlx_img_eff scale-[150] lg:scale-110 w-full aspect-[4/5] object-cover  brightness-[.9] ' src="/Images/studioPage/right_portrait.webp" alt="loading" />
                         </div>
                         <p className=' text-sm lg:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
                     </div>
@@ -698,7 +703,7 @@ const index = () => {
                     <div className=" w-full  lg:w-[30vw]  lg:h-fit overflow-hidden">
                         <div className=" overflow-hidden h-fit  w-full aspect-[6/7] par_img_pren_2">
                             <img
-                                className="w-full parlx_img_eff_2 scale-110 aspect-[6/7] object-cover"
+                                className="w-full parlx_img_eff_2 scale-110 brightness-105 aspect-[6/7] object-cover"
                                 src="/Images/studioPage/behind_studio.webp"
                                 alt="loading"
                             />

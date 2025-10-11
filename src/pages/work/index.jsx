@@ -9,166 +9,30 @@ import SplitText from 'gsap/dist/SplitText';
 import useNavigation from '@/store/useNavigation';
 import { useRouter } from 'next/router';
 import SeoHeader from '@/components/seo/SeoHeader';
+import { worksData } from '@/store/WorksData';
+import Image from 'next/image';
 gsap.registerPlugin(SplitText);
-
-const worksData = [
-  {
-    id: 1,
-    title: "Beyond the Frame",
-    HeroImg: "/Images/HomePage/HeroImg.png",
-    images: [
-      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    id: 2,
-    title: "Urban Calm",
-    HeroImg: "/Images/HomePage/cdcs.webp",
-    images: [
-      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    id: 3,
-    title: "The Flexible Studio",
-    HeroImg: "/Images/HomePage/erec.webp",
-    images: [
-      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    id: 4,
-    title: "Sleek Sanctuary",
-    HeroImg: "/Images/HomePage/FooterImg.webp",
-    images: [
-      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    id: 5,
-    title: "Beyond the Frame",
-    HeroImg: "/Images/HomePage/HeroImg.png",
-    images: [
-      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    id: 6,
-    title: "Urban Calm",
-    HeroImg: "/Images/HomePage/cdcs.webp",
-    images: [
-      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    id: 7,
-    title: "The Flexible Studio",
-    HeroImg: "/Images/HomePage/erec.webp",
-    images: [
-      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-  {
-    id: 8,
-    title: "Sleek Sanctuary",
-    HeroImg: "/Images/HomePage/FooterImg.webp",
-    images: [
-      { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-      { type: "landscape", img: "/Images/HomePage/HeroImg.png" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-      { type: "portrait", img: "/Images/HomePage/erec.webp" },
-      { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-      { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    ],
-  },
-];
 
 const Index = () => {
 
   const meta = {
-    title: "Studio AKTO — Interior Design Studio",
-    description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
-    canonical: "https://studioakto.com/",
+    title: "STUDIO AKTO - WORK & PROJECTS ",
+    description: "Explore Studio AKTO's portfolio of interiors across residential, commercial, and hospitality spaces.",
+    canonical: "https://studioakto.com/work",
     og: {
-      title: "Studio AKTO — Interior Design Studio",
-      description: "Proportion-led interiors across residential, commercial & hospitality.",
-      image: "https://www.studioakto.com/logo.png"
+      title: "STUDIO AKTO - WORK & PROJECTS ",
+      description: "Discover our portfolio of proportion-led interior design projects for homes, offices, and hospitality.",
+      image: "https://www.studioakto.com/logo.png" // You can replace with a hero image from your work page
     },
     twitter: {
       card: "summary_large_image",
-      title: "Studio AKTO",
-      description: "Precision and design systems for contemporary spaces.",
-      image: "https://www.studioakto.com/logo.png"
+      title: "STUDIO AKTO - WORK & PROJECTS ",
+      description: "Showcasing our curated interior design projects for contemporary spaces.",
+      image: "https://www.studioakto.com/logo.png" // Optional: replace with a project highlight image
     },
     robots: "index,follow"
   };
+
 
 
   const router = useRouter();
@@ -192,30 +56,44 @@ const Index = () => {
 
 
   useEffect(() => {
+    const wrapper = scrollWrapper.current;
+    const content = scrollContent.current;
+
     const lenis = new Lenis({
-      wrapper: scrollWrapper.current || undefined,
-      content: scrollContent.current || undefined,
-      duration: 1.5,
+      wrapper,
+      content,
+      duration: 1.2,
       orientation: "horizontal",
       gestureOrientation: "vertical",
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: (t) => 1 - Math.pow(2, -10 * t),
       smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 2,
-      infinite: true,
+      infinite: false,
     });
+
+    const cloneCount = 3;
+    const originalChildren = Array.from(content.children);
+    for (let i = 0; i < cloneCount - 1; i++) {
+      originalChildren.forEach((child) => {
+        const clone = child.cloneNode(true);
+        content.appendChild(clone);
+      });
+    }
+
+    const totalWidth = content.scrollWidth / cloneCount;
 
     const raf = (time) => {
       lenis.raf(time);
-      AOS.refresh();
+      const scrollLeft = lenis.scroll;
+      if (scrollLeft >= totalWidth) {
+        lenis.scrollTo(scrollLeft - totalWidth, { immediate: true });
+      } else if (scrollLeft <= 0) {
+        lenis.scrollTo(scrollLeft + totalWidth, { immediate: true });
+      }
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
-
     return () => {
       lenis.destroy();
-      window.lenis = null;
     };
   }, []);
 
@@ -377,12 +255,12 @@ const Index = () => {
           style={{ opacity: 1, display: "flex" }}
         >
           <div
-            ref={scrollWrapper} className="w-full flex items-end pb-10 md:pb-[1vw] absolute h-[100dvh] z-[9] top-0 left-0 px-3 lg:px-10 pr-3 lg:pr-10 overflow-x-auto scroller_none">
+            ref={scrollWrapper} className="w-full flex justify-start items-end pb-10 md:pb-[1vw] absolute h-[100dvh] z-[9] top-0 left-0 px-3 lg:px-10 pr-3 lg:pr-10 overflow-x-auto scroller_none">
             <div
               ref={scrollContent}
               className=" gap-3 lg:gap-5  flex "
             >
-              {worksData.map((item, idx) => (
+              {[...worksData, ...worksData].map((item, idx) => (
                 <div
                   key={idx}
                   onClick={() => navigate(router, `/work/${item.id}`)}
@@ -394,11 +272,13 @@ const Index = () => {
                   </div>
                   <div
                     style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                    className=" hori_clip_div clip_div w-full h-full overflow-hidden">
-                    <img
-                      className="w-full h-[250px] object-cover"
+                    className=" hori_clip_div clip_div w-full h-[250px] overflow-hidden relative">
+                    <Image
                       src={item.HeroImg}
                       alt="loading"
+                      fill
+                      quality={20}
+                      className="object-cover"
                     />
                   </div>
                 </div>
@@ -427,14 +307,15 @@ const Index = () => {
               </div>
               <div
                 style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                className=" ver_clip_div clip_div w-full h-full overflow-hidden">
-                <img
+                className=" ver_clip_div clip_div w-full h-full overflow-hidden relative">
+                <Image
                   data-aos="clip"
                   data-aos-anchor-placement="top-bottom"
                   data-aos-delay={idx * 100}
-                  className="w-full h-full object-cover"
                   src={item.HeroImg}
                   alt="loading"
+                  fill
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>

@@ -5,6 +5,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useNavigation from '@/store/useNavigation';
+import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const Hero = () => {
@@ -334,7 +335,13 @@ const Hero = () => {
                 <p className='  left_txt_2a text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
                 <p className=' right_txt_2a  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
                 <img className='-bottom-4 left-1/2 -translate-x-1/2 absolute z-[1] w-[7%]' src="/mono_white.png" alt="" />
-                <img className='hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="loading" />
+                <Image
+                    src="/Images/HeroImg.webp"
+                    alt="loading"
+                    priority
+                    fill
+                    className="hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover"
+                />
                 <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
                     <div className="block overflow-hidden">
                         <p className='anim_txt font-bold'>Design that lives, </p>
@@ -342,7 +349,6 @@ const Hero = () => {
                     <div className="block overflow-hidden">
                         <p className='anim_txt font-bold'>breathes, and belongs</p>
                     </div>
-                    <p></p>
                 </div>
 
                 <div className=" slide_paren  w-[100%] h-[100%] center overflow-hidden absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-[#FFFDF6]"></div>
@@ -351,21 +357,35 @@ const Hero = () => {
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_1 w-full h-full origin-center  absolute z-[2] ">
-                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/1_787ee4dae3_54280191fd.webp" alt="loading" />
+                    <Image
+                        src="/Images/HomePage/heroSlider/Hero_animation_1.webp"
+                        alt="loading"
+                        fill
+                        className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
+                    />
                 </div>
                 <div
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_2 w-full h-full origin-center  absolute z-[3] ">
-                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/4_e4dd79658e_e0dc0c7570.webp" alt="loading" />
+                    <Image
+                        src="/Images/HomePage/heroSlider/Hero_animation_2.webp"
+                        alt="loading"
+                        fill
+                        className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
+                    />
                 </div>
                 <div
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_3 w-full h-full origin-center  absolute z-[4] ">
-                    <img className=' hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/3_58be3bd3a5_5a7aefd99a.webp" alt="loading" />
+                    <Image
+                        src="/Images/HomePage/heroSlider/Hero_animation_3.webp"
+                        alt="loading"
+                        fill
+                        className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
+                    />
                 </div>
-
                 <div className=" hero_slide_4 overflow-hidden scale-[0] bg-[#FFFDF6] w-full h-full absolute z-[5]">
                     <div className="w-full h-screen relative flex-col gap-10 center text-center ">
                         <div className=" about_div flex-col w-full h-full gap-10 center text-center">
@@ -374,7 +394,7 @@ const Hero = () => {
                                 <div className='block relative overflow-hidden lg:pb-2'>
                                     <div className=" opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
                                     <p>
-                                        At AKTO, design is more than 
+                                        At AKTO, design is more than
                                     </p>
                                 </div>
                                 <div className="flex  relative overflow-hidden lg:pb-2 pr-2 gap-2">
@@ -409,18 +429,18 @@ const Hero = () => {
                         </div>
 
                         <div className=" sq_img_1 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_1 w-full h-full object-cover' src="https://cdn.fame-estate.com/six_70549f943a.png" alt="loading" />
+                            <img className=' sq_img_in_1 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_1.webp" alt="loading" />
                         </div>
                         <div className=" sq_img_2 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_2 w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="loading" />
+                            <img className=' sq_img_in_2 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_2.webp" alt="loading" />
                         </div>
                         <div className=" sq_img_3 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_3 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="loading" /></div>
+                            <img className=' sq_img_in_3 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_5.webp" alt="loading" /></div>
                         <div className=" sq_img_4 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-32 w-[50vw] md:w-[15vw] ">
-                            <img className='sq_img_in_4 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service_01a01267d4.png" alt="loading" />
+                            <img className='sq_img_in_4 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_4.webp" alt="loading" />
                         </div>
                         <div className=" sq_img_5 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-32 w-[50vw] md:w-[15vw] ">
-                            <img className='sq_img_in_5 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_damac_2cd1f341f0.png" alt="loading" />
+                            <img className='sq_img_in_5 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_3.webp" alt="loading" />
                         </div>
 
 

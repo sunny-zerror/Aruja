@@ -77,14 +77,14 @@ const SeoHeader = ({ meta = {}, type = "website" }) => {
         rel="icon"
         type="image/png"
         sizes="96x96"
-        href="/mono_black.png"
+        href="/favicon/favicon.ico"
       />
-      <link rel="icon" type="image/svg+xml" href="/mono_black.png" />
+      <link rel="icon" type="image/svg+xml" href="/favicon/favicon-32x32.png" />
       <link rel="shortcut icon" href="/favicon.ico" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/mono_black.png"
+        href="/favicon/apple-touch-icon.png"
       />
       <meta name="apple-mobile-web-app-title" content="AKTO" />
       <link rel="manifest" href="/favicon/site.webmanifest" />

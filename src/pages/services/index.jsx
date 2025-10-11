@@ -8,23 +8,24 @@ gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const ServiceSlider = () => {
 
-    const meta = {
-        title: "Studio AKTO — Interior Design Studio",
-        description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
-        canonical: "https://studioakto.com/",
-        og: {
-            title: "Studio AKTO — Interior Design Studio",
-            description: "Proportion-led interiors across residential, commercial & hospitality.",
-            image: "https://www.studioakto.com/logo.png"
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Studio AKTO",
-            description: "Precision and design systems for contemporary spaces.",
-            image: "https://www.studioakto.com/logo.png"
-        },
-        robots: "index,follow"
-    };
+const meta = {
+  title: "STUDIO AKTO — SERVICES",
+  description: "Discover Studio AKTO’s interior design services, creating functional, proportion-led spaces for residential, commercial, and hospitality projects.",
+  canonical: "https://studioakto.com/services",
+  og: {
+    title: "STUDIO AKTO — SERVICES",
+    description: "We craft tailored interior solutions across homes, offices, and hospitality, balancing form, function, and flow.",
+    image: "https://www.studioakto.com/logo.png" // Replace with a hero image from your services page if available
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "STUDIO AKTO — SERVICES",
+    description: "Explore our range of interior design services that transform spaces with proportion, purpose, and precision.",
+    image: "https://www.studioakto.com/logo.png" // Optional: replace with a hero image
+  },
+  robots: "index,follow"
+};
+
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -99,18 +100,18 @@ const ServiceSlider = () => {
 
 
     return (
-        <>
+        <div>
             <SeoHeader meta={meta} />
 
             <div id='services' className=" serv_slider_paren w-full center  text-[#FFFDF6] h-screen relative">
                 <img
-                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/HomePage/cdcs.webp" alt="loading" />
+                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/services/servImg1.webp" alt="loading" />
                 <img
-                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_2 w-full h-full absolute object-cover top-0 left-0 z-[3] ' src="/Images/HomePage/erec.webp" alt="loading" />
+                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_2 w-full h-full absolute object-cover top-0 left-0 z-[3] ' src="/Images/services/servImg2.webp" alt="loading" />
                 <img
-                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_3 w-full h-full absolute object-cover top-0 left-0 z-[2] ' src="/Images/HomePage/okdv.webp" alt="loading" />
+                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_3 w-full h-full absolute object-cover top-0 left-0 z-[2] ' src="/Images/services/servImg3.webp" alt="loading" />
                 <img
-                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_4 w-full h-full absolute object-cover top-0 left-0 z-[1] ' src="/Images/HomePage/wmdsc.webp" alt="loading" />
+                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_4 w-full h-full absolute object-cover top-0 left-0 z-[1] ' src="/Images/services/servImg4.webp" alt="loading" />
 
                 <div className=" serv_slide_bg_img_1 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[15] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
@@ -129,14 +130,14 @@ const ServiceSlider = () => {
                                 <p className=' text-xl lg:text-5xl uppercase  serv_anim_txt translate-y-[105%] '>Residential Interior </p>
                             </div>
                             <div className=" overflow-hidden w-full text-xs lg:text-base lg:w-[30%] leading-none">
-                                <p className='serv_anim_txt translate-y-[105%]'>End-to-end spatial design and structural planning that shape how people live and work.</p>
+                                <p className='serv_anim_txt translate-y-[105%]'>Personalized home transformations that balance aesthetics and function, creating warm, timeless spaces tailored to everyday living.</p>
                             </div>
                         </div>
                     </div>
                     <div className="h-[60%] w-full">
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                            className='w-full h-full object-cover serv_clip_div ' src="/Images/HomePage/cdcs.webp" alt="loading" />
+                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg1.webp" alt="loading" />
                     </div>
                 </div>
 
@@ -156,14 +157,14 @@ const ServiceSlider = () => {
                         <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
                             <p className=' text-xl lg:text-5xl uppercase'>commercial interiors</p>
                             <div className=" w-full text-xs lg:text-base lg:w-[30%] leading-none">
-                                <p className=''>End-to-end spatial design and structural planning that shape how people live and work.</p>
+                                <p className=''>Transformative redesign of workspaces that enhance functionality, reflect brand identity, and create engaging professional environments.</p>
                             </div>
                         </div>
                     </div>
                     <div className="h-[60%] w-full">
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                            className='w-full h-full object-cover serv_clip_div ' src="/Images/HomePage/erec.webp" alt="loading" />
+                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg2.webp" alt="loading" />
                     </div>
                 </div>
 
@@ -183,14 +184,14 @@ const ServiceSlider = () => {
                         <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
                             <p className=' text-xl lg:text-5xl uppercase'>space planning</p>
                             <div className=" w-full text-xs lg:text-base lg:w-[30%] leading-none">
-                                <p className=''>End-to-end spatial design and structural planning that shape how people live and work.</p>
+                                <p className=''>Comprehensive planning of form and flow to create efficient, balanced, and experience-driven living or working spaces.</p>
                             </div>
                         </div>
                     </div>
                     <div className="h-[60%] w-full">
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                            className='w-full h-full object-cover serv_clip_div ' src="/Images/HomePage/okdv.webp" alt="loading" />
+                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg3.webp" alt="loading" />
                     </div>
                 </div>
 
@@ -210,18 +211,18 @@ const ServiceSlider = () => {
                         <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
                             <p className=' text-xl lg:text-5xl uppercase'>styling</p>
                             <div className=" w-full text-xs lg:text-base lg:w-[30%] leading-none">
-                                <p className=''>End-to-end spatial design and structural planning that shape how people live and work.</p>
+                                <p className=''>Thoughtful selection of materials and decor that refine spaces with balance, texture, and timeless visual appeal.</p>
                             </div>
                         </div>
                     </div>
                     <div className="h-[60%] w-full">
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                            className='w-full h-full object-cover serv_clip_div ' src="/Images/HomePage/wmdsc.webp" alt="loading" />
+                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg4.webp" alt="loading" />
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

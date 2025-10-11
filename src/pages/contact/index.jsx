@@ -6,23 +6,24 @@ import Marquee from 'react-fast-marquee'
 
 const index = () => {
 
-    const meta = {
-        title: "Studio AKTO — Interior Design Studio",
-        description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
-        canonical: "https://studioakto.com/",
-        og: {
-            title: "Studio AKTO — Interior Design Studio",
-            description: "Proportion-led interiors across residential, commercial & hospitality.",
-            image: "https://www.studioakto.com/logo.png"
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "Studio AKTO",
-            description: "Precision and design systems for contemporary spaces.",
-            image: "https://www.studioakto.com/logo.png"
-        },
-        robots: "index,follow"
-    };
+const meta = {
+  title: "STUDIO AKTO — GET IN TOUCH",
+  description: "Get in touch with Studio AKTO for interior design inquiries, project consultations, or collaborations across residential, commercial, and hospitality spaces.",
+  canonical: "https://studioakto.com/contact",
+  og: {
+    title: "STUDIO AKTO — GET IN TOUCH",
+    description: "Reach out to Studio AKTO to discuss your interior design project, request consultations, or explore collaboration opportunities.",
+    image: "https://www.studioakto.com/logo.png" // Optional: replace with a contact hero image
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "STUDIO AKTO — GET IN TOUCH",
+    description: "Contact Studio AKTO for expert interior design solutions and personalized consultations for your space.",
+    image: "https://www.studioakto.com/logo.png" // Optional: replace with a contact hero image
+  },
+  robots: "index,follow"
+};
+
 
     usePageReady(() => {
         gsap.to(".marq_op", {
@@ -62,20 +63,20 @@ const index = () => {
                     <div className=" lg:hidden  marq_op opacity-0 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full ">
                         <Marquee gradient gradientWidth={50} className='   h-full w-full scroller_none ' >
                             <p className='h-full  ml-[10vw] flex gap-10 items-center'>
-                                “Got a Thought? <img className='w-8' src="/icons/footerMonogram/1.svg" alt="" />
+                                “Got a Thought? <img className='w-8' src="/monogram.svg" alt="" />
                             </p>
                             <p className='h-full  ml-[10vw] flex gap-10 items-center'>
-                                toss It Here”<img className='w-8' src="/icons/footerMonogram/1.svg" alt="" />
+                                toss It Here”<img className='w-8' src="/monogram.svg" alt="" />
                             </p>
                         </Marquee>
                     </div>
                     <div className=" hidden lg:block absolute marq_op opacity-0 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full top-[10vh] lg:top-[25%]">
                         <Marquee gradient gradientWidth={50} className='   h-full w-full scroller_none ' >
                             <p className='h-full  ml-[5vw] flex gap-20 items-center'>
-                                “Got a Thought? <img className='w-20' src="/icons/footerMonogram/1.svg" alt="" />
+                                “Got a Thought? <img className='w-20' src="/monogram.svg" alt="" />
                             </p>
                             <p className='h-full  ml-[5vw] flex gap-20 items-center'>
-                                toss It Here”<img className='w-20' src="/icons/footerMonogram/1.svg" alt="" />
+                                toss It Here”<img className='w-20' src="/monogram.svg" alt="" />
                             </p>
 
                         </Marquee>
@@ -104,7 +105,7 @@ const index = () => {
                                 <div className='  block overflow-hidden'>
                                     <div className="block overflow-hidden">
                                         <p className='ctct_anim_txt text-lg lg:text-2xl translate-y-[105%]'  >
-                                            H.no arujak mumbai,
+                                        Rajasthan,
                                         </p>
                                     </div>
                                     <div className="block overflow-hidden">
@@ -125,7 +126,7 @@ const index = () => {
                                 </div>
                                 <div className='  block overflow-hidden'>
                                     <p className='ctct_anim_txt text-lg lg:text-2xl translate-y-[105%]'  >
-                                        +91 12345 67890
+                                        +91 81300 70663
                                     </p>
                                 </div>
                             </div>

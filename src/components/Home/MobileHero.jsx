@@ -5,6 +5,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useNavigation from '@/store/useNavigation';
+import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
 const MobileHero = () => {
@@ -13,7 +14,7 @@ const MobileHero = () => {
     CustomEase.create("in-out-quint", "0.83,0,0.17,1");
 
     useEffect(() => {
-   const hasSeenLoader = sessionStorage.getItem("hasSeenLoader");
+        const hasSeenLoader = sessionStorage.getItem("hasSeenLoader");
 
         if (hasSeenLoader === "true") {
             gsap.from(".left_txt_2a_mob", {
@@ -154,59 +155,59 @@ const MobileHero = () => {
             ease: "linear",
         }, "parr");
 
-            tl.to(".sq_img_1_mob", {
-                top: "-55vw",
-                duration: 1,
-                ease: "linear",
-            }, "parr");
-            tl.fromTo(".sq_img_in_1_mob", {
-                y: -80,
-            }, {
-                y: 80,
-                duration: 1,
-                ease: "linear",
-            }, "parr");
-            tl.to(".sq_img_2_mob", {
-                top: "-55vw",
-                duration: 1,
-                ease: "linear",
-                delay: .5,
-            }, "parr");
-            tl.fromTo(".sq_img_in_2_mob", {
-                y: -80,
-            }, {
-                y: 80,
-                duration: 1,
-                delay: .5,
-                ease: "linear",
-            }, "parr");
-            tl.to(".sq_img_3_mob", {
-                top: "-55vw",
-                duration: 1,
-                ease: "linear",
-                delay: 1,
-            }, "parr");
-            tl.fromTo(".sq_img_in_3_mob", {
-                y: -80,
-            }, {
-                y: 80,
-                delay: 1,
-                duration: 1,
-                ease: "linear",
-            }, "parr");
-            tl.to(".about_div_mob", {
-                y: -150,
-                duration: 1,
-                ease: "linear",
-                delay: 2.3,
-            }, "parr");
-            tl.to(".number_div_mob", {
-                bottom: " 10vh",
-                duration: 1,
-                ease: "linear",
-                delay: 2.3,
-            }, "parr");
-    
+        tl.to(".sq_img_1_mob", {
+            top: "-55vw",
+            duration: 1,
+            ease: "linear",
+        }, "parr");
+        tl.fromTo(".sq_img_in_1_mob", {
+            y: -80,
+        }, {
+            y: 80,
+            duration: 1,
+            ease: "linear",
+        }, "parr");
+        tl.to(".sq_img_2_mob", {
+            top: "-55vw",
+            duration: 1,
+            ease: "linear",
+            delay: .5,
+        }, "parr");
+        tl.fromTo(".sq_img_in_2_mob", {
+            y: -80,
+        }, {
+            y: 80,
+            duration: 1,
+            delay: .5,
+            ease: "linear",
+        }, "parr");
+        tl.to(".sq_img_3_mob", {
+            top: "-55vw",
+            duration: 1,
+            ease: "linear",
+            delay: 1,
+        }, "parr");
+        tl.fromTo(".sq_img_in_3_mob", {
+            y: -80,
+        }, {
+            y: 80,
+            delay: 1,
+            duration: 1,
+            ease: "linear",
+        }, "parr");
+        tl.to(".about_div_mob", {
+            y: -150,
+            duration: 1,
+            ease: "linear",
+            delay: 2.3,
+        }, "parr");
+        tl.to(".number_div_mob", {
+            bottom: " 10vh",
+            duration: 1,
+            ease: "linear",
+            delay: 2.3,
+        }, "parr");
+
 
 
 
@@ -219,7 +220,13 @@ const MobileHero = () => {
                 <p className='  left_txt_2a_mob text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
                 <p className=' right_txt_2a_mob  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
                 <img className='bottom-0 lg:-bottom-4 left-1/2 -translate-x-1/2 absolute w-[25%] z-[1]  lg:w-[7%]' src="/mono_white.png" alt="" />
-                <img className='hero_bg_img_mob top-0 left-0 h-full brightness-[.6] w-full object-cover' src="/Images/HomePage/HeroImg.png" alt="loading" />
+                <Image
+                    src="/Images/HeroImg.webp"
+                    alt="loading"
+                    priority
+                    fill
+                    className="hero_bg_img_mob top-0 left-0 h-full brightness-[.6] w-full object-cover"
+                />
                 <div className=" leading-none absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
                     <div className="block overflow-hidden">
                         <p className='anim_txt_mob font-bold'>Design that lives, </p>
@@ -236,13 +243,13 @@ const MobileHero = () => {
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_1_mob w-full h-full origin-center  absolute z-[2] ">
-                    <img className=' hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/1_787ee4dae3_54280191fd.webp" alt="loading" />
+                    <img className=' hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] ' src="/Images/HomePage/heroSlider/Hero_animation_1.webp" alt="loading" />
                 </div>
                 <div
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
                     }} className="hero_slide_2_mob w-full h-full origin-center  absolute z-[3] ">
-                    <img className=' hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] ' src="https://cdn.fame-estate.com/4_e4dd79658e_e0dc0c7570.webp" alt="loading" />
+                    <img className=' hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] ' src="/Images/HomePage/heroSlider/Hero_animation_2.webp" alt="loading" />
                 </div>
                 <div className=" hero_slide_4_mob overflow-hidden scale-[0] bg-[#FFFDF6] w-full h-full absolute z-[5]">
                     <div className="w-full h-screen relative flex-col gap-10 center text-center ">
@@ -287,14 +294,14 @@ const MobileHero = () => {
                         </div>
 
                         <div className=" sq_img_1_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_1_mob scale-110  w-full h-full object-cover' src="https://cdn.fame-estate.com/six_70549f943a.png" alt="loading" />
+                            <img className=' sq_img_in_1_mob scale-110  w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_1.webp" alt="loading" />
                         </div>
                         <div className=" sq_img_2_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-3 lg:left-10 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_2_mob scale-110 w-full h-full object-cover' src="https://cdn.fame-estate.com/1_02b2655de9.jpg" alt="loading" />
+                            <img className=' sq_img_in_2_mob scale-110 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_2.webp" alt="loading" />
                         </div>
                         <div className=" sq_img_3_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw]  lg:bottom-[-15vw] left-1/2 -translate-x-1/2 w-[50vw] md:w-[15vw] ">
-                            <img className=' sq_img_in_3_mob scale-110 w-full h-full object-cover' src="https://cdn.fame-estate.com/medium_service2_db4b58f8b4.png" alt="loading" /></div>
-                        
+                            <img className=' sq_img_in_3_mob scale-110 w-full h-full object-cover' src="/Images/HomePage/heroSlider/about_3.webp" alt="loading" /></div>
+
 
 
                         <div className=" number_div_mob w-full absolute bottom-[-20vh] left-0 h-[20vh]    grid space-y-5 md:space-y-0 content-center  grid-cols-1 md:flex md:items-center md:justify-between px-3 md:px-24">
